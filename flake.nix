@@ -319,7 +319,7 @@
         gc.automatic = true;
 
         # Automatically run the nix store optimiser at a specific time.
-        #optimise.automatic = true;
+        optimise.automatic = true;
 
         #package = pkgs.nix;
 
@@ -328,7 +328,7 @@
           #   and replaces them with hard links to a single copy.
           # This saves disk space.
           # If set to false (the default), you can still run nix-store --optimise to get rid of duplicate files.
-          #auto-optimise-store = true;
+          auto-optimise-store = true;
 
           # Necessary for using flakes on this system.
           experimental-features = "nix-command flakes";
