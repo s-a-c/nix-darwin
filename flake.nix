@@ -240,6 +240,7 @@
           "notion" "notion-calendar" "notion-enhanced"
           "obs" "droidcam-obs" "obs-advanced-scene-switcher" "obs-backgroundremoval" "obs-websocket"
           "obsidian"
+          "ollama" "ollamac" "notesollama"
           "onyx"
           "paragon-extfs"
           "pgadmin4"
