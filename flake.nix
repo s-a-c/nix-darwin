@@ -395,7 +395,7 @@
 
       services = {
         eternal-terminal = {
-          enable = true;
+          enable = false;
           port = 2022;
           verbosity = 2;
         };
