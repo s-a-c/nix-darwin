@@ -41,7 +41,7 @@
         pkgs.ascii-image-converter
         pkgs.atuin
         pkgs.autoconf pkgs.autoconf-archive pkgs.automake pkgs.gnum4 pkgs.libtool pkgs.texi2html
-        pkgs.avfs
+        #pkgs.avfs
         pkgs.bash-preexec pkgs.bash_unit pkgs.bashate pkgs.bats pkgs.checkbashisms pkgs.blesh pkgs.shellcheck pkgs.shellcheck-sarif pkgs.shellharden pkgs.shellspec pkgs.shfmt
         pkgs.bat pkgs.bat-extras.batdiff pkgs.bat-extras.batgrep pkgs.bat-extras.batman pkgs.bat-extras.batpipe pkgs.bat-extras.batwatch pkgs.bat-extras.prettybat
         pkgs.binutils-unwrapped-all-targets
@@ -228,6 +228,7 @@
           "libreoffice-language-pack"
           "libreoffice"
           "logitech-g-hub"
+          "macfuse"
           "mediainfo"
           "mediainfoex"
           "Messenger"
