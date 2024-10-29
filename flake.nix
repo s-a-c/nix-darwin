@@ -114,8 +114,7 @@
         pkgs.ranger
         pkgs.ripgrep
         pkgs.rlwrap
-        pkgs.ruby_3_3 pkgs.rubyPackages_3_3.rails pkgs.rubyPackages_3_3.ruby-lsp pkgs.rubyPackages_3_3.sass-listen pkgs.rubyPackages_3_3.sassc # pkgs.rubyPackages_3_3.sass
-        pkgs.rustup
+        pkgs.ruby_3_3 pkgs.rubyPackages_3_3.rails pkgs.rubyPackages_3_3.ruby-lsp pkgs.rubyPackages_3_3.sass-listen pkgs.rubyPackages_3_3.sassc # pkgs.rubyPackages_3_3.sass # pkgs.rustup
         pkgs.screen # pkgs.scribus
         pkgs.sheldon
         pkgs.sqlite pkgs.sqlite-utils pkgs.sqlite-web pkgs.sqlar pkgs.sqlcipher pkgs.sqldiff pkgs.spatialite_tools pkgs.lazysql
@@ -164,6 +163,7 @@
           "ghcup"
           "nushell"
           "opam"
+          "rustup"
           "yubikey-personalization"
           "zig" "zigmod"
           "zsh-lovers"
@@ -188,7 +188,7 @@
           "dotnet-sdk"
           "duckduckgo"
           "dyalog"
-          "emacs@nightly"
+          "emacs@pretest"
           "emojipedia"
           "expressvpn"
           "flutter"
@@ -598,4 +598,3 @@
     darwinPackages = self.darwinConfigurations."StandAloneComplexs-MacBook-Pro".pkgs;
   };
 }
-
