@@ -40,11 +40,10 @@
         pkgs.any-nix-shell
         pkgs.ascii-image-converter
         pkgs.atuin
-        pkgs.autoconf pkgs.autoconf-archive pkgs.automake pkgs.gnum4 pkgs.libtool pkgs.texi2html
+        pkgs.autoconf pkgs.autoconf-archive pkgs.autogen pkgs.automake pkgs.binutils-unwrapped-all-targets pkgs.coreutils-full pkgs.gnum4 pkgs.gnumake pkgs.libtool pkgs.perl pkgs.texi2html
         #pkgs.avfs
         pkgs.bash-preexec pkgs.bash_unit pkgs.bashate pkgs.bats pkgs.checkbashisms pkgs.blesh pkgs.shellcheck pkgs.shellcheck-sarif pkgs.shellharden pkgs.shellspec pkgs.shfmt
         pkgs.bat pkgs.bat-extras.batdiff pkgs.bat-extras.batgrep pkgs.bat-extras.batman pkgs.bat-extras.batpipe pkgs.bat-extras.batwatch pkgs.bat-extras.prettybat
-        pkgs.binutils-unwrapped-all-targets
         pkgs.btop
         pkgs.bun
         pkgs.bzip2
@@ -52,7 +51,6 @@
         pkgs.chafa
         pkgs.clipse
         pkgs.clojure pkgs.clojure-lsp pkgs.cq pkgs.guile pkgs.guile-lib pkgs.racket pkgs.roswell # pkgs.corepack_latest pkgs.typescript # pkgs.guix
-        pkgs.coreutils-full
         pkgs.curlFull
         pkgs.dart pkgs.dart-sass pkgs.stylelint pkgs.tailwindcss pkgs.tailwindcss-language-server # pkgs.darwin.xcode
         pkgs.dbus
@@ -102,7 +100,7 @@
         pkgs.openssh_hpn
         pkgs.openssl
         pkgs.parallel-full
-        pkgs.perl pkgs.perl538Packages.XMLParser pkgs.perl538Packages.CPAN pkgs.perl538Packages.CPANPLUS pkgs.rakudo pkgs.zef
+        pkgs.perl538Packages.XMLParser pkgs.perl538Packages.CPAN pkgs.perl538Packages.CPANPLUS pkgs.rakudo pkgs.zef
         #pkgs.php83 pkgs.php83Packages.composer pkgs.php83Packages.phpstan pkgs.phpunit pkgs.laravel # pkgs.php83Packages.composer-local-repo-plugin pkgs.php83Packages.psysh
         pkgs.pkg-config
         pkgs.pngpaste
