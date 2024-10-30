@@ -51,7 +51,7 @@
         pkgs.ccache pkgs.ccls pkgs.clang-analyzer pkgs.clang-manpages pkgs.clang-tools pkgs.lldb pkgs.llvm # pkgs.gcc pkgs.llvm-manpages
         pkgs.chafa
         pkgs.clipse
-        pkgs.clojure pkgs.clojure-lsp pkgs.cq pkgs.guile pkgs.guile-lib pkgs.racket pkgs.roswell # pkgs.corepack_latest pkgs.typescript
+        pkgs.clojure pkgs.clojure-lsp pkgs.cq pkgs.guile pkgs.guile-lib pkgs.racket pkgs.roswell # pkgs.corepack_latest pkgs.typescript # pkgs.guix
         pkgs.coreutils-full
         pkgs.curlFull
         pkgs.dart pkgs.dart-sass pkgs.stylelint pkgs.tailwindcss pkgs.tailwindcss-language-server # pkgs.darwin.xcode
@@ -74,9 +74,9 @@
         pkgs.gitFull pkgs.gitui pkgs.gh pkgs.gist pkgs.lazygit pkgs.tig
         pkgs.gmp
         pkgs.gnugrep
+        pkgs.gnupatch
         pkgs.gnupg pkgs.gpa pkgs.gpg-tui pkgs.pinentry_mac pkgs.cacert
         pkgs.go pkgs.gopls
-        pkgs.gmp # pkgs.guix
         pkgs.gum
         pkgs.imagemagickBig pkgs.nsxiv
         pkgs.iterm2
@@ -158,12 +158,14 @@
         enable = true;
         brews = [
           "autoenv"
+          "cargo-about" "cargo-all-features" "cargo-audit" "cargo-auditable" "cargo-binstall" "cargo-binutils" "cargo-bloat" "cargo-bundle"
+          "cargo-c" "cargo-crev" "cargo-deny" "cargo-depgraph" "cargo-deps" "cargo-docset" "cargo-edit" "cargo-fuzz" "cargo-generate" "cargo-instruments" "cargo-llvm-cov" "cargo-llvm-lines" "cargo-make" "cargo-nextest" "cargo-outdated" "cargo-release" "cargo-sweep" "cargo-udeps" "cargo-watch" "cargo-zigbuild"
           "fisher"
           "fizsh"
+          "gcc"
           "ghcup"
           "nushell"
-          "opam"
-          "rustup"
+          # "opam"
           "yubikey-personalization"
           "zig" "zigmod"
           "zsh-lovers"
