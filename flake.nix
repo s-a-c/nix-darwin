@@ -40,14 +40,14 @@
         pkgs.any-nix-shell
         pkgs.ascii-image-converter
         pkgs.atuin
-        pkgs.autoconf pkgs.autoconf-archive pkgs.autogen pkgs.automake pkgs.binutils-unwrapped-all-targets pkgs.coreutils-full pkgs.gnum4 pkgs.gnumake pkgs.libtool pkgs.perl pkgs.texi2html
+        pkgs.autoconf pkgs.autoconf-archive pkgs.autogen pkgs.automake pkgs.coreutils-full pkgs.gnum4 pkgs.gnumake pkgs.libtool pkgs.perl pkgs.texi2html  # pkgs.binutils-unwrapped-all-targets # pkgs.gcc
         #pkgs.avfs
         pkgs.bash-preexec pkgs.bash_unit pkgs.bashate pkgs.bats pkgs.checkbashisms pkgs.blesh pkgs.shellcheck pkgs.shellcheck-sarif pkgs.shellharden pkgs.shellspec pkgs.shfmt
         pkgs.bat pkgs.bat-extras.batdiff pkgs.bat-extras.batgrep pkgs.bat-extras.batman pkgs.bat-extras.batpipe pkgs.bat-extras.batwatch pkgs.bat-extras.prettybat
         pkgs.btop
         pkgs.bun
         pkgs.bzip2
-        pkgs.ccache pkgs.ccls pkgs.clang-analyzer pkgs.clang-manpages pkgs.clang-tools pkgs.lldb pkgs.llvm # pkgs.gcc pkgs.llvm-manpages
+        pkgs.ccache pkgs.ccls pkgs.clang-analyzer pkgs.clang-manpages pkgs.clang-tools pkgs.lldb pkgs.llvm # pkgs.llvm-manpages
         pkgs.chafa
         pkgs.clipse
         pkgs.clojure pkgs.clojure-lsp pkgs.cq pkgs.guile pkgs.guile-lib pkgs.racket pkgs.roswell # pkgs.corepack_latest pkgs.typescript # pkgs.guix
@@ -160,7 +160,7 @@
           "cargo-c" "cargo-crev" "cargo-deny" "cargo-depgraph" "cargo-deps" "cargo-docset" "cargo-edit" "cargo-fuzz" "cargo-generate" "cargo-instruments" "cargo-llvm-cov" "cargo-llvm-lines" "cargo-make" "cargo-nextest" "cargo-outdated" "cargo-release" "cargo-sweep" "cargo-udeps" "cargo-watch" "cargo-zigbuild"
           "fisher"
           "fizsh"
-          "gcc"
+          "gcc" "binutils"
           "ghcup"
           "nushell"
           # "opam"
