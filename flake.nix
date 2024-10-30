@@ -94,7 +94,7 @@
         pkgs.ncurses
         pkgs.neovim pkgs.neovim-remote pkgs.neovide # pkgs.netbird pkgs.netbird-ui
         pkgs.ninja
-        pkgs.nix-zsh-completions pkgs.nixfmt-rfc-style
+        pkgs.nix-zsh-completions pkgs.nixfmt-rfc-style pkgs.nixd
         #pkgs.nushell pkgs.nushellPlugins.formats pkgs.nushellPlugins.gstat pkgs.nushellPlugins.net pkgs.nushellPlugins.query pkgs.nu_scripts pkgs. nufmt
         pkgs.odin pkgs.ols
         pkgs.openssh_hpn
