@@ -117,6 +117,7 @@
         pkgs.sheldon
         pkgs.sqlite pkgs.sqlite-utils pkgs.sqlite-web pkgs.sqlar pkgs.sqlcipher pkgs.sqldiff pkgs.spatialite_tools pkgs.lazysql
         pkgs.starship # pkgs.tailscale pkgs.tailscale-nginx-auth pkgs.tailscalesd
+        pkgs.stow
         pkgs.tcl pkgs.tclx pkgs.tix pkgs.tk pkgs.tkman
         pkgs.tealdeer
         pkgs.texliveFull
