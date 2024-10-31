@@ -47,11 +47,9 @@
         pkgs.btop
         pkgs.bun
         pkgs.bzip2
-        pkgs.ccache pkgs.ccls pkgs.clang-analyzer pkgs.clang-manpages pkgs.clang-tools pkgs.lldb pkgs.llvm # pkgs.llvm-manpages
         pkgs.chafa
         pkgs.clipse
         pkgs.clojure pkgs.clojure-lsp pkgs.cq pkgs.guile pkgs.guile-lib pkgs.racket pkgs.roswell # pkgs.corepack_latest pkgs.typescript # pkgs.guix
-        pkgs.curlFull
         pkgs.dart pkgs.dart-sass pkgs.stylelint pkgs.tailwindcss pkgs.tailwindcss-language-server # pkgs.darwin.xcode
         pkgs.dbus
         pkgs.deno
@@ -62,14 +60,12 @@
         pkgs.exiftool
         pkgs.eza
         pkgs.fastfetch
-        pkgs.fd
         pkgs.ffmpeg_7-full pkgs.ffmpegthumbnailer pkgs.mediainfo pkgs.mediainfo-gui pkgs.mpc-cli pkgs.ncmpcpp pkgs.mpd pkgs.mpv
         pkgs.figlet
         pkgs.findutils
         pkgs.fortune pkgs.cowsay pkgs.ponysay pkgs.taoup pkgs.tewisay
         pkgs.fzf pkgs.fzf-git-sh pkgs.fzf-make pkgs.fzf-obc pkgs.fzf-zsh pkgs.gh-f pkgs.sysz pkgs.ytfzf pkgs.zsh-forgit pkgs.zsh-fzf-history-search
         pkgs.gettext
-        pkgs.gitFull pkgs.gitui pkgs.gh pkgs.gist pkgs.lazygit pkgs.tig
         pkgs.gmp
         pkgs.gnugrep
         pkgs.gnupatch
@@ -78,21 +74,35 @@
         pkgs.gum
         pkgs.imagemagickBig pkgs.nsxiv
         pkgs.iterm2
-        pkgs.jdk22 # pkgs.jellycli pkgs.jellyfin pkgs.jellyfin-ffmpeg pkgs.jellyfin-media-player pkgs.jellyfin-mpv-shim pkgs.jellyfin-web pkgs.jftui pkgs.mopidy-jellyfin
-        pkgs.jq pkgs.jq-lsp pkgs.jq-zsh-plugin pkgs.json_c # pkgs.kodi
+        pkgs.jdk22 # pkgs.jellycli pkgs.jellyfin pkgs.jellyfin-ffmpeg pkgs.jellyfin-media-player pkgs.jellyfin-mpv-shim pkgs.jellyfin-web pkgs.jftui pkgs.mopidy-jellyfin # pkgs.kodi
         pkgs.lazycli
         pkgs.lesspipe
         pkgs.lilypond-with-fonts
         pkgs.lolcat pkgs.dwt1-shell-color-scripts # pkgs.clolcat
         pkgs.lorri
-        pkgs.lsd
-        pkgs.lua54Packages.lua pkgs.lua-language-server pkgs.lua54Packages.luarepl pkgs.lua54Packages.luarocks pkgs.lua54Packages.fennel pkgs.fennel-ls pkgs.fnlfmt
         pkgs.mas
         pkgs.micro
         pkgs.mkalias
         pkgs.mmv
         pkgs.ncurses
-        pkgs.neovim pkgs.neovim-remote pkgs.neovide # pkgs.netbird pkgs.netbird-ui
+        pkgs.neovim pkgs.neovim-remote pkgs.neovide
+        ## [lazyman-nix]  ## {{{
+        pkgs.gitFull pkgs.gitui pkgs.gh pkgs.gist pkgs.lazygit pkgs.tig
+        pkgs.curlFull
+        pkgs.jq pkgs.jq-lsp pkgs.jq-zsh-plugin pkgs.json_c
+        pkgs.unzip
+        pkgs.wget
+        pkgs.xclip
+        pkgs.lua54Packages.lua pkgs.lua-language-server pkgs.lua54Packages.luacheck pkgs.lua54Packages.luarepl pkgs.lua54Packages.luarocks pkgs.stylua pkgs.lua54Packages.fennel pkgs.fennel-ls pkgs.fnlfmt
+        pkgs.ripgrep
+        pkgs.zoxide # pkgs.julia
+        pkgs.lemonade
+        pkgs.lsd
+        pkgs.ccls pkgs.ccache pkgs.clang-analyzer pkgs.clang-manpages pkgs.clang-tools pkgs.lldb pkgs.llvm # pkgs.llvm-manpages
+        pkgs.xsel
+        pkgs.fd
+        ## }}}  ## [lazyman]
+        # pkgs.netbird pkgs.netbird-ui
         pkgs.ninja
         pkgs.nix-zsh-completions pkgs.nixfmt-rfc-style pkgs.nixd
         #pkgs.nushell pkgs.nushellPlugins.formats pkgs.nushellPlugins.gstat pkgs.nushellPlugins.net pkgs.nushellPlugins.query pkgs.nu_scripts pkgs. nufmt
@@ -110,7 +120,6 @@
         pkgs.progress
         pkgs.python313Full pkgs.pipx pkgs.rich-cli
         pkgs.ranger
-        pkgs.ripgrep
         pkgs.rlwrap
         pkgs.ruby_3_3 pkgs.rubyPackages_3_3.rails pkgs.rubyPackages_3_3.ruby-lsp pkgs.rubyPackages_3_3.sass-listen pkgs.rubyPackages_3_3.sassc # pkgs.rubyPackages_3_3.sass # pkgs.rustup
         pkgs.screen # pkgs.scribus
@@ -125,18 +134,14 @@
         pkgs.trash-cli
         pkgs.tree
         pkgs.tree-sitter
-        pkgs.unar # pkgs.vcpkg pkgs.vcpkg-tool
-        pkgs.wget # pkgs.wireguard-tools
+        pkgs.unar # pkgs.vcpkg pkgs.vcpkg-tool  # pkgs.wireguard-tools
         pkgs.yaml-language-server pkgs.yamlfmt pkgs.yamlscript pkgs.yq
         pkgs.yazi
         pkgs.yt-dlp pkgs.yt-dlg # pkgs.tartube-yt-dlp
         pkgs.yubico-pam pkgs.yubico-piv-tool pkgs.yubikey-agent pkgs.yubikey-manager # pkgs.yubikey-personalization pkgs.yubikey-personalization-gui # pkgs.yubikey-touch-detector
         pkgs.zellij # pkgs.zig pkgs.zig-shell-completions pkgs.zls pkgs.ztags
         pkgs.zlib
-        pkgs.zoxide # pkgs.zsh
-        #pkgs.zsh-abbr pkgs.zsh-autocomplete pkgs.zsh-autopair pkgs.zsh-autosuggestions pkgs.zsh-completions pkgs.zsh-f-sy-h pkgs.zsh-history-search-multi-word pkgs.zsh-history-substring-search pkgs.zsh-navigation-tools pkgs.zsh-you-should-use
-        pkgs.zsh-nix-shell
-        pkgs.zsh-zhooks
+        # pkgs.zsh pkgs.zsh-abbr pkgs.zsh-autocomplete pkgs.zsh-autopair pkgs.zsh-autosuggestions pkgs.zsh-completions pkgs.zsh-f-sy-h pkgs.zsh-history-search-multi-word pkgs.zsh-history-substring-search pkgs.zsh-navigation-tools pkgs.zsh-you-should-use pkgs.zsh-nix-shell pkgs.zsh-zhooks
         pkgs.zstd
         pkgs.zunit
       ];
@@ -156,6 +161,9 @@
       homebrew = {
         enable = true;
         brews = [
+          ## [lazyman] ## {{{
+          "clipboard" "gpatch" "gnu-sed" "juliaup" "nvm"
+          ## }}}  ## [lazyman]
           "autoenv"
           "cargo-about" "cargo-all-features" "cargo-audit" "cargo-auditable" "cargo-binstall" "cargo-binutils" "cargo-bloat" "cargo-bundle"
           "cargo-c" "cargo-crev" "cargo-deny" "cargo-depgraph" "cargo-deps" "cargo-docset" "cargo-edit" "cargo-fuzz" "cargo-generate" "cargo-instruments" "cargo-llvm-cov" "cargo-llvm-lines" "cargo-make" "cargo-nextest" "cargo-outdated" "cargo-release" "cargo-sweep" "cargo-udeps" "cargo-watch" "cargo-zigbuild"
@@ -582,7 +590,7 @@
 
             # Optional: Enable fully-declarative tap management
             # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`.
-            mutableTaps = false;
+            #mutableTaps = false;
 
             # Optional: Declarative tap management
             taps = {
