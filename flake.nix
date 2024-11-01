@@ -56,6 +56,7 @@
         pkgs.deno
         pkgs.e2fsprogs
         pkgs.editorconfig-core-c pkgs.editorconfig-checker
+        pkgs.elvish
         pkgs.erlang_27 pkgs.erlang-ls pkgs.erlfmt pkgs.lfe pkgs.rebar3 pkgs.elixir pkgs.elixir-ls pkgs.livebook pkgs.gleam
         pkgs.exercism
         pkgs.exiftool
