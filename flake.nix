@@ -47,6 +47,7 @@
         pkgs.btop
         pkgs.bun
         pkgs.bzip2
+        pkgs.carapace
         pkgs.chafa
         pkgs.clipse
         pkgs.clojure pkgs.clojure-lsp pkgs.cq pkgs.guile pkgs.guile-lib pkgs.racket pkgs.roswell # pkgs.corepack_latest pkgs.typescript # pkgs.guix
