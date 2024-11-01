@@ -228,7 +228,7 @@
           "insync"
           "itermai"
           "jellyfin" "jellyfin-media-player"
-          "jetbrains-gat" "jetbrains-space" "jetbrains-toolbox"
+          "jetbrains-gateway" "jetbrains-space" "jetbrains-toolbox"
           "jupyterlab"
           "karabiner-elements"
           "keycast"
