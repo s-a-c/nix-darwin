@@ -39,7 +39,7 @@
         # pkgs.vim
         pkgs.any-nix-shell
         pkgs.ascii-image-converter
-        pkgs.atuin
+        #pkgs.atuin
         pkgs.autoconf pkgs.autoconf-archive pkgs.autogen pkgs.automake pkgs.coreutils-full pkgs.gnum4 pkgs.gnumake pkgs.libtool pkgs.perl pkgs.texi2html  # pkgs.binutils-unwrapped-all-targets # pkgs.gcc
         #pkgs.avfs
         pkgs.bash-preexec pkgs.bash_unit pkgs.bashate pkgs.bats pkgs.checkbashisms pkgs.blesh pkgs.shellcheck pkgs.shellcheck-sarif pkgs.shellharden pkgs.shellspec pkgs.shfmt
@@ -162,7 +162,7 @@
         enable = true;
         brews = [
           ## [lazyman] ## {{{
-          "clipboard" "gpatch" "gnu-sed" "juliaup" "nvm"
+          "bob" "clipboard" "gpatch" "gnu-sed" "juliaup" "nvm"
           ## }}}  ## [lazyman]
           "autoenv"
           "cargo-about" "cargo-all-features" "cargo-audit" "cargo-auditable" "cargo-binstall" "cargo-binutils" "cargo-bloat" "cargo-bundle"
@@ -308,11 +308,16 @@
           "Safari: Raindrop.io" = 1549370672;
           "Safari: Wayback Machine" = 1472432422;
           "Safari: Web Translator for DeepL" = 6443492610;
+          "Smart JSON Editor" = 1268962404;
           "Testflight" = 899247664;
           #"Tomorrow.io: Weather Forecast" = 1443325509;
           "Ultra CharMap" = 520265986;
           #"Windows App" = 1295203466;
           #"Xcode" = 97799835;
+          "Xcode: XCFormat" = 1165321484;
+          "Xcode: Text Toolset" = 1157225201;
+          "Xcode: Comment Wrapper" = 1377998565;
+          "Xcode: NamingTranslator" = 1218784832;
           #"Yoink" = 457622435;
         };
         onActivation = {
