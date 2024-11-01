@@ -162,7 +162,8 @@
         enable = true;
         brews = [
           ## [lazyman] ## {{{
-          "bob" "clipboard" "gpatch" "gnu-sed" "juliaup" "nvm"
+          #"bob"
+          "clipboard" "gpatch" "gnu-sed" "juliaup" "nvm"
           ## }}}  ## [lazyman]
           "autoenv"
           "cargo-about" "cargo-all-features" "cargo-audit" "cargo-auditable" "cargo-binstall" "cargo-binutils" "cargo-bloat" "cargo-bundle"
