@@ -39,7 +39,7 @@
         # pkgs.vim
         pkgs.any-nix-shell
         pkgs.ascii-image-converter
-        #pkgs.atuin
+        pkgs.atuin
         pkgs.autoconf pkgs.autoconf-archive pkgs.autogen pkgs.automake pkgs.coreutils-full pkgs.gnum4 pkgs.gnumake pkgs.libtool pkgs.perl pkgs.texi2html  # pkgs.binutils-unwrapped-all-targets # pkgs.gcc
         #pkgs.avfs
         pkgs.bash-preexec pkgs.bash_unit pkgs.bashate pkgs.bats pkgs.checkbashisms pkgs.blesh pkgs.shellcheck pkgs.shellcheck-sarif pkgs.shellharden pkgs.shellspec pkgs.shfmt
