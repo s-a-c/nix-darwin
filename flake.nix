@@ -89,7 +89,7 @@
         pkgs.mmv
         pkgs.ncurses
         pkgs.neovim pkgs.neovim-remote pkgs.neovide
-        ## [lazyman-nix]  ## {{{
+        ## [nvim-lazyman]  ## {{{
         pkgs.gitFull pkgs.gitui pkgs.gh pkgs.gist pkgs.lazygit pkgs.tig
         pkgs.curlFull
         pkgs.jq pkgs.jq-lsp pkgs.jq-zsh-plugin pkgs.json_c
@@ -104,7 +104,7 @@
         pkgs.ccls pkgs.ccache pkgs.clang-analyzer pkgs.clang-manpages pkgs.clang-tools pkgs.lldb pkgs.llvm # pkgs.llvm-manpages
         pkgs.xsel
         pkgs.fd
-        ## }}}  ## [lazyman]
+        ## }}}  ## [nvim-lazyman]
         # pkgs.netbird pkgs.netbird-ui
         pkgs.ninja
         pkgs.nix-zsh-completions pkgs.nixfmt-rfc-style pkgs.nixd
@@ -119,6 +119,7 @@
         pkgs.pngpaste
         pkgs.poppler pkgs.poppler_data pkgs.poppler_utils
         # pkgs.postgresql_16 pkgs.postgresql16Packages.postgis pkgs.postgresql16Packages.temporal_tables pkgs.postgresql16Packages.timescaledb pkgs.postgresql16Packages.timescaledb_toolkit # pkgs.pgadmin4 pkgs.pgadmin4-desktopmode
+        pkgs.powerline-fonts pkgs.powerline-symbols
         pkgs.procps
         pkgs.progress
         pkgs.python313Full pkgs.pipx pkgs.rich-cli
