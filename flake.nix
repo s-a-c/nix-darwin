@@ -77,6 +77,7 @@
         pkgs.imagemagickBig pkgs.nsxiv
         pkgs.iterm2
         pkgs.jdk22 # pkgs.jellycli pkgs.jellyfin pkgs.jellyfin-ffmpeg pkgs.jellyfin-media-player pkgs.jellyfin-mpv-shim pkgs.jellyfin-web pkgs.jftui pkgs.mopidy-jellyfin # pkgs.kodi
+        #pkgs.ksnip
         pkgs.lazycli
         pkgs.lesspipe
         pkgs.lilypond-with-fonts
