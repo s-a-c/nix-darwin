@@ -137,6 +137,7 @@
         pkgs.tree
         pkgs.tree-sitter
         pkgs.unar # pkgs.vcpkg pkgs.vcpkg-tool  # pkgs.wireguard-tools
+        pkgs.vivid
         pkgs.yaml-language-server pkgs.yamlfmt pkgs.yamlscript pkgs.yq
         pkgs.yazi
         pkgs.yt-dlp pkgs.yt-dlg # pkgs.tartube-yt-dlp
