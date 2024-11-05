@@ -89,8 +89,8 @@
         pkgs.mmv
         pkgs.mopidy-bandcamp pkgs.mopidy-local pkgs.mopidy-moped pkgs.mopidy-notify pkgs.mopidy-podcast pkgs.mopidy-scrobbler pkgs.mopidy-somafm pkgs.mopidy-soundcloud pkgs.mopidy-spotify pkgs.mopidy-tunein pkgs.mopidy-youtube pkgs.mopidy-ytmusic
         pkgs.ncurses
-        pkgs.neovim pkgs.neovim-remote pkgs.neovide
         ## [nvim-lazyman]  ## {{{
+        #pkgs.neovim pkgs.neovim-remote # pkgs.neovide
         pkgs.gitFull pkgs.gitui pkgs.gh pkgs.gist pkgs.lazygit pkgs.tig
         pkgs.curlFull
         pkgs.jq pkgs.jq-lsp pkgs.jq-zsh-plugin pkgs.json_c
@@ -178,6 +178,7 @@
           "fizsh"
           "gcc" "binutils"
           "ghcup"
+          "neovim" "neovim-remote"
           "nushell"
           # "opam"
           "yubikey-personalization"
@@ -253,6 +254,7 @@
           "microsoft-azure-storage-explorer"
           "microsoft-excel" "microsoft-onenote" "microsoft-outlook" "microsoft-powerpoint" "microsoft-teams" "microsoft-word" "onedrive" "windows-app" # "microsoft-office-businesspro" "microsoft-remote-desktop"
           "musescore"
+          "neovide"
           "nextcloud"
           "notion" "notion-calendar" "notion-enhanced"
           "obs" "droidcam-obs" "obs-advanced-scene-switcher" "obs-backgroundremoval" "obs-websocket"
