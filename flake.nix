@@ -62,7 +62,7 @@
         pkgs.exiftool
         pkgs.eza
         pkgs.fastfetch
-        pkgs.ffmpeg_7-full pkgs.ffmpegthumbnailer pkgs.mediainfo pkgs.mediainfo-gui pkgs.mpc-cli pkgs.ncmpcpp pkgs.mpd pkgs.mpv
+        pkgs.ffmpeg_7-full pkgs.ffmpegthumbnailer pkgs.mediainfo pkgs.mediainfo-gui pkgs.mpc pkgs.rmpc pkgs.mpd pkgs.mpv pkgs.mpvc
         pkgs.figlet
         pkgs.findutils
         pkgs.fortune pkgs.cowsay pkgs.ponysay pkgs.taoup pkgs.tewisay
@@ -76,7 +76,7 @@
         pkgs.gum
         pkgs.imagemagickBig pkgs.nsxiv
         pkgs.iterm2
-        pkgs.jdk22 # pkgs.jellycli pkgs.jellyfin pkgs.jellyfin-ffmpeg pkgs.jellyfin-media-player pkgs.jellyfin-mpv-shim pkgs.jellyfin-web pkgs.jftui pkgs.mopidy-jellyfin # pkgs.kodi
+        pkgs.jdk23 # pkgs.jellycli pkgs.jellyfin pkgs.jellyfin-ffmpeg pkgs.jellyfin-media-player pkgs.jellyfin-mpv-shim pkgs.jellyfin-web pkgs.jftui pkgs.mopidy-jellyfin # pkgs.kodi
         #pkgs.ksnip
         pkgs.lazycli
         pkgs.lesspipe
@@ -87,6 +87,7 @@
         pkgs.micro
         pkgs.mkalias
         pkgs.mmv
+        pkgs.mopidy-bandcamp pkgs.mopidy-local pkgs.mopidy-moped pkgs.mopidy-notify pkgs.mopidy-podcast pkgs.mopidy-scrobbler pkgs.mopidy-somoafm pkgs.mopidy-soundcloud pkgs.mopidy-spotify pkgs.mopidy-tunein pkgs.mopidy-youtube pkgs.mopidy-ytmusic
         pkgs.ncurses
         pkgs.neovim pkgs.neovim-remote pkgs.neovide
         ## [nvim-lazyman]  ## {{{
@@ -113,7 +114,7 @@
         pkgs.openssh_hpn
         pkgs.openssl
         pkgs.parallel-full
-        pkgs.perl538Packages.XMLParser pkgs.perl538Packages.CPAN pkgs.perl538Packages.CPANPLUS pkgs.rakudo pkgs.zef
+        pkgs.perl pkgs.rakudo pkgs.zef
         #pkgs.php83 pkgs.php83Packages.composer pkgs.php83Packages.phpstan pkgs.phpunit pkgs.laravel # pkgs.php83Packages.composer-local-repo-plugin pkgs.php83Packages.psysh
         pkgs.pkg-config
         pkgs.pngpaste
