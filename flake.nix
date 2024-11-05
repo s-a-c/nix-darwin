@@ -62,7 +62,7 @@
         pkgs.exiftool
         pkgs.eza
         pkgs.fastfetch
-        pkgs.ffmpeg_7-full pkgs.ffmpegthumbnailer pkgs.mediainfo pkgs.mediainfo-gui pkgs.mpc pkgs.mpd pkgs.mpv
+        pkgs.ffmpeg_7-full pkgs.ffmpegthumbnailer pkgs.mediainfo pkgs.mediainfo-gui pkgs.mpd pkgs.mpv
         pkgs.figlet
         pkgs.findutils
         pkgs.fortune pkgs.cowsay pkgs.ponysay pkgs.taoup pkgs.tewisay
@@ -330,6 +330,10 @@
       nix = {
         extraOptions = ''
           extra-platforms = x86_64-darwin aarch64-darwin
+          keep-derivations = true
+          keep-failed = false
+          keep-going = true
+          keep-outputs = true
         '';
 
         # Automatically run the garbage collector at a specific time.
@@ -345,7 +349,7 @@
           #   and replaces them with hard links to a single copy.
           # This saves disk space.
           # If set to false (the default), you can still run nix-store --optimise to get rid of duplicate files.
-          auto-optimise-store = true;
+          auto-optimise-store = false;
 
           # Necessary for using flakes on this system.
           experimental-features = "nix-command flakes";
