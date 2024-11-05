@@ -62,7 +62,7 @@
         pkgs.exiftool
         pkgs.eza
         pkgs.fastfetch
-        pkgs.ffmpeg_7-full pkgs.ffmpegthumbnailer pkgs.mediainfo pkgs.mediainfo-gui pkgs.mpc pkgs.rmpc pkgs.mpd pkgs.mpv pkgs.mpvc
+        pkgs.ffmpeg_7-full pkgs.ffmpegthumbnailer pkgs.mediainfo pkgs.mediainfo-gui pkgs.mpc pkgs.mpd pkgs.mpv pkgs.mpvc
         pkgs.figlet
         pkgs.findutils
         pkgs.fortune pkgs.cowsay pkgs.ponysay pkgs.taoup pkgs.tewisay
