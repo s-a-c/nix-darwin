@@ -87,7 +87,7 @@
         pkgs.micro
         pkgs.mkalias
         pkgs.mmv
-        pkgs.mopidy-bandcamp pkgs.mopidy-local pkgs.mopidy-moped pkgs.mopidy-notify pkgs.mopidy-podcast pkgs.mopidy-scrobbler pkgs.mopidy-somoafm pkgs.mopidy-soundcloud pkgs.mopidy-spotify pkgs.mopidy-tunein pkgs.mopidy-youtube pkgs.mopidy-ytmusic
+        pkgs.mopidy-bandcamp pkgs.mopidy-local pkgs.mopidy-moped pkgs.mopidy-notify pkgs.mopidy-podcast pkgs.mopidy-scrobbler pkgs.mopidy-somafm pkgs.mopidy-soundcloud pkgs.mopidy-spotify pkgs.mopidy-tunein pkgs.mopidy-youtube pkgs.mopidy-ytmusic
         pkgs.ncurses
         pkgs.neovim pkgs.neovim-remote pkgs.neovide
         ## [nvim-lazyman]  ## {{{
