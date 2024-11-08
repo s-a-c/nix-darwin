@@ -36,118 +36,319 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [
-        # pkgs.vim
+        #pkgs.avfs
+        #pkgs.binutils-unwrapped-all-targets
+        #pkgs.clolcat
+        #pkgs.corepack_latest
+        #pkgs.darwin.xcode
+        #pkgs.gcc
+        #pkgs.guix
+        #pkgs.jellycli
+        #pkgs.jellyfin
+        #pkgs.jellyfin-ffmpeg
+        #pkgs.jellyfin-media-player
+        #pkgs.jellyfin-mpv-shim
+        #pkgs.jellyfin-web
+        #pkgs.jftui
+        #pkgs.julia
+        #pkgs.kodi
+        #pkgs.ksnip
+        #pkgs.laravel
+        #pkgs.llvm-manpages
+        #pkgs.mopidy-jellyfin
+        #pkgs.neovide
+        #pkgs.neovim
+        #pkgs.neovim-remote
+        #pkgs.netbird
+        #pkgs.netbird-ui
+        #pkgs.nu_scripts
+        #pkgs.nufmt
+        #pkgs.nushell
+        #pkgs.nushellPlugins.formats
+        #pkgs.nushellPlugins.gstat
+        #pkgs.nushellPlugins.net
+        #pkgs.nushellPlugins.query
+        #pkgs.pgadmin4
+        #pkgs.pgadmin4-desktopmode
+        #pkgs.php83
+        #pkgs.php83Packages.composer
+        #pkgs.php83Packages.composer-local-repo-plugin
+        #pkgs.php83Packages.phpstan
+        #pkgs.php83Packages.psysh
+        #pkgs.phpunit
+        #pkgs.postgresql_16
+        #pkgs.postgresql16Packages.postgis
+        #pkgs.postgresql16Packages.temporal_tables
+        #pkgs.postgresql16Packages.timescaledb
+        #pkgs.postgresql16Packages.timescaledb_toolkit
+        #pkgs.powerline-fonts
+        #pkgs.powerline-symbols
+        #pkgs.rubyPackages_3_3.sass
+        #pkgs.rustup
+        #pkgs.scribus
+        #pkgs.tailscale
+        #pkgs.tailscale-nginx-auth
+        #pkgs.tailscalesd
+        #pkgs.tartube-yt-dlp
+        #pkgs.tmux
+        #pkgs.typescript
+        #pkgs.vcpkg
+        #pkgs.vim
+        #pkgs.wireguard-tools
+        #pkgs.yubikey-personalization
+        #pkgs.yubikey-personalization-gui
+        #pkgs.yubikey-touch-detector
+        #pkgs.zig
+        #pkgs.zig-shell-completions
+        #pkgs.zls
+        #pkgs.zsh
+        #pkgs.zsh-abbr
+        #pkgs.zsh-autocomplete
+        #pkgs.zsh-autopair
+        #pkgs.zsh-autosuggestions
+        #pkgs.zsh-completions
+        #pkgs.zsh-f-sy-h
+        #pkgs.zsh-forgit
+        #pkgs.zsh-fzf-history-search
+        #pkgs.zsh-history-search-multi-word
+        #pkgs.zsh-history-substring-search
+        #pkgs.zsh-navigation-tools
+        #pkgs.zsh-nix-shell
+        #pkgs.zsh-you-should-use
+        #pkgs.zsh-zhooks
+        #pkgs.ztags
         pkgs.any-nix-shell
         pkgs.ascii-image-converter
         pkgs.atuin
-        pkgs.autoconf pkgs.autoconf-archive pkgs.autogen pkgs.automake pkgs.coreutils-full pkgs.gnum4 pkgs.gnumake pkgs.libtool pkgs.perl pkgs.texi2html  # pkgs.binutils-unwrapped-all-targets # pkgs.gcc
-        #pkgs.avfs
-        pkgs.bash-preexec pkgs.bash_unit pkgs.bashate pkgs.bats pkgs.checkbashisms pkgs.blesh pkgs.shellcheck pkgs.shellcheck-sarif pkgs.shellharden pkgs.shellspec pkgs.shfmt
-        pkgs.bat pkgs.bat-extras.batdiff pkgs.bat-extras.batgrep pkgs.bat-extras.batman pkgs.bat-extras.batpipe pkgs.bat-extras.batwatch pkgs.bat-extras.prettybat
+        pkgs.autoconf
+        pkgs.autoconf-archive
+        pkgs.autogen
+        pkgs.automake
+        pkgs.bash_unit
+        pkgs.bash-preexec
+        pkgs.bashate
+        pkgs.bat
+        pkgs.bat-extras.batdiff
+        pkgs.bat-extras.batgrep
+        pkgs.bat-extras.batman
+        pkgs.bat-extras.batpipe
+        pkgs.bat-extras.batwatch
+        pkgs.bat-extras.prettybat
+        pkgs.bats
+        pkgs.blesh
         pkgs.btop
         pkgs.bun
         pkgs.bzip2
+        pkgs.cacert
         pkgs.carapace
+        pkgs.ccache
+        pkgs.ccls
         pkgs.chafa
+        pkgs.checkbashisms
+        pkgs.chruby
+        pkgs.clang-analyzer
+        pkgs.clang-manpages
+        pkgs.clang-tools
         pkgs.clipse
-        pkgs.clojure pkgs.clojure-lsp pkgs.cq pkgs.guile pkgs.guile-lib pkgs.racket pkgs.roswell # pkgs.corepack_latest pkgs.typescript # pkgs.guix
-        pkgs.dart pkgs.dart-sass pkgs.stylelint pkgs.tailwindcss pkgs.tailwindcss-language-server # pkgs.darwin.xcode
+        pkgs.clojure
+        pkgs.clojure-lsp
+        pkgs.coreutils-full
+        pkgs.cowsay
+        pkgs.cq
+        pkgs.curlFull
+        pkgs.dart
+        pkgs.dart-sass
         pkgs.dbus
         pkgs.deno
+        pkgs.dwt1-shell-color-scripts
         pkgs.e2fsprogs
-        pkgs.editorconfig-core-c pkgs.editorconfig-checker
+        pkgs.editorconfig-checker
+        pkgs.editorconfig-core-c
+        pkgs.elixir
+        pkgs.elixir-ls
         pkgs.elvish
-        pkgs.erlang_27 pkgs.erlang-ls pkgs.erlfmt pkgs.lfe pkgs.rebar3 pkgs.elixir pkgs.elixir-ls pkgs.livebook pkgs.gleam
+        pkgs.erlang_27
+        pkgs.erlang-ls
+        pkgs.erlfmt
         pkgs.exercism
         pkgs.exiftool
         pkgs.eza
         pkgs.fastfetch
-        pkgs.ffmpeg_7-full pkgs.ffmpegthumbnailer pkgs.mediainfo pkgs.mediainfo-gui pkgs.mpd pkgs.mpv
+        pkgs.fd
+        pkgs.fennel-ls
+        pkgs.ffmpeg_7-full
+        pkgs.ffmpegthumbnailer
         pkgs.figlet
         pkgs.findutils
-        pkgs.fortune pkgs.cowsay pkgs.ponysay pkgs.taoup pkgs.tewisay
-        pkgs.fzf pkgs.fzf-git-sh pkgs.fzf-make pkgs.fzf-obc pkgs.fzf-zsh pkgs.gh-f pkgs.sysz pkgs.ytfzf pkgs.zsh-forgit pkgs.zsh-fzf-history-search
+        pkgs.fnlfmt
+        pkgs.fortune
+        pkgs.fzf
+        pkgs.fzf-git-sh
+        pkgs.fzf-make
+        pkgs.fzf-obc
+        pkgs.fzf-zsh
         pkgs.gettext
+        pkgs.gh
+        pkgs.gh-f
+        pkgs.gist
+        pkgs.gitFull
+        pkgs.gitui
+        pkgs.gleam
         pkgs.gmp
         pkgs.gnugrep
+        pkgs.gnum4
+        pkgs.gnumake
         pkgs.gnupatch
-        pkgs.gnupg pkgs.gpa pkgs.gpg-tui pkgs.pinentry_mac pkgs.cacert
-        pkgs.go pkgs.gopls
+        pkgs.gnupg
+        pkgs.go
+        pkgs.gopls
+        pkgs.gpa
+        pkgs.gpg-tui
+        pkgs.guile
+        pkgs.guile-lib
         pkgs.gum
-        pkgs.imagemagickBig pkgs.nsxiv
+        pkgs.imagemagickBig
         pkgs.iterm2
-        pkgs.jdk23 # pkgs.jellycli pkgs.jellyfin pkgs.jellyfin-ffmpeg pkgs.jellyfin-media-player pkgs.jellyfin-mpv-shim pkgs.jellyfin-web pkgs.jftui pkgs.mopidy-jellyfin # pkgs.kodi
-        #pkgs.ksnip
+        pkgs.jdk23
+        pkgs.jq
+        pkgs.jq-lsp
+        pkgs.jq-zsh-plugin
+        pkgs.json_c
         pkgs.lazycli
+        pkgs.lazygit
+        pkgs.lazysql
+        pkgs.lemonade
         pkgs.lesspipe
+        pkgs.lfe
+        pkgs.libtool
         pkgs.lilypond-with-fonts
-        pkgs.lolcat pkgs.dwt1-shell-color-scripts # pkgs.clolcat
+        pkgs.livebook
+        pkgs.lldb
+        pkgs.llvm
+        pkgs.lolcat
         pkgs.lorri
+        pkgs.lsd
+        pkgs.lua-language-server
+        pkgs.lua54Packages.fennel
+        pkgs.lua54Packages.lua
+        pkgs.lua54Packages.luacheck
+        pkgs.lua54Packages.luarepl
+        pkgs.lua54Packages.luarocks
         pkgs.mas
+        pkgs.mediainfo
+        pkgs.mediainfo-gui
         pkgs.micro
         pkgs.mkalias
         pkgs.mmv
-        pkgs.mopidy-bandcamp pkgs.mopidy-local pkgs.mopidy-moped pkgs.mopidy-notify pkgs.mopidy-podcast pkgs.mopidy-scrobbler pkgs.mopidy-somafm pkgs.mopidy-soundcloud pkgs.mopidy-spotify pkgs.mopidy-tunein pkgs.mopidy-youtube pkgs.mopidy-ytmusic
+        pkgs.mopidy-bandcamp
+        pkgs.mopidy-local
+        pkgs.mopidy-moped
+        pkgs.mopidy-notify
+        pkgs.mopidy-podcast
+        pkgs.mopidy-scrobbler
+        pkgs.mopidy-somafm
+        pkgs.mopidy-soundcloud
+        pkgs.mopidy-spotify
+        pkgs.mopidy-tunein
+        pkgs.mopidy-youtube
+        pkgs.mopidy-ytmusic
+        pkgs.mpd
+        pkgs.mpv
         pkgs.ncurses
-        ## [nvim-lazyman]  ## {{{
-        #pkgs.neovim pkgs.neovim-remote # pkgs.neovide
-        pkgs.gitFull pkgs.gitui pkgs.gh pkgs.gist pkgs.lazygit pkgs.tig
-        pkgs.curlFull
-        pkgs.jq pkgs.jq-lsp pkgs.jq-zsh-plugin pkgs.json_c
-        pkgs.unzip
-        pkgs.wget
-        pkgs.xclip
-        pkgs.lua54Packages.lua pkgs.lua-language-server pkgs.lua54Packages.luacheck pkgs.lua54Packages.luarepl pkgs.lua54Packages.luarocks pkgs.stylua pkgs.lua54Packages.fennel pkgs.fennel-ls pkgs.fnlfmt
-        pkgs.ripgrep
-        pkgs.zoxide # pkgs.julia
-        pkgs.lemonade
-        pkgs.lsd
-        pkgs.ccls pkgs.ccache pkgs.clang-analyzer pkgs.clang-manpages pkgs.clang-tools pkgs.lldb pkgs.llvm # pkgs.llvm-manpages
-        pkgs.xsel
-        pkgs.fd
-        ## }}}  ## [nvim-lazyman]
-        # pkgs.netbird pkgs.netbird-ui
         pkgs.ninja
-        pkgs.nix-zsh-completions pkgs.nixfmt-rfc-style pkgs.nixd
-        #pkgs.nushell pkgs.nushellPlugins.formats pkgs.nushellPlugins.gstat pkgs.nushellPlugins.net pkgs.nushellPlugins.query pkgs.nu_scripts pkgs. nufmt
-        pkgs.odin pkgs.ols
+        pkgs.nix-zsh-completions
+        pkgs.nixd
+        pkgs.nixfmt-rfc-style
+        pkgs.nsxiv
+        pkgs.odin
+        pkgs.ols
         pkgs.openssh_hpn
         pkgs.openssl
         pkgs.parallel-full
-        pkgs.perl pkgs.rakudo pkgs.zef
-        #pkgs.php83 pkgs.php83Packages.composer pkgs.php83Packages.phpstan pkgs.phpunit pkgs.laravel # pkgs.php83Packages.composer-local-repo-plugin pkgs.php83Packages.psysh
+        pkgs.perl
+        pkgs.pinentry_mac
+        pkgs.pipx
         pkgs.pkg-config
         pkgs.pngpaste
-        pkgs.poppler pkgs.poppler_data pkgs.poppler_utils
-        # pkgs.postgresql_16 pkgs.postgresql16Packages.postgis pkgs.postgresql16Packages.temporal_tables pkgs.postgresql16Packages.timescaledb pkgs.postgresql16Packages.timescaledb_toolkit # pkgs.pgadmin4 pkgs.pgadmin4-desktopmode
-        pkgs.powerline-fonts pkgs.powerline-symbols
+        pkgs.ponysay
+        pkgs.poppler
+        pkgs.poppler_data
+        pkgs.poppler_utils
         pkgs.procps
         pkgs.progress
-        pkgs.python313Full pkgs.pipx pkgs.rich-cli
+        pkgs.python313Full
+        pkgs.racket
+        pkgs.rakudo
         pkgs.ranger
+        pkgs.rebar3
+        pkgs.rich-cli
+        pkgs.ripgrep
         pkgs.rlwrap
-        pkgs.ruby_3_3 pkgs.rubyPackages_3_3.rails pkgs.rubyPackages_3_3.ruby-lsp pkgs.rubyPackages_3_3.sass-listen pkgs.rubyPackages_3_3.sassc pkgs.chruby # pkgs.rubyPackages_3_3.sass # pkgs.rustup
-        pkgs.screen # pkgs.scribus
+        pkgs.roswell
+        pkgs.ruby_3_3
+        pkgs.rubyPackages_3_3.rails
+        pkgs.rubyPackages_3_3.ruby-lsp
+        pkgs.rubyPackages_3_3.sass-listen
+        pkgs.rubyPackages_3_3.sassc
+        pkgs.screen
         pkgs.sheldon
-        pkgs.sqlite pkgs.sqlite-utils pkgs.sqlite-web pkgs.sqlar pkgs.sqlcipher pkgs.sqldiff pkgs.spatialite_tools pkgs.lazysql
-        pkgs.starship # pkgs.tailscale pkgs.tailscale-nginx-auth pkgs.tailscalesd
+        pkgs.shellcheck
+        pkgs.shellcheck-sarif
+        pkgs.shellharden
+        pkgs.shellspec
+        pkgs.shfmt
+        pkgs.spatialite_tools
+        pkgs.sqlar
+        pkgs.sqlcipher
+        pkgs.sqldiff
+        pkgs.sqlite
+        pkgs.sqlite-utils
+        pkgs.sqlite-web
+        pkgs.starship
         pkgs.stow
-        pkgs.tcl pkgs.tclx pkgs.tix pkgs.tk pkgs.tkman
+        pkgs.stylelint
+        pkgs.stylua
+        pkgs.sysz
+        pkgs.tailwindcss
+        pkgs.tailwindcss-language-server
+        pkgs.taoup
+        pkgs.tcl
+        pkgs.tclx
         pkgs.tealdeer
+        pkgs.tewisay
+        pkgs.texi2html
         pkgs.texliveFull
-        pkgs.tigerbeetle  # pkgs.tmux
+        pkgs.tig
+        pkgs.tigerbeetle
+        pkgs.tix
+        pkgs.tk
+        pkgs.tkman
         pkgs.trash-cli
         pkgs.tree
         pkgs.tree-sitter
-        pkgs.unar # pkgs.vcpkg pkgs.vcpkg-tool  # pkgs.wireguard-tools
+        pkgs.unar
+        pkgs.unzip
+        pkgs.vcpkg-tool
         pkgs.vivid
-        pkgs.yaml-language-server pkgs.yamlfmt pkgs.yamlscript pkgs.yq
+        pkgs.wget
+        pkgs.xclip
+        pkgs.xsel
+        pkgs.yaml-language-server
+        pkgs.yamlfmt
+        pkgs.yamlscript
         pkgs.yazi
-        pkgs.yt-dlp pkgs.yt-dlg # pkgs.tartube-yt-dlp
-        pkgs.yubico-pam pkgs.yubico-piv-tool pkgs.yubikey-agent pkgs.yubikey-manager # pkgs.yubikey-personalization pkgs.yubikey-personalization-gui # pkgs.yubikey-touch-detector
-        pkgs.zellij # pkgs.zig pkgs.zig-shell-completions pkgs.zls pkgs.ztags
+        pkgs.yq
+        pkgs.yt-dlg
+        pkgs.yt-dlp
+        pkgs.ytfzf
+        pkgs.yubico-pam
+        pkgs.yubico-piv-tool
+        pkgs.yubikey-agent
+        pkgs.yubikey-manager
+        pkgs.zef
+        pkgs.zellij
         pkgs.zlib
-        # pkgs.zsh pkgs.zsh-abbr pkgs.zsh-autocomplete pkgs.zsh-autopair pkgs.zsh-autosuggestions pkgs.zsh-completions pkgs.zsh-f-sy-h pkgs.zsh-history-search-multi-word pkgs.zsh-history-substring-search pkgs.zsh-navigation-tools pkgs.zsh-you-should-use pkgs.zsh-nix-shell pkgs.zsh-zhooks
+        pkgs.zoxide
         pkgs.zstd
         pkgs.zunit
       ];
@@ -166,43 +367,216 @@
 
       homebrew = {
         enable = true;
-        brews = [
-          ## [lazyman] ## {{{
-          #"bob"
-          "clipboard" "gpatch" "gnu-sed" "juliaup" "nvm"
-          ## }}}  ## [lazyman]
+        brews = [ ## ==> Formulae
+          "aom"
+          "asciinema"
           "autoenv"
-          "cargo-about" "cargo-all-features" "cargo-audit" "cargo-auditable" "cargo-binstall" "cargo-binutils" "cargo-bloat" "cargo-bundle"
-          "cargo-c" "cargo-crev" "cargo-deny" "cargo-depgraph" "cargo-deps" "cargo-docset" "cargo-edit" "cargo-fuzz" "cargo-generate" "cargo-instruments" "cargo-llvm-cov" "cargo-llvm-lines" "cargo-make" "cargo-nextest" "cargo-outdated" "cargo-release" "cargo-sweep" "cargo-udeps" "cargo-watch" "cargo-zigbuild"
+          "bdw-gc"
+          "binutils"
+          "brotli"
+          "c-ares"
+          "c2048"
+          "ca-certificates"
+          "cairo"
+          "cargo-about"
+          "cargo-all-features"
+          "cargo-audit"
+          "cargo-auditable"
+          "cargo-binstall"
+          "cargo-binutils"
+          "cargo-bloat"
+          "cargo-bundle"
+          "cargo-c"
+          "cargo-crev"
+          "cargo-deny"
+          "cargo-depgraph"
+          "cargo-deps"
+          "cargo-docset"
+          "cargo-edit"
+          "cargo-fuzz"
+          "cargo-generate"
+          "cargo-instruments"
+          "cargo-llvm-cov"
+          "cargo-llvm-lines"
+          "cargo-make"
+          "cargo-nextest"
+          "cargo-outdated"
+          "cargo-release"
+          "cargo-sweep"
+          "cargo-udeps"
+          "cargo-watch"
+          "cargo-zigbuild"
+          "cffi"
+          "clipboard"
+          "cmatrix"
+          "coreutils"
+          "curl"
+          "deno"
+          "dialog"
+          "fish"
           "fisher"
           "fizsh"
-          "gcc" "binutils"
+          "fontconfig"
+          "freetype"
+          "fribidi"
+          "gcc"
+          "gettext"
           "ghcup"
-          "neovim" "neovim-remote"
+          "ghostscript"
+          "giflib"
+          "glib"
+          "gmime"
+          "gmp"
+          "gnu-sed"
+          "gnupg"
+          "gnutls"
+          "gpatch"
+          "gpgme"
+          "graphite2"
+          "greed"
+          "harfbuzz"
+          "highway"
+          "icu4c@76"
+          "imagemagick"
+          "imath"
+          "imlib2"
+          "isl"
+          "jasper"
+          "jbig2dec"
+          "jpeg-turbo"
+          "jpeg-xl"
+          "json-c"
+          "juliaup"
+          "leptonica"
+          "libarchive"
+          "libassuan"
+          "libb2"
+          "libcaca"
+          "libde265"
+          "libdeflate"
+          "libevent"
+          "libgcrypt"
+          "libgit2"
+          "libgit2@1.7"
+          "libgpg-error"
+          "libheif"
+          "libiconv"
+          "libidn"
+          "libidn2"
+          "libksba"
+          "liblqr"
+          "libmpc"
+          "libnghttp2"
+          "libomp"
+          "libpng"
+          "libraw"
+          "libssh2"
+          "libtasn1"
+          "libtiff"
+          "libtool"
+          "libunistring"
+          "libusb"
+          "libuv"
+          "libvmaf"
+          "libvterm"
+          "libx11"
+          "libxau"
+          "libxcb"
+          "libxdmcp"
+          "libxext"
+          "libxrender"
+          "libyubikey"
+          "little-cms2"
+          "lmdb"
+          "lpeg"
+          "lua"
+          "luajit"
+          "luv"
+          "lz4"
+          "lzo"
+          "m4"
+          "mas"
+          "mpdecimal"
+          "mpfr"
+          "mplayer"
+          "msgpack"
+          "nbsdgames"
+          "ncurses"
+          "neofetch"
+          "neomutt"
+          "neovim-remote"
+          "neovim"
+          "nethack"
+          "nettle"
+          "newsboat"
+          "ninvaders"
+          "node"
+          "notmuch"
+          "npth"
+          "nudoku"
           "nushell"
-          # "opam"
-          "yubikey-personalization"
-          "zig" "zigmod"
+          "nvm"
+          "openexr"
+          "openjpeg"
+          "openssl@3"
+          "p11-kit"
+          "pango"
+          "pcre"
+          "pcre2"
+          "pinentry"
+          "pixman"
+          "portaudio"
+          "pycparser"
+          "python-packaging"
+          "python@3.12"
+          "python@3.13"
+          "readline"
+          "rtmpdump"
+          "screenresolution"
+          "shared-mime-info"
+          "speedtest-cli"
+          "sqlite"
+          "talloc"
+          "tesseract"
+          "tokyo-cabinet"
+          "tree-sitter"
+          "unbound"
+          "unibilium"
+          "w3m"
+          "webp"
+          "x265"
+          "xapian"
+          "xorgproto"
+          "xz"
+          "ykpers"
+          "z3"
+          "zig"
+          "zigmod"
           "zsh-lovers"
+          "zsh"
+          "zstd"
         ];
-        casks = [
+        casks = [ ## ==> Casks
           "adium"
-          "alacritty" "kitty" "warp" "wezterm"
+          "alacritty"
           "alfred"
           "amethyst"
-          "arc" "wavebox" "zen-browser" # "brave-browser" "chrome" "firefox" "opera" "safari" "microsoft-edge@beta"
-          "BBEdit" "cursor" "visual-studio-code" "zed"
+          "arc"
+          "bbedit"
           "bitwarden"
-          "blender" "blender-benchmark"
+          "blender-benchmark"
+          "blender"
           "brewservicesmenubar"
           "chatgpt"
           "cmake"
           "copyq"
           "crossover"
+          "cursor"
           "devtoys"
           "discord"
           "docker"
           "dotnet-sdk"
+          "droidcam-obs"
           "duckduckgo"
           "dyalog"
           "emacs@pretest"
@@ -225,8 +599,10 @@
           "font-zen-loop"
           "git-credential-manager"
           "github"
-          "gitkraken" "gitkraken-cli"
-          "godot" "godot-mono"
+          "gitkraken-cli"
+          "gitkraken"
+          "godot-mono"
+          "godot"
           "gpg-suite"
           "hammerspoon"
           "herd"
@@ -234,11 +610,15 @@
           "inkscape"
           "insync"
           "itermai"
-          "jellyfin" "jellyfin-media-player"
-          "jetbrains-gateway" "jetbrains-space" "jetbrains-toolbox"
+          "jellyfin-media-player"
+          "jellyfin"
+          "jetbrains-gateway"
+          "jetbrains-space"
+          "jetbrains-toolbox"
           "jupyterlab"
           "karabiner-elements"
           "keycast"
+          "kitty"
           "kodi"
           "languagetool"
           "launchcontrol"
@@ -249,45 +629,71 @@
           "macfuse"
           "mediainfo"
           "mediainfoex"
-          "Messenger"
+          "messenger"
           "microsoft-auto-update"
           "microsoft-azure-storage-explorer"
-          "microsoft-excel" "microsoft-onenote" "microsoft-outlook" "microsoft-powerpoint" "microsoft-teams" "microsoft-word" "onedrive" "windows-app" # "microsoft-office-businesspro" "microsoft-remote-desktop"
+          "microsoft-excel"
+          "microsoft-onenote"
+          "microsoft-outlook"
+          "microsoft-powerpoint"
+          "microsoft-teams"
+          "microsoft-word"
           "musescore"
           "neovide"
           "nextcloud"
-          "notion" "notion-calendar" "notion-enhanced"
-          "obs" "droidcam-obs" "obs-advanced-scene-switcher" "obs-backgroundremoval" "obs-websocket"
+          "notesollama"
+          "notion-calendar"
+          "notion-enhanced"
+          "notion"
+          "obs-advanced-scene-switcher"
+          "obs-backgroundremoval"
+          "obs-websocket"
+          "obs"
           "obsidian"
-          "ollama" "ollamac" "notesollama"
+          "ollama"
+          "ollamac"
+          "onedrive"
           "onyx"
+          "opera@beta"
           "paragon-extfs"
           "pgadmin4"
           "porting-kit"
           "powershell"
           "quarto"
-          "r" "rstudio"
+          "r"
           "raycast"
+          "rstudio"
           "scribus"
           "setapp"
-          "slack" "slack-cli"
+          "slack-cli"
+          "slack"
           "spotify"
-          "sqlitemanager" "sqlitestudio"
-          "steam" "steamcmd"  # "steam-plus-plus"
+          "sqlitemanager"
+          "sqlitestudio"
+          "steam"
+          "steamcmd"
           "swiftformat-for-xcode"
           "sync"
           "tex-live-utility"
           "the-unarchiver"
-          "vlc" "vlc-setup" "vlc-webplugin"
+          "visual-studio-code"
+          "vlc-setup"
+          "vlc-webplugin"
+          "vlc"
           "vmware-fusion"
           "wakatime"
+          "warp"
+          "wavebox"
+          "wezterm"
           "whatsapp"
+          "windows-app"
           "xcodeclangformat"
           "youtube-downloader"
           "ytmdesktop-youtube-music"
           "yubico-yubikey-manager"
+          "zed"
+          "zen-browser"
           "zenmap"
-          #"zsh-abbr" "zsh-async" "zsh-autocomplete" "zsh-autopair" "zsh-autosuggestions" "zsh-completions" "zsh-fast-syntax-highlighting" "zsh-git-prompt" "zsh-history-substring-search" "zsh-navigation-tools" "zsh-syntax-highlighting" "zsh-vi-mode" "zsh-you-should-use"
         ];
         masApps = {
           "Amazon Prime Video" = 545519333;
