@@ -38,11 +38,13 @@
       environment.systemPackages = [
         #pkgs.avfs
         #pkgs.binutils-unwrapped-all-targets
+        #pkgs.chruby
         #pkgs.clolcat
         #pkgs.corepack_latest
         #pkgs.darwin.xcode
         #pkgs.gcc
         #pkgs.guix
+        #pkgs.jdk23
         #pkgs.jellycli
         #pkgs.jellyfin
         #pkgs.jellyfin-ffmpeg
@@ -145,7 +147,6 @@
         pkgs.ccls
         pkgs.chafa
         pkgs.checkbashisms
-        pkgs.chruby
         pkgs.clang-analyzer
         pkgs.clang-manpages
         pkgs.clang-tools
@@ -209,7 +210,6 @@
         pkgs.gum
         pkgs.imagemagickBig
         pkgs.iterm2
-        pkgs.jdk23
         pkgs.jq
         pkgs.jq-lsp
         pkgs.jq-zsh-plugin
@@ -407,6 +407,7 @@
           "cargo-watch"
           "cargo-zigbuild"
           "cffi"
+          "chruby"
           "clipboard"
           "cmatrix"
           "coreutils"
@@ -655,6 +656,8 @@
           "onedrive"
           "onyx"
           "opera@beta"
+          "oracle-jdk"
+          "oracle-jdk-javadoc"
           "paragon-extfs"
           "pgadmin4"
           "porting-kit"
