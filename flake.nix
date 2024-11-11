@@ -262,7 +262,7 @@
         pkgs.nsxiv
         pkgs.odin
         pkgs.ols
-        pkgs.openssh_hpn
+        #pkgs.openssh_hpn
         pkgs.openssl
         pkgs.parallel-full
         pkgs.perl
@@ -604,6 +604,7 @@
           "gitkraken"
           "godot-mono"
           "godot"
+          "google-chrome"
           "gpg-suite"
           "hammerspoon"
           "herd"
