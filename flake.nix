@@ -710,6 +710,7 @@
         masApps = {
           "Amazon Prime Video" = 545519333;
           "Apple Develooper" = 640199958;
+          "iPulse" = 1028916583;
           "Kindle" = 302584613;
           "LanguageTool - Grammar Checker" = 1534275760;
           #"Messenger" = 1480068668;
