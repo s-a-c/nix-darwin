@@ -27,10 +27,16 @@
       url = "github:homebrew/homebrew-core";
       flake = false;
     };
+    homebrew-dutis = {
+      url = "github:tsonglew/dutis";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew,
-    homebrew-bundle, homebrew-cask, homebrew-core, ... }:
+    homebrew-bundle, homebrew-cask, homebrew-core,
+    homebrew-dutis,
+    ... }:
   let
     configuration = { pkgs, config, ... }: {
       # List packages installed in system profile. To search by name, run:
@@ -415,6 +421,7 @@
           "deno"
           "dialog"
           "duti"
+          "dutis"
           "fish"
           "fisher"
           "fizsh"
@@ -734,6 +741,15 @@
           "Xcode: NamingTranslator" = 1218784832;
           #"Yoink" = 457622435;
         };
+        taps = [
+          # "homebrew/bundle"
+          # "homebrew/cask"
+          # "homebrew/core"
+          { name = "tsonglew/dutis";
+            clone_target = "https://github.com/tsonglew/dutis.git";
+            force_auto_update = true;
+          }
+        ];
         onActivation = {
           cleanup = "zap";
           extraFlags = [ "--verbose" ];
@@ -1020,6 +1036,7 @@
               "homebrew/homebrew-bundle" = homebrew-bundle;
               "homebrew/homebrew-cask" = homebrew-cask;
               "homebrew/homebrew-core" = homebrew-core;
+              "tsonglew/dutis" = homebrew-dutis;
             };
           };
         }
