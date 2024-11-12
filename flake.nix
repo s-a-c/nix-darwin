@@ -414,6 +414,7 @@
           "curl"
           "deno"
           "dialog"
+          "duti"
           "fish"
           "fisher"
           "fizsh"
