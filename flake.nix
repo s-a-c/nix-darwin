@@ -48,6 +48,11 @@
         #pkgs.clolcat
         #pkgs.corepack_latest
         #pkgs.darwin.xcode
+        #pkgs.fzf
+        #pkgs.fzf-git-sh
+        #pkgs.fzf-make
+        #pkgs.fzf-obc
+        #pkgs.fzf-zsh
         #pkgs.gcc
         #pkgs.guix
         #pkgs.jdk23
@@ -106,6 +111,7 @@
         #pkgs.vcpkg
         #pkgs.vim
         #pkgs.wireguard-tools
+        #pkgs.ytfzf
         #pkgs.yubikey-personalization
         #pkgs.yubikey-personalization-gui
         #pkgs.yubikey-touch-detector
@@ -193,11 +199,6 @@
         pkgs.findutils
         pkgs.fnlfmt
         pkgs.fortune
-        pkgs.fzf
-        pkgs.fzf-git-sh
-        pkgs.fzf-make
-        pkgs.fzf-obc
-        pkgs.fzf-zsh
         pkgs.gettext
         pkgs.gh
         pkgs.gh-f
@@ -250,18 +251,18 @@
         pkgs.micro
         pkgs.mkalias
         pkgs.mmv
-        pkgs.mopidy-bandcamp
-        pkgs.mopidy-local
-        pkgs.mopidy-moped
-        pkgs.mopidy-notify
-        pkgs.mopidy-podcast
-        pkgs.mopidy-scrobbler
-        pkgs.mopidy-somafm
-        pkgs.mopidy-soundcloud
-        pkgs.mopidy-spotify
-        pkgs.mopidy-tunein
-        pkgs.mopidy-youtube
-        pkgs.mopidy-ytmusic
+        #pkgs.mopidy-bandcamp
+        #pkgs.mopidy-local
+        #pkgs.mopidy-moped
+        #pkgs.mopidy-notify
+        #pkgs.mopidy-podcast
+        #pkgs.mopidy-scrobbler
+        #pkgs.mopidy-somafm
+        #pkgs.mopidy-soundcloud
+        #pkgs.mopidy-spotify
+        #pkgs.mopidy-tunein
+        #pkgs.mopidy-youtube
+        #pkgs.mopidy-ytmusic
         pkgs.mpd
         pkgs.mpv
         pkgs.ncurses
@@ -347,7 +348,6 @@
         pkgs.yq
         pkgs.yt-dlg
         pkgs.yt-dlp
-        pkgs.ytfzf
         pkgs.yubico-pam
         pkgs.yubico-piv-tool
         pkgs.yubikey-agent
@@ -418,7 +418,7 @@
           "clipboard"
           "cmatrix"
           "coreutils"
-	  "cpanminus"
+	        "cpanminus"
           "curl"
           "deno"
           "dialog"
@@ -430,6 +430,7 @@
           "fontconfig"
           "freetype"
           "fribidi"
+          "fzf"
           "gcc"
           "gettext"
           "ghcup"
@@ -534,8 +535,8 @@
           "pango"
           "pcre"
           "pcre2"
-	  "perl"
-	  "perl6"
+	        "perl"
+	        #"perl6"
           "pinentry"
           "pixman"
           "portaudio"
@@ -543,8 +544,8 @@
           "python-packaging"
           "python@3.12"
           "python@3.13"
-	  "rakudo"
-	  "rakudo-star"
+	        #"rakudo"
+	        "rakudo-star"
           "readline"
           "rtmpdump"
           "screenresolution"
@@ -802,8 +803,9 @@
 
       nixpkgs = {
         config = {
-          # allowBroken = true;	# Allow broken packages.
+          #allowBroken = true;	# Allow broken packages.
           allowUnfree = true;
+          #allowUnsupportedSystem = true;
         };
 
 
@@ -867,8 +869,8 @@
         karabiner-elements.enable = false;
 
         mopidy = {
-          enable = true;
-          mediakeys.enable = true;
+          enable = false;
+          mediakeys.enable = false;
         };
 
         netbird.enable = true;
@@ -886,7 +888,7 @@
 
         spacebar.enable = false;
 
-        spotifyd.enable = true;
+        spotifyd.enable = false;
 
         tailscale.enable = true;
       };
