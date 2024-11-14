@@ -76,6 +76,8 @@
         #pkgs.nushellPlugins.gstat
         #pkgs.nushellPlugins.net
         #pkgs.nushellPlugins.query
+        #pkgs.openssh_hpn
+        #pkgs.perl
         #pkgs.pgadmin4
         #pkgs.pgadmin4-desktopmode
         #pkgs.php83
@@ -91,6 +93,7 @@
         #pkgs.postgresql16Packages.timescaledb_toolkit
         #pkgs.powerline-fonts
         #pkgs.powerline-symbols
+        #pkgs.rakudo
         #pkgs.rubyPackages_3_3.sass
         #pkgs.rustup
         #pkgs.scribus
@@ -152,6 +155,7 @@
         pkgs.ccache
         pkgs.ccls
         pkgs.chafa
+	pkgs.charm
         pkgs.checkbashisms
         pkgs.clang-analyzer
         pkgs.clang-manpages
@@ -268,10 +272,8 @@
         pkgs.nsxiv
         pkgs.odin
         pkgs.ols
-        #pkgs.openssh_hpn
         pkgs.openssl
         pkgs.parallel-full
-        pkgs.perl
         pkgs.pinentry_mac
         pkgs.pipx
         pkgs.pkg-config
@@ -284,7 +286,6 @@
         pkgs.progress
         pkgs.python313Full
         pkgs.racket
-        pkgs.rakudo
         pkgs.ranger
         pkgs.rebar3
         pkgs.rich-cli
@@ -417,11 +418,12 @@
           "clipboard"
           "cmatrix"
           "coreutils"
+	  "cpanminus"
           "curl"
           "deno"
           "dialog"
           "duti"
-          "dutis"
+          #"dutis"
           "fish"
           "fisher"
           "fizsh"
@@ -532,6 +534,8 @@
           "pango"
           "pcre"
           "pcre2"
+	  "perl"
+	  "perl6"
           "pinentry"
           "pixman"
           "portaudio"
@@ -539,6 +543,8 @@
           "python-packaging"
           "python@3.12"
           "python@3.13"
+	  "rakudo"
+	  "rakudo-star"
           "readline"
           "rtmpdump"
           "screenresolution"
