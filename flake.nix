@@ -270,6 +270,7 @@
         pkgs.nix-zsh-completions
         pkgs.nixd
         pkgs.nixfmt-rfc-style
+        pkgs.notcurses
         pkgs.nsxiv
         pkgs.odin
         pkgs.ols
