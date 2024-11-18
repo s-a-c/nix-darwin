@@ -152,6 +152,7 @@
         pkgs.bat-extras.batwatch
         pkgs.bat-extras.prettybat
         pkgs.bats
+        pkgs.bfg-repo-cleaner
         pkgs.blesh
         pkgs.btop
         pkgs.bun
@@ -161,7 +162,7 @@
         pkgs.ccache
         pkgs.ccls
         pkgs.chafa
-	pkgs.charm
+        pkgs.charm
         pkgs.checkbashisms
         pkgs.clang-analyzer
         pkgs.clang-manpages
@@ -203,6 +204,7 @@
         pkgs.gh
         pkgs.gh-f
         pkgs.gist
+        pkgs.git-filter-repo
         pkgs.gitFull
         pkgs.gitui
         pkgs.gleam
