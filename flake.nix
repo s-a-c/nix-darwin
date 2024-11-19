@@ -356,7 +356,7 @@
         pkgs.yubikey-agent
         pkgs.yubikey-manager
         pkgs.zef
-        pkgs.zellij
+        #pkgs.zellij
         pkgs.zlib
         pkgs.zoxide
         pkgs.zstd
@@ -569,6 +569,7 @@
           "xz"
           "ykpers"
           "z3"
+          "zellij"
           "zig"
           "zigmod"
           "zsh-lovers"
@@ -694,7 +695,7 @@
           "sqlitestudio"
           "steam"
           "steamcmd"
-          "swiftdefaultappsprefpane" 
+          "swiftdefaultappsprefpane"
           "swiftformat-for-xcode"
           "sync"
           "tex-live-utility"
