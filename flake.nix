@@ -136,7 +136,7 @@
         #pkgs.ztags
         pkgs.any-nix-shell
         pkgs.ascii-image-converter
-        pkgs.atuin
+        #pkgs.atuin
         pkgs.autoconf
         pkgs.autoconf-archive
         pkgs.autogen
