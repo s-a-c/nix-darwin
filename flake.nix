@@ -27,15 +27,15 @@
       url = "github:homebrew/homebrew-core";
       flake = false;
     };
-    homebrew-dutis = {
-      url = "github:tsonglew/dutis";
+    homebrew-aerospace = {
+      url = "github:nikitabobko/homebrew-tap";
       flake = false;
     };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew,
     homebrew-bundle, homebrew-cask, homebrew-core,
-    homebrew-dutis,
+    homebrew-aerospace,
     ... }:
   let
     configuration = { pkgs, config, ... }: {
@@ -426,7 +426,6 @@
           "deno"
           "dialog"
           "duti"
-          #"dutis"
           "fish"
           "fisher"
           "fizsh"
@@ -578,9 +577,9 @@
         ];
         casks = [ ## ==> Casks
           "adium"
+          "aerospace"
           "alacritty"
           "alfred"
-          "amethyst"
           "arc"
           "bbedit"
           "bitwarden"
@@ -1050,7 +1049,7 @@
               "homebrew/homebrew-bundle" = homebrew-bundle;
               "homebrew/homebrew-cask" = homebrew-cask;
               "homebrew/homebrew-core" = homebrew-core;
-              "tsonglew/dutis" = homebrew-dutis;
+              "nikitabobko/homebrew-tap" = homebrew-aerospace;
             };
           };
         }
