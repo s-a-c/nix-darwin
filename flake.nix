@@ -31,11 +31,15 @@
       url = "github:nikitabobko/homebrew-tap";
       flake = false;
     };
+    homebrew-sketchybar = {
+      url = "github:felixkratz/homebrew-formulae";
+      flake = false;
+    };
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew,
     homebrew-bundle, homebrew-cask, homebrew-core,
-    homebrew-aerospace,
+    homebrew-aerospace, homebrew-sketchybar,
     ... }:
   let
     configuration = { pkgs, config, ... }: {
@@ -552,8 +556,10 @@
           "rtmpdump"
           "screenresolution"
           "shared-mime-info"
+          "sketchybar"
           "speedtest-cli"
           "sqlite"
+          "svim"
           "talloc"
           "tesseract"
           "tokyo-cabinet"
@@ -1046,10 +1052,11 @@
 
             # Optional: Declarative tap management
             taps = {
-              "homebrew/homebrew-bundle" = homebrew-bundle;
-              "homebrew/homebrew-cask" = homebrew-cask;
-              "homebrew/homebrew-core" = homebrew-core;
-              "nikitabobko/homebrew-tap" = homebrew-aerospace;
+              "homebrew/homebrew-bundle"      = homebrew-bundle;
+              "homebrew/homebrew-cask"        = homebrew-cask;
+              "homebrew/homebrew-core"        = homebrew-core;
+              "nikitabobko/homebrew-tap"      = homebrew-aerospace;
+              "felixkratz/homebrew-formulae"  = homebrew-sketchybar;
             };
           };
         }
