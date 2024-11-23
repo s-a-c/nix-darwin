@@ -46,6 +46,7 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [
+        #pkgs.atuin
         #pkgs.avfs
         #pkgs.binutils-unwrapped-all-targets
         #pkgs.chruby
@@ -72,7 +73,19 @@
         #pkgs.ksnip
         #pkgs.laravel
         #pkgs.llvm-manpages
+        #pkgs.mopidy-bandcamp
         #pkgs.mopidy-jellyfin
+        #pkgs.mopidy-local
+        #pkgs.mopidy-moped
+        #pkgs.mopidy-notify
+        #pkgs.mopidy-podcast
+        #pkgs.mopidy-scrobbler
+        #pkgs.mopidy-somafm
+        #pkgs.mopidy-soundcloud
+        #pkgs.mopidy-spotify
+        #pkgs.mopidy-tunein
+        #pkgs.mopidy-youtube
+        #pkgs.mopidy-ytmusic
         #pkgs.neovide
         #pkgs.neovim
         #pkgs.neovim-remote
@@ -119,6 +132,7 @@
         #pkgs.yubikey-personalization
         #pkgs.yubikey-personalization-gui
         #pkgs.yubikey-touch-detector
+        #pkgs.zellij
         #pkgs.zig
         #pkgs.zig-shell-completions
         #pkgs.zls
@@ -140,7 +154,6 @@
         #pkgs.ztags
         pkgs.any-nix-shell
         pkgs.ascii-image-converter
-        #pkgs.atuin
         pkgs.autoconf
         pkgs.autoconf-archive
         pkgs.autogen
@@ -225,6 +238,8 @@
         pkgs.guile
         pkgs.guile-lib
         pkgs.gum
+        pkgs.helix
+        pkgs.helix-gpt
         pkgs.imagemagickBig
         pkgs.iterm2
         pkgs.jq
@@ -257,18 +272,6 @@
         pkgs.micro
         pkgs.mkalias
         pkgs.mmv
-        #pkgs.mopidy-bandcamp
-        #pkgs.mopidy-local
-        #pkgs.mopidy-moped
-        #pkgs.mopidy-notify
-        #pkgs.mopidy-podcast
-        #pkgs.mopidy-scrobbler
-        #pkgs.mopidy-somafm
-        #pkgs.mopidy-soundcloud
-        #pkgs.mopidy-spotify
-        #pkgs.mopidy-tunein
-        #pkgs.mopidy-youtube
-        #pkgs.mopidy-ytmusic
         pkgs.mpd
         pkgs.mpv
         pkgs.ncurses
@@ -360,7 +363,6 @@
         pkgs.yubikey-agent
         pkgs.yubikey-manager
         pkgs.zef
-        #pkgs.zellij
         pkgs.zlib
         pkgs.zoxide
         pkgs.zstd
@@ -383,10 +385,14 @@
         enable = true;
         brews = [ ## ==> Formulae
           "aom"
+          "armadillo"
           "asciinema"
           "autoenv"
           "bdw-gc"
+          "bear"
           "binutils"
+          "boost"
+          "borders"
           "brotli"
           "c-ares"
           "c2048"
@@ -429,10 +435,14 @@
           "curl"
           "deno"
           "dialog"
+          "dooit"
           "duti"
           "fish"
           "fisher"
           "fizsh"
+          # { name = "fnnn";
+          #   args = [ "HEAD" ];
+          # }
           "fontconfig"
           "freetype"
           "fribidi"
@@ -447,14 +457,18 @@
           "gmp"
           "gnu-sed"
           "gnupg"
+          "gnuplot"
           "gnutls"
           "gpatch"
           "gpgme"
           "graphite2"
           "greed"
+          "gsl"
           "harfbuzz"
+          "hdf5"
           "highway"
           "icu4c@76"
+          "ifstat"
           "imagemagick"
           "imath"
           "imlib2"
@@ -485,6 +499,7 @@
           "liblqr"
           "libmpc"
           "libnghttp2"
+          "libomp"
           "libomp"
           "libpng"
           "libraw"
@@ -528,8 +543,10 @@
           "nettle"
           "newsboat"
           "ninvaders"
+          "nnn"
           "node"
           "notmuch"
+          "nowplaying-cli"
           "npth"
           "nudoku"
           "nushell"
@@ -542,7 +559,6 @@
           "pcre"
           "pcre2"
           "perl"
-          #"perl6"
           "pinentry"
           "pixman"
           "portaudio"
@@ -550,7 +566,6 @@
           "python-packaging"
           "python@3.12"
           "python@3.13"
-          #"rakudo"
           "rakudo-star"
           "readline"
           "rtmpdump"
@@ -560,14 +575,19 @@
           "speedtest-cli"
           "sqlite"
           "svim"
+          "svim"
+          "switchaudio-osx"
+          "switchaudio-osx"
           "talloc"
           "tesseract"
+          "texlab"
           "tokyo-cabinet"
           "tree-sitter"
           "unbound"
           "unibilium"
           "w3m"
           "webp"
+          "wireguard-go"
           "x265"
           "xapian"
           "xorgproto"
@@ -597,6 +617,7 @@
           "copyq"
           "crossover"
           "cursor"
+          "cutter"
           "devtoys"
           "discord"
           "docker"
@@ -612,11 +633,16 @@
           "font-alegreya-sans"
           "font-alegreya-sc"
           "font-awesome-terminal-fonts"
+          "font-fira-code"
           "font-fontawesome"
+          "font-hack-nerd-font"
+          "font-jetbrains-mono"
           "font-linux-biolinum"
           "font-monaspace-nerd-font"
           "font-monaspace"
           "font-open-dyslexic"
+          "font-sf-mono"
+          "font-sf-pro"
           "font-trispace"
           "font-zed-sans"
           "font-zen-antique-soft"
@@ -632,6 +658,7 @@
           "gpg-suite"
           "hammerspoon"
           "herd"
+          "hex-fiend"
           "iina"
           "inkscape"
           "insync"
@@ -652,9 +679,13 @@
           "libreoffice-language-pack"
           "libreoffice"
           "logitech-g-hub"
+          "lulu"
           "macfuse"
+          "machoview"
+          "mactex"
           "mediainfo"
           "mediainfoex"
+          "meetingbar"
           "messenger"
           "microsoft-auto-update"
           "microsoft-azure-storage-explorer"
@@ -681,8 +712,9 @@
           "onedrive"
           "onyx"
           "opera@beta"
-          "oracle-jdk"
           "oracle-jdk-javadoc"
+          "oracle-jdk"
+          "orion"
           "paragon-extfs"
           "pgadmin4"
           "porting-kit"
@@ -693,8 +725,11 @@
           "rstudio"
           "scribus"
           "setapp"
+          "sf-symbols"
+          "skim"
           "slack-cli"
           "slack"
+          "sloth"
           "spotify"
           "sqlitemanager"
           "sqlitestudio"
@@ -703,6 +738,7 @@
           "swiftdefaultappsprefpane"
           "swiftformat-for-xcode"
           "sync"
+          "telegram-desktop@beta"
           "tex-live-utility"
           "the-unarchiver"
           "visual-studio-code"
@@ -723,36 +759,40 @@
           "zed"
           "zen-browser"
           "zenmap"
+          "zoom"
         ];
         masApps = {
           "Amazon Prime Video" = 545519333;
           "Apple Develooper" = 640199958;
+          #"Carrot Weather: Alerts and Radar" = 961390574;
           "iPulse" = 1028916583;
           "Kindle" = 302584613;
           "LanguageTool - Grammar Checker" = 1534275760;
-          #"Messenger" = 1480068668;
+          "Messenger" = 1480068668;
           #"Microsoft 365" = 1450038993;
+          #"MSE MoneySavingExpert" = 1590502794;
           "Safari: Black Menu for Wikipedia" = 1543803288;
-          #"Safari: Carrot Weather: Alerts and Radar" = 961390574;
           "Safari: Dark Readert Pro" = 1438243180;
           "Safari: DuckDuckGo Privacy" = 1482920575;
           "Safari: G App Launcher" = 1543803459;
           "Safari: Inkscape Editor for Graphics" = 6443424132;
           "Safari: LanguageTool" = 1534275760;
-          #"Safari: MSE MoneySavingExpert" = 1590502794;
           "Safari: Notion Web Clipper" = 1559269364;
           "Safari: Refined GitHub" = 1519867270;
           "Safari: Save to Pocket" = 1477385213;
           "Safari: SingleFile" = 6444322545;
           "Safari: Raindrop.io" = 1549370672;
+          #"Safari: Vimari" = 1480933944;
           "Safari: Wayback Machine" = 1472432422;
           "Safari: Web Translator for DeepL" = 6443492610;
           "Smart JSON Editor" = 1268962404;
+          #"Tailscale" = 1475387142;
           "Testflight" = 899247664;
           #"Tomorrow.io: Weather Forecast" = 1443325509;
           "Ultra CharMap" = 520265986;
-          #"Windows App" = 1295203466;
-          #"Xcode" = 97799835;
+          "Windows App" = 1295203466;
+          #"Wireguard" = 1451685025;
+          "Xcode" = 497799835;
           "Xcode: XCFormat" = 1165321484;
           "Xcode: Text Toolset" = 1157225201;
           "Xcode: Comment Wrapper" = 1377998565;
@@ -760,11 +800,24 @@
           #"Yoink" = 457622435;
         };
         taps = [
-          # "homebrew/bundle"
-          # "homebrew/cask"
-          # "homebrew/core"
-          { name = "tsonglew/dutis";
-            clone_target = "https://github.com/tsonglew/dutis.git";
+          { name = "homebrew/bundle";
+            clone_target = "https://github.com/homebrew/homebrew-bundle.git";
+            force_auto_update = true;
+          }
+          { name = "homebrew/cask";
+            clone_target = "https://github.com/homebrew/homebrew-cask.git";
+            force_auto_update = true;
+          }
+          { name = "homebrew/core";
+            clone_target = "https://github.com/homebrew/homebrew-core.git";
+            force_auto_update = true;
+          }
+          { name = "homebrew/aerospace";
+            clone_target = "https://github.com/nikitabobko/homebrew-tap.git";
+            force_auto_update = true;
+          }
+          { name = "homebrew/sketchybar";
+            clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
             force_auto_update = true;
           }
         ];
@@ -894,11 +947,11 @@
           package = pkgs.postgresql;
         };
 
-        sketchybar.enable = false;
+        sketchybar.enable = true;
 
         spacebar.enable = false;
 
-        spotifyd.enable = false;
+        spotifyd.enable = true;
 
         tailscale.enable = true;
       };
