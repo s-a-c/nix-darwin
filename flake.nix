@@ -194,7 +194,7 @@
                 pkgs.dart
                 pkgs.dart-sass
                 pkgs.dbus
-                pkgs.deno
+                #pkgs.deno
                 pkgs.dwt1-shell-color-scripts
                 pkgs.e2fsprogs
                 pkgs.editorconfig-checker
@@ -433,7 +433,7 @@
                     "coreutils"
                     "cpanminus"
                     "curl"
-                    "deno"
+                    #"deno"
                     "dialog"
                     "dooit"
                     "duti"
@@ -793,8 +793,8 @@
                     "setapp"
                     "sf-symbols"
                     "skim"
-                    "slack-cli"
-                    "slack"
+                    #"slack-cli"
+                    #"slack"
                     "sloth"
                     "spotify"
                     "sqlitemanager"
@@ -851,6 +851,7 @@
                     #"Safari: Vimari" = 1480933944;
                     "Safari: Wayback Machine" = 1472432422;
                     "Safari: Web Translator for DeepL" = 6443492610;
+                    "Slack" = 803453959;
                     "Smart JSON Editor" = 1268962404;
                     #"Tailscale" = 1475387142;
                     "Testflight" = 899247664;
