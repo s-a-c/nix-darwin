@@ -1046,7 +1046,7 @@
             package = pkgs.postgresql;
           };
 
-          sketchybar.enable = true;
+          sketchybar.enable = false;
 
           spacebar.enable = false;
 
