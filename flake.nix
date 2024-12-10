@@ -583,6 +583,7 @@
             "pinentry"
             "pixman"
             "portaudio"
+            "prettier"
             "pycparser"
             "python-packaging"
             "python@3.12"
