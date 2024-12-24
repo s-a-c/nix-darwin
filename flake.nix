@@ -207,12 +207,12 @@
           pkgs.e2fsprogs
           pkgs.editorconfig-checker
           pkgs.editorconfig-core-c
-          pkgs.elixir
-          pkgs.elixir-ls
+          #pkgs.elixir
+          #pkgs.elixir-ls
           pkgs.elvish
-          pkgs.erlang_27
-          pkgs.erlang-ls
-          pkgs.erlfmt
+          #pkgs.erlang_27
+          #pkgs.erlang-ls
+          #pkgs.erlfmt
           pkgs.exercism
           pkgs.exiftool
           pkgs.eza
@@ -228,11 +228,11 @@
           pkgs.gettext
           pkgs.gh
           pkgs.gh-f
-          pkgs.gist
-          pkgs.git-filter-repo
-          pkgs.gitFull
-          pkgs.gitui
-          pkgs.gleam
+          #pkgs.gist
+          #pkgs.git-filter-repo
+          #pkgs.gitFull
+          #pkgs.gitui
+          #pkgs.gleam
           pkgs.gmp
           pkgs.gnugrep
           pkgs.gnum4
@@ -259,21 +259,21 @@
           pkgs.lazysql
           pkgs.lemonade
           pkgs.lesspipe
-          pkgs.lfe
+          #pkgs.lfe
           pkgs.libtool
           pkgs.lilypond-with-fonts
-          pkgs.livebook
+          #pkgs.livebook
           pkgs.lldb
           pkgs.llvm
           pkgs.lolcat
           pkgs.lorri
           pkgs.lsd
-          pkgs.lua-language-server
-          pkgs.lua54Packages.fennel
-          pkgs.lua54Packages.lua
-          pkgs.lua54Packages.luacheck
-          pkgs.lua54Packages.luarepl
-          pkgs.lua54Packages.luarocks
+          #pkgs.lua-language-server
+          #pkgs.lua54Packages.fennel
+          #pkgs.lua54Packages.lua
+          #pkgs.lua54Packages.luacheck
+          #pkgs.lua54Packages.luarepl
+          #pkgs.lua54Packages.luarocks
           pkgs.mas
           pkgs.mediainfo
           pkgs.mediainfo-gui
@@ -304,9 +304,9 @@
           pkgs.procps
           pkgs.progress
           pkgs.python313Full
-          pkgs.racket
+          #pkgs.racket
           pkgs.ranger
-          pkgs.rebar3
+          #pkgs.rebar3
           pkgs.rich-cli
           pkgs.ripgrep
           pkgs.rlwrap
@@ -450,12 +450,16 @@
             "coreutils"
             "cpanminus"
             "curl"
-            #"deno"
+            "deno"
             "dialog"
             "direnv"
             "dooit"
             "dotenv-linter"
             "duti"
+            "elixir"
+            "elixir-ls"
+            "erlang"
+            "erlang_ls"
             "fish"
             "fisher"
             "fizsh"
@@ -471,6 +475,14 @@
             "ghcup"
             "ghostscript"
             "giflib"
+            "gist"
+            "git"
+            "git-extras"
+            "git-gui"
+            "git-plus"
+            "git-tools"
+            "gitui"
+            "gleam"
             "glib"
             "gmime"
             "gmp"
@@ -520,7 +532,6 @@
             "libmpc"
             "libnghttp2"
             "libomp"
-            "libomp"
             "libpng"
             "libraw"
             "libssh2"
@@ -543,7 +554,10 @@
             "lmdb"
             "lpeg"
             "lua"
+            "lua-language-server"
+            "luacheck"
             "luajit"
+            "luarocks"
             "luv"
             "lz4"
             "lzo"
@@ -590,15 +604,15 @@
             "python@3.13"
             "rakudo-star"
             "readline"
+            "rebar3"
             "rtmpdump"
             "screenresolution"
             "shared-mime-info"
             "sketchybar"
             "speedtest-cli"
             "sqlite"
+            "stylua"
             "svim"
-            "svim"
-            "switchaudio-osx"
             "switchaudio-osx"
             "talloc"
             "tesseract"
@@ -768,6 +782,7 @@
             "launchpad-manager"
             "libreoffice-language-pack"
             "libreoffice"
+            "livebook"
             "logitech-g-hub"
             "lulu"
             "macfuse"
@@ -811,6 +826,7 @@
             "powershell"
             "quarto"
             "r"
+            "racket"
             "raycast"
             "rstudio"
             "scribus"
@@ -852,11 +868,21 @@
             "zoom"
           ];
           masApps = {
+            "Amazon Kindle" = 302584613;
             "Amazon Prime Video" = 545519333;
+            #"Apple Carrot Weather: Alerts and Radar" = 961390574;
+            "Apple Configurator" = 1037126344;
             "Apple Develooper" = 640199958;
-            #"Carrot Weather: Alerts and Radar" = 961390574;
+            "Apple GarageBand" = 682658836;
+            "Apple iMovie" = 408981434;
+            "Apple Keynote" = 409183694;
+            "Apple Numbers" = 409203825;
+            "Apple Pages" = 409201541;
+            "Apple Shazam: Identify Songs" = 897118787;
+            "Apple Swift Playgrounds" = 1496833156;
+            "Apple Testflight" = 899247664;
+            "Apple Transporter" = 1450874784;
             "iPulse" = 1028916583;
-            "Kindle" = 302584613;
             "LanguageTool - Grammar Checker" = 1534275760;
             "Messenger" = 1480068668;
             #"Microsoft 365" = 1450038993;
