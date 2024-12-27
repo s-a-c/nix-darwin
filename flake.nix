@@ -847,7 +847,7 @@
             "telegram-desktop@beta"
             "tex-live-utility"
             "the-unarchiver"
-            "visual-studio-code"
+            #"visual-studio-code"
             "vlc-setup"
             "vlc-webplugin"
             "vlc"
