@@ -327,9 +327,9 @@
           pkgs.sqlar
           pkgs.sqlcipher
           pkgs.sqldiff
-          pkgs.sqlite
-          pkgs.sqlite-utils
-          pkgs.sqlite-web
+          #pkgs.sqlite
+          #pkgs.sqlite-utils
+          #pkgs.sqlite-web
           pkgs.starship
           pkgs.stow
           pkgs.stylelint
@@ -535,6 +535,7 @@
             "libomp"
             "libpng"
             "libraw"
+            "libsql"
             "libssh2"
             "libtasn1"
             "libtiff"
