@@ -307,7 +307,7 @@
           #pkgs.racket
           pkgs.ranger
           #pkgs.rebar3
-          pkgs.rich-cli
+          #pkgs.rich-cli
           pkgs.ripgrep
           pkgs.rlwrap
           pkgs.roswell
@@ -351,7 +351,7 @@
           pkgs.tkman
           pkgs.trash-cli
           pkgs.tree
-          pkgs.tree-sitter
+          #pkgs.tree-sitter
           pkgs.unar
           pkgs.unzip
           pkgs.vcpkg-tool
@@ -478,6 +478,7 @@
             "gist"
             "git"
             "git-extras"
+            "git-flow"
             "git-gui"
             "git-plus"
             "git-tools"
