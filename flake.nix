@@ -407,6 +407,7 @@
                             "aom"
                             "armadillo"
                             "asciinema"
+                            "aspell"
                             "autoenv"
                             "bdw-gc"
                             "bear"
