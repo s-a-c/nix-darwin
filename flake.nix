@@ -349,7 +349,7 @@
             pkgs.ascii-image-converter
             pkgs.bash_unit
             pkgs.bash-preexec
-            pkgs.bashate
+            #pkgs.bashate
             pkgs.blesh
             pkgs.bun
             pkgs.cacert
@@ -564,6 +564,9 @@
               "jq"
               "json-c"
               "juliaup"
+              "kubectl"
+              "kubernetes-cli"
+              "kubetui"
               "leptonica"
               "lazydocker"
               "lazygit"
@@ -808,7 +811,6 @@
               "cursor"
               "cutter"
               "devtoys"
-              "discord"
               "docker"
               "dotnet-sdk"
               "droidcam-obs"
@@ -933,6 +935,7 @@
               "languagetool"
               "launchcontrol"
               "launchpad-manager"
+              "legcord"
               "libreoffice-language-pack"
               "libreoffice"
               "livebook"
@@ -989,8 +992,6 @@
               "setapp"
               "sf-symbols"
               "skim"
-              #"slack-cli"
-              #"slack"
               "sloth"
               "spotify"
               "sqlitemanager"
@@ -1197,7 +1198,7 @@
             };
           };
 
-          security.pam.enableSudoTouchIdAuth = true;
+          ## security.pam.enableSudoTouchIdAuth = true;
 
           services = {
             eternal-terminal = {
@@ -1236,7 +1237,7 @@
 
             spacebar.enable = false;
 
-            spotifyd.enable = true;
+            #spotifyd.enable = true;
 
             tailscale.enable = true;
           };
