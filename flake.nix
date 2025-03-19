@@ -692,12 +692,7 @@
               "pcre"
               "pcre2"
               "perl"
-              {
-                name = "php";
-                link = false;
-                restart_service = false;
-                start_service = false;
-              }
+              "php"
               "pinentry"
               "pinentry-mac"
               "pipx"
