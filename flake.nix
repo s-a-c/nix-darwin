@@ -693,6 +693,8 @@
               "pcre2"
               "perl"
               "php"
+              #"shivammathur/extensions/pcov@8.3"
+              #"shivammathur/extensions/pcov@8.4"
               "pinentry"
               "pinentry-mac"
               "pipx"
