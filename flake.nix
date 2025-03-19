@@ -656,8 +656,8 @@
               {
                 name = "mpd";
                 link = true;
-                restart_service = false;
-                start_service = false;
+                restart_service = true;
+                start_service = true;
               }
               "mpdecimal"
               "mpfr"
@@ -694,9 +694,9 @@
               "perl"
               {
                 name = "php";
-                link = true;
-                restart_service = false;
-                start_service = false;
+                link = false;
+                restart_service = true;
+                start_service = true;
               }
               "pinentry"
               "pinentry-mac"
