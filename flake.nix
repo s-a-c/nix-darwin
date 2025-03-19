@@ -59,6 +59,11 @@
     let
       # The platform the configuration will be used on.
       hostPlatform = "aarch64-darwin";
+      homebrew-services-patched = nixpkgs.legacyPackages."${hostPlatform}".applyPatches {
+        name = "homebrew-services-patched";
+        src = homebrew-services;
+        patches = [ ./homebrew-services.patch ];
+      };
       configuration =
         { pkgs, config, lib,
           homebrew-bundle,
@@ -651,8 +656,8 @@
               {
                 name = "mpd";
                 link = true;
-                restart_service = true;
-                start_service = true;
+                restart_service = false;
+                start_service = false;
               }
               "mpdecimal"
               "mpfr"
@@ -820,7 +825,7 @@
             casks = [
               ## ==> Casks
               "adium"
-              "aerospace"
+              "nikitabobko/tap/aerospace"
               "alfred"
               "arc"
               "beyond-compare"
@@ -1396,12 +1401,6 @@
             # $ darwin-rebuild changelog
             stateVersion = 5;
           };
-        };
-
-        homebrew-services-patched = nixpkgs.legacyPackages."${hostPlatform}".applyPatches {
-          name = "homebrew-services-patched";
-          src = homebrew-services;
-          patches = [ ./homebrew-services.patch ];
         };
     in
     {
