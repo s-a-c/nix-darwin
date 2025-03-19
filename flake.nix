@@ -695,8 +695,8 @@
               {
                 name = "php";
                 link = false;
-                restart_service = true;
-                start_service = true;
+                restart_service = false;
+                start_service = false;
               }
               "pinentry"
               "pinentry-mac"
