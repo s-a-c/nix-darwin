@@ -8,12 +8,13 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     nix-homebrew = {
       url = "github:zhaofengli/nix-homebrew";
     };
+
     # Warning: The Intel Homebrew prefix has been set up, but Rosetta isn't installed yet.
     # ==> Run ${tty_bold}softwareupdate --install-rosetta${tty_reset} to install it.
+
     homebrew-bundle = {
       url = "github:homebrew/homebrew-bundle";
       flake = false;
@@ -25,6 +26,10 @@
     };
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
+      flake = false;
+    };
+    homebrew-services = {
+      url = "github:homebrew/homebrew-services";
       flake = false;
     };
     homebrew-aerospace = {
@@ -46,13 +51,22 @@
       homebrew-bundle,
       homebrew-cask,
       homebrew-core,
+      homebrew-services,
       homebrew-aerospace,
       homebrew-sketchybar,
       ...
     }:
     let
+      # The platform the configuration will be used on.
+      hostPlatform = "aarch64-darwin";
       configuration =
-        { pkgs, config, ... }:
+        { pkgs, config, lib,
+          homebrew-bundle,
+          homebrew-cask,
+          homebrew-core,
+          homebrew-services,
+          ...
+        }:
         {
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
@@ -458,7 +472,7 @@
               "cargo-udeps"
               "cargo-watch"
               "cargo-zigbuild"
-              "ccache"
+              #"ccache"
               "ccls"
               "chafa"
               "charm"
@@ -634,7 +648,12 @@
               "micro"
               "mmv"
               "mongosh"
-              "mpd"
+              {
+                name = "mpd";
+                link = true;
+                restart_service = true;
+                start_service = true;
+              }
               "mpdecimal"
               "mpfr"
               "mplayer"
@@ -668,7 +687,12 @@
               "pcre"
               "pcre2"
               "perl"
-              "php"
+              {
+                name = "php";
+                link = true;
+                restart_service = false;
+                start_service = false;
+              }
               "pinentry"
               "pinentry-mac"
               "pipx"
@@ -1028,6 +1052,10 @@
               "zenmap"
               "zoom"
             ];
+            global = {
+              autoUpdate = true;
+              brewfile = true;
+            };
             masApps = {
               "Amazon Kindle" = 302584613;
               "Amazon Prime Video" = 545519333;
@@ -1077,6 +1105,12 @@
               "Xcode: NamingTranslator" = 1218784832;
               #"Yoink" = 457622435;
             };
+            onActivation = {
+              autoUpdate = true;
+              cleanup = "zap";
+              extraFlags = [ "--verbose" ];
+              upgrade = true;
+            };
             taps = [
               {
                 name = "homebrew/bundle";
@@ -1104,10 +1138,6 @@
                 force_auto_update = true;
               }
             ];
-            onActivation = {
-              cleanup = "zap";
-              extraFlags = [ "--verbose" ];
-            };
           };
 
           nix = {
@@ -1155,7 +1185,7 @@
             };
 
             # The platform the configuration will be used on.
-            hostPlatform = "aarch64-darwin";
+            hostPlatform = hostPlatform;
           };
 
           programs = {
@@ -1229,7 +1259,7 @@
 
             postgresql = {
               enable = true;
-              enableTCPIP = false;
+              enableTCPIP = true;
               package = pkgs.postgresql;
             };
 
@@ -1367,12 +1397,24 @@
             stateVersion = 5;
           };
         };
+
+        homebrew-services-patched = nixpkgs.legacyPackages."${hostPlatform}".applyPatches {
+          name = "homebrew-services-patched";
+          src = homebrew-services;
+          patches = [ ./homebrew-services.patch ];
+        };
     in
     {
       # Build darwin flake using:
       # $ darwin-rebuild build --flake .#StandAloneComplexs-MacBook-Pro
       darwinConfigurations."StandAloneComplexs-MacBook-Pro" = nix-darwin.lib.darwinSystem {
         modules = [
+          (
+            { config, ... }:
+            {
+              homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
+            }
+          )
           configuration
           nix-homebrew.darwinModules.nix-homebrew
           {
@@ -1396,6 +1438,7 @@
                 "homebrew/homebrew-bundle" = homebrew-bundle;
                 "homebrew/homebrew-cask" = homebrew-cask;
                 "homebrew/homebrew-core" = homebrew-core;
+                "homebrew/homebrew-services" = homebrew-services-patched;
                 "nikitabobko/homebrew-tap" = homebrew-aerospace;
                 "felixkratz/homebrew-formulae" = homebrew-sketchybar;
               };
