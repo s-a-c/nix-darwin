@@ -59,11 +59,11 @@
     let
       # The platform the configuration will be used on.
       hostPlatform = "aarch64-darwin";
-      homebrew-services-patched = nixpkgs.legacyPackages."${hostPlatform}".applyPatches {
-        name = "homebrew-services-patched";
-        src = homebrew-services;
-        patches = [ ./homebrew-services.patch ];
-      };
+#      homebrew-services-patched = nixpkgs.legacyPackages."${hostPlatform}".applyPatches {
+#        name = "homebrew-services-patched";
+#        src = homebrew-services;
+#        patches = [ ./homebrew-services.patch ];
+#      };
       configuration =
         { pkgs, config, lib,
           homebrew-bundle,
@@ -1049,7 +1049,7 @@
               "youtube-downloader"
               "ytmdesktop-youtube-music"
               "yubico-yubikey-manager"
-              "zed"
+              #"zed"
               "zen-browser"
               "zenmap"
               "zoom"
@@ -1434,7 +1434,7 @@
                 "homebrew/homebrew-bundle" = homebrew-bundle;
                 "homebrew/homebrew-cask" = homebrew-cask;
                 "homebrew/homebrew-core" = homebrew-core;
-                "homebrew/homebrew-services" = homebrew-services-patched;
+                "homebrew/homebrew-services" = homebrew-services;
                 "nikitabobko/homebrew-tap" = homebrew-aerospace;
                 "felixkratz/homebrew-formulae" = homebrew-sketchybar;
               };
