@@ -957,7 +957,6 @@
               "jupyterlab"
               "karabiner-elements"
               "keycast"
-              "kitty"
               "kodi"
               "languagetool"
               "launchcontrol"
@@ -1394,6 +1393,18 @@
               #mouseDriverCursorSize = 2.0;
               #};
             };
+
+            # To continue using these options, set `system.primaryUser` to the name
+            # of the user you have been using to run `darwin-rebuild`. In the long
+            # run, this setting will be deprecated and removed after all the
+            # functionality it is relevant for has been adjusted to allow
+            # specifying the relevant user separately, moved under the
+            # `users.users.*` namespace, or migrated to Home Manager.
+            #
+            # If you run into any unexpected issues with the migration, please
+            # open an issue at <https://github.com/nix-darwin/nix-darwin/issues/new>
+            # and include as much information as possible.
+            primaryUser = "s-a-c";
 
             # Used for backwards compatibility, please read the changelog before changing.
             # $ darwin-rebuild changelog
