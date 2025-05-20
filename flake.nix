@@ -577,6 +577,7 @@
               "isl"
               "jasper"
               "jbig2dec"
+              "jj"
               "jpeg-turbo"
               "jpeg-xl"
               "jpegoptim"
