@@ -958,6 +958,7 @@
               "jupyterlab"
               "karabiner-elements"
               "keycast"
+              "kitty"
               "kodi"
               "languagetool"
               "launchcontrol"
@@ -1087,7 +1088,6 @@
               "Safari: LanguageTool" = 1534275760;
               "Safari: Notion Web Clipper" = 1559269364;
               "Safari: Refined GitHub" = 1519867270;
-              "Safari: Save to Pocket" = 1477385213;
               "Safari: SingleFile" = 6444322545;
               "Safari: Raindrop.io" = 1549370672;
               #"Safari: Vimari" = 1480933944;
