@@ -1035,7 +1035,7 @@
               "tex-live-utility"
               "texstudio"
               "the-unarchiver"
-              "visual-studio-code@insiders"
+              "visual-studio-code"
               "vlc-setup"
               "vlc-webplugin"
               "vlc"
