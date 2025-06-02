@@ -56,30 +56,16 @@
             homebrew-cask,
             homebrew-core,
             homebrew-services,
-            #homebrew-aerospace,
-            #homebrew-sketchybar,
+            # homebrew-aerospace,
+            # homebrew-sketchybar,
             shivammathur-extensions,
             ...
         }:
         let
             # The platform the configuration will be used on.
             hostPlatform = "aarch64-darwin";
-#            homebrew-services-patched = nixpkgs.legacyPackages."${hostPlatform}".applyPatches {
-#                name = "homebrew-services-patched";
-#                src = homebrew-services;
-#                patches = [ ./homebrew-services.patch ];
-#            };
-            configuration =
-                { pkgs, config, lib,
-                    homebrew-bundle,
-                    homebrew-cask,
-                    homebrew-core,
-                    homebrew-services,
-                    #homebrew-aerospace,
-                    #homebrew-sketchybar,
-                    shivammathur-extensions,
-                    ...
-                }:
+            configuration = homebrew-args:
+                { pkgs, config, lib, ... }:
                 {
                     # List packages installed in system profile. To search by name, run:
                     # $ nix-env -qaP | grep wget
@@ -506,6 +492,7 @@
                             "curl"
                             "deno"
                             "dialog"
+                            "diff-so-fancy"
                             "direnv"
                             "dooit"
                             "dotenv-linter"
@@ -530,6 +517,7 @@
                             "fish"
                             "fisher"
                             "fizsh"
+                            "flyctl"
                             "fontconfig"
                             "fortune"
                             "freetype"
@@ -752,7 +740,7 @@
                             "shellcheck"
                             "shellharden"
                             "shellspec"
-                            "sketchybar"
+                            #"sketchybar"
                             "spatialite-gui"
                             "spatialite-tools"
                             "speedtest-cli"
@@ -832,7 +820,7 @@
                         casks = [
                             ## ==> Casks
                             "adium"
-                            # "nikitabobko/tap/aerospace"
+                            #"nikitabobko/tap/aerospace"
                             "alfred"
                             "arc"
                             "beyond-compare"
@@ -1138,16 +1126,16 @@
                                 clone_target = "https://github.com/homebrew/homebrew-core.git";
                                 force_auto_update = true;
                             }
-                            {
-                                name = "homebrew/aerospace";
-                                clone_target = "https://github.com/nikitabobko/homebrew-tap.git";
-                                force_auto_update = true;
-                            }
-                            {
-                                name = "homebrew/sketchybar";
-                                clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
-                                force_auto_update = true;
-                            }
+                            #{
+                            #    name = "homebrew/aerospace";
+                            #    clone_target = "https://github.com/nikitabobko/homebrew-tap.git";
+                            #    force_auto_update = true;
+                            #}
+                            #{
+                            #    name = "homebrew/sketchybar";
+                            #    clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
+                            #    force_auto_update = true;
+                            #}
                             {
                                 name = "shivammathur/extensions";
                                 clone_target = "https://github.com/shivammathur/homebrew-extensions.git";
@@ -1437,7 +1425,9 @@
                             homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
                         }
                     )
-                    configuration
+                    (configuration {
+                        inherit homebrew-bundle homebrew-cask homebrew-core homebrew-services shivammathur-extensions;
+                    })
                     nix-homebrew.darwinModules.nix-homebrew
                     {
                         nix-homebrew = {
