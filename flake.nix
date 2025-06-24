@@ -417,6 +417,7 @@
                         enable = true;
                         brews = [
                             ## ==> Formulae
+                            "acli"
                             "aom"
                             "armadillo"
                             "asciinema"
@@ -821,10 +822,10 @@
                         ];
                         casks = [
                             ## ==> Casks
-                            "adium"
+                            #"adium"
                             #"nikitabobko/tap/aerospace"
                             "alfred"
-                            "arc"
+                            #"arc"
                             "balenaetcher"
                             "beyond-compare"
                             "bbedit"
@@ -835,7 +836,7 @@
                             "chatgpt"
                             "cmake"
                             "crossover"
-                            "cursor"
+                            #"cursor"
                             "cutter"
                             "devtoys"
                             "docker"
@@ -847,87 +848,87 @@
                             "emojipedia"
                             "expressvpn"
                             "flutter"
-                            "font-0xproto-nerd-font"
-                            "font-3270-nerd-font"
-                            "font-agave-nerd-font"
+                            #"font-0xproto-nerd-font"
+                            #"font-3270-nerd-font"
+                            #"font-agave-nerd-font"
                             "font-alegreya-sans-sc"
                             "font-alegreya-sans"
                             "font-alegreya-sc"
-                            "font-anonymice-nerd-font"
-                            "font-arimo-nerd-font"
-                            "font-aurulent-sans-mono-nerd-font"
-                            "font-awesome-terminal-fonts"
-                            "font-bigblue-terminal-nerd-font"
-                            "font-bitstream-vera-sans-mono-nerd-font"
-                            "font-blex-mono-nerd-font"
-                            "font-caskaydia-cove-nerd-font"
-                            "font-caskaydia-mono-nerd-font"
-                            "font-code-new-roman-nerd-font"
-                            "font-comic-shanns-mono-nerd-font"
-                            "font-commit-mono-nerd-font"
-                            "font-cousine-nerd-font"
-                            "font-d2coding-nerd-font"
-                            "font-daddy-time-mono-nerd-font"
-                            "font-dejavu-sans-mono-nerd-font"
-                            "font-departure-mono-nerd-font"
-                            "font-droid-sans-mono-nerd-font"
-                            "font-envy-code-r-nerd-font"
-                            "font-fantasque-sans-mono-nerd-font"
+                            #"font-anonymice-nerd-font"
+                            #"font-arimo-nerd-font"
+                            #"font-aurulent-sans-mono-nerd-font"
+                            #"font-awesome-terminal-fonts"
+                            #"font-bigblue-terminal-nerd-font"
+                            #"font-bitstream-vera-sans-mono-nerd-font"
+                            #"font-blex-mono-nerd-font"
+                            #"font-caskaydia-cove-nerd-font"
+                            #"font-caskaydia-mono-nerd-font"
+                            #"font-code-new-roman-nerd-font"
+                            #"font-comic-shanns-mono-nerd-font"
+                            #"font-commit-mono-nerd-font"
+                            #"font-cousine-nerd-font"
+                            #"font-d2coding-nerd-font"
+                            #"font-daddy-time-mono-nerd-font"
+                            #"font-dejavu-sans-mono-nerd-font"
+                            #"font-departure-mono-nerd-font"
+                            #"font-droid-sans-mono-nerd-font"
+                            #"font-envy-code-r-nerd-font"
+                            #"font-fantasque-sans-mono-nerd-font"
                             "font-fira-code-nerd-font"
                             "font-fira-code"
                             "font-fira-mono-nerd-font"
                             "font-fontawesome"
                             "font-geist-mono-nerd-font"
-                            "font-go-mono-nerd-font"
-                            "font-gohufont-nerd-font"
-                            "font-hack-nerd-font"
-                            "font-hasklug-nerd-font"
-                            "font-heavy-data-nerd-font"
-                            "font-hurmit-nerd-font"
-                            "font-im-writing-nerd-font"
-                            "font-inconsolata-go-nerd-font"
-                            "font-inconsolata-lgc-nerd-font"
-                            "font-inconsolata-nerd-font"
-                            "font-intone-mono-nerd-font"
-                            "font-iosevka-nerd-font"
-                            "font-iosevka-term-nerd-font"
-                            "font-iosevka-term-slab-nerd-font"
+                            #"font-go-mono-nerd-font"
+                            #"font-gohufont-nerd-font"
+                            #"font-hack-nerd-font"
+                            #"font-hasklug-nerd-font"
+                            #"font-heavy-data-nerd-font"
+                            #"font-hurmit-nerd-font"
+                            #"font-im-writing-nerd-font"
+                            #"font-inconsolata-go-nerd-font"
+                            #"font-inconsolata-lgc-nerd-font"
+                            #"font-inconsolata-nerd-font"
+                            #"font-intone-mono-nerd-font"
+                            #"font-iosevka-nerd-font"
+                            #"font-iosevka-term-nerd-font"
+                            #"font-iosevka-term-slab-nerd-font"
                             "font-jetbrains-mono-nerd-font"
                             "font-jetbrains-mono"
-                            "font-lekton-nerd-font"
-                            "font-liberation-nerd-font"
-                            "font-lilex-nerd-font"
-                            "font-linux-biolinum"
-                            "font-m+-nerd-font"
-                            "font-martian-mono-nerd-font"
-                            "font-meslo-lg-nerd-font"
-                            "font-monaspace-nerd-font"
-                            "font-monaspace"
-                            "font-monocraft-nerd-font"
-                            "font-monofur-nerd-font"
-                            "font-monoid-nerd-font"
-                            "font-mononoki-nerd-font"
-                            "font-noto-nerd-font"
+                            #"font-lekton-nerd-font"
+                            #"font-liberation-nerd-font"
+                            #"font-lilex-nerd-font"
+                            #"font-linux-biolinum"
+                            #"font-m+-nerd-font"
+                            #"font-martian-mono-nerd-font"
+                            #"font-meslo-lg-nerd-font"
+                            #"font-monaspace-nerd-font"
+                            #"font-monaspace"
+                            #"font-monocraft-nerd-font"
+                            #"font-monofur-nerd-font"
+                            #"font-monoid-nerd-font"
+                            #"font-mononoki-nerd-font"
+                            #"font-noto-nerd-font"
                             "font-open-dyslexic-nerd-font"
                             "font-open-dyslexic"
                             "font-overpass-nerd-font"
-                            "font-profont-nerd-font"
-                            "font-proggy-clean-tt-nerd-font"
+                            #"font-profont-nerd-font"
+                            #"font-proggy-clean-tt-nerd-font"
                             "font-recursive-mono-nerd-font"
-                            "font-roboto-mono-nerd-font"
-                            "font-sauce-code-pro-nerd-font"
+                            #"font-roboto-mono-nerd-font"
+                            #"font-sauce-code-pro-nerd-font"
                             "font-sf-mono"
                             "font-sf-pro"
-                            "font-shure-tech-mono-nerd-font"
-                            "font-space-mono-nerd-font"
+                            #"font-shure-tech-mono-nerd-font"
+                            #"font-space-mono-nerd-font"
                             "font-symbols-only-nerd-font"
-                            "font-terminess-ttf-nerd-font"
-                            "font-tinos-nerd-font"
-                            "font-trispace"
-                            "font-ubuntu-mono-nerd-font"
-                            "font-ubuntu-nerd-font"
-                            "font-ubuntu-sans-nerd-font"
-                            "font-victor-mono-nerd-font"
+                            #"font-terminess-ttf-nerd-font"
+                            #"font-tinos-nerd-font"
+                            #"font-trispace"
+                            #"font-ubuntu-mono-nerd-font"
+                            #"font-ubuntu-nerd-font"
+                            #"font-ubuntu-sans-nerd-font"
+                            #"font-victor-mono-nerd-font"
                             "font-zed-mono-nerd-font"
                             "font-zen-loop"
                             "font-zed-sans"
@@ -1010,6 +1011,7 @@
                             "postman-agent"
                             "postman-cli"
                             "powershell"
+                            "qownnotes"
                             "quarto"
                             "r"
                             "racket"
@@ -1020,7 +1022,7 @@
                             "sf-symbols"
                             "skim"
                             "sloth"
-                            "spotify"
+                            #"spotify"
                             "sqlitemanager"
                             "sqlitestudio"
                             "steam"
@@ -1029,7 +1031,7 @@
                             "swiftdefaultappsprefpane"
                             "swiftformat-for-xcode"
                             "tailscale"
-                            "telegram-desktop@beta"
+                            #"telegram-desktop@beta"
                             "tex-live-utility"
                             "texstudio"
                             "the-unarchiver"
@@ -1065,7 +1067,7 @@
                             "Apple Configurator" = 1037126344;
                             "Apple Develooper" = 640199958;
                             "Apple GarageBand" = 682658836;
-                            "Apple iMovie" = 408981434;
+                            #"Apple iMovie" = 408981434;
                             "Apple Keynote" = 409183694;
                             "Apple Numbers" = 409203825;
                             "Apple Pages" = 409201541;
@@ -1142,6 +1144,10 @@
                                 name = "shivammathur/extensions";
                                 clone_target = "https://github.com/shivammathur/homebrew-extensions.git";
                                 force_auto_update = true;
+                            }
+                            {
+                                name = "atlassian/homebrew-acli";
+                                clone_target = "https://github.com/atlassian/homebrew-acli.git";
                             }
                         ];
                     };
@@ -1341,12 +1347,12 @@
                                 GloballyEnabled = true;
                                 StandardHideDesktopIcons = true;
                             };
-                            alf = {
-                                allowdownloadsignedenabled = 1;
-                                globalstate = 1;
-                                loggingenabled = 1;
-                                stealthenabled = 1;
-                            };
+                            #alf = {
+                            #    allowdownloadsignedenabled = 1;
+                            #    globalstate = 1;
+                            #    loggingenabled = 1;
+                            #    stealthenabled = 1;
+                            #};
                             dock = {
                                 appswitcher-all-displays = true;
                                 autohide = true;
