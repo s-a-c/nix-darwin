@@ -844,7 +844,7 @@
                             "droidcam-obs"
                             "duckduckgo"
                             "dyalog"
-                            "emacs-app@pretest"
+                            "emacs-app"
                             "emojipedia"
                             "expressvpn"
                             "flutter"
