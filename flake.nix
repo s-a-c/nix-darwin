@@ -40,6 +40,10 @@
         #     url = "github:felixkratz/homebrew-formulae";
         #     flake = false;
         # };
+        shivammathur-php = {
+            url = "github:shivammathur/homebrew-php";
+            flake = false;
+        };
         shivammathur-extensions = {
             url = "github:shivammathur/homebrew-extensions";
             flake = false;
@@ -58,6 +62,7 @@
             homebrew-services,
             # homebrew-aerospace,
             # homebrew-sketchybar,
+            shivammathur-php,
             shivammathur-extensions,
             ...
         }:
@@ -70,299 +75,10 @@
                     # List packages installed in system profile. To search by name, run:
                     # $ nix-env -qaP | grep wget
                     environment.systemPackages = [
-                        #pkgs.atuin
-                        #pkgs.autoconf
-                        #pkgs.autoconf-archive
-                        #pkgs.autogen
-                        #pkgs.automake
-                        #pkgs.avfs
-                        #pkgs.bat
-                        #pkgs.bat-extras.batdiff
-                        #pkgs.bat-extras.batgrep
-                        #pkgs.bat-extras.batman
-                        #pkgs.bat-extras.batpipe
-                        #pkgs.bat-extras.batwatch
-                        #pkgs.bat-extras.prettybat
-                        #pkgs.bats
-                        #pkgs.bfg-repo-cleaner
-                        #pkgs.binutils-unwrapped-all-targets
-                        #pkgs.btop
-                        #pkgs.bzip2
-                        #pkgs.carapace
-                        #pkgs.ccache
-                        #pkgs.ccls
-                        #pkgs.chafa
-                        #pkgs.charm
-                        #pkgs.chruby
-                        #pkgs.clang-analyzer
-                        #pkgs.clang-manpages
-                        #pkgs.clang-tools
-                        #pkgs.clojure
-                        #pkgs.clojure-lsp
-                        #pkgs.clolcat
-                        #pkgs.corepack_latest
-                        #pkgs.coreutils-full
-                        #pkgs.cowsay
-                        #pkgs.cq
-                        #pkgs.curlFull
-                        #pkgs.dart
-                        #pkgs.dart-sass
-                        #pkgs.darwin.xcode
-                        #pkgs.dbus
-                        #pkgs.deno
-                        #pkgs.e2fsprogs
-                        #pkgs.editorconfig-checker
-                        #pkgs.editorconfig-core-c
-                        #pkgs.elixir
-                        #pkgs.elixir-ls
-                        #pkgs.elvish
-                        #pkgs.erlang_27
-                        #pkgs.erlang-ls
-                        #pkgs.erlfmt
-                        #pkgs.exercism
-                        #pkgs.exiftool
-                        #pkgs.eza
-                        #pkgs.fastfetch
-                        #pkgs.fd
-                        #pkgs.fennel-ls
-                        #pkgs.ffmpeg_7-full
-                        #pkgs.ffmpegthumbnailer
-                        #pkgs.figlet
-                        #pkgs.findutils
-                        #pkgs.fnlfmt
-                        #pkgs.fortune
-                        #pkgs.fzf
-                        #pkgs.fzf-git-sh
-                        #pkgs.fzf-make
-                        #pkgs.fzf-obc
-                        #pkgs.fzf-zsh
-                        #pkgs.gcc
-                        #pkgs.gettext
-                        #pkgs.gh
-                        #pkgs.gh-f
-                        #pkgs.gist
-                        #pkgs.git-filter-repo
-                        #pkgs.gitFull
-                        #pkgs.gitui
-                        #pkgs.gleam
-                        #pkgs.gmp
-                        #pkgs.gnugrep
-                        #pkgs.gnum4
-                        #pkgs.gnumake
-                        #pkgs.gnupatch
-                        #pkgs.gnupg
-                        #pkgs.go
-                        #pkgs.gopls
-                        #pkgs.gpa
-                        #pkgs.gpg-tui
-                        #pkgs.guile
-                        #pkgs.guile-lib
-                        #pkgs.guix
-                        #pkgs.gum
-                        #pkgs.helix
-                        #pkgs.helix-gpt
-                        #pkgs.imagemagickBig
-                        #pkgs.iterm2
-                        #pkgs.jdk23
-                        #pkgs.jellycli
-                        #pkgs.jellyfin
-                        #pkgs.jellyfin-ffmpeg
-                        #pkgs.jellyfin-media-player
-                        #pkgs.jellyfin-mpv-shim
-                        #pkgs.jellyfin-web
-                        #pkgs.jftui
-                        #pkgs.jq
-                        #pkgs.jq-lsp
-                        #pkgs.jq-zsh-plugin
-                        #pkgs.json_c
-                        #pkgs.julia
-                        #pkgs.kodi
-                        #pkgs.ksnip
-                        #pkgs.laravel
-                        #pkgs.lazygit
-                        #pkgs.lesspipe
-                        #pkgs.lfe
-                        #pkgs.libtool
-                        #pkgs.lilypond-with-fonts
-                        #pkgs.livebook
-                        #pkgs.llvm
-                        #pkgs.llvm-manpages
-                        #pkgs.lolcat
-                        #pkgs.lsd
-                        #pkgs.lua-language-server
-                        #pkgs.lua54Packages.fennel
-                        #pkgs.lua54Packages.lua
-                        #pkgs.lua54Packages.luacheck
-                        #pkgs.lua54Packages.luarepl
-                        #pkgs.lua54Packages.luarocks
-                        #pkgs.mas
-                        #pkgs.mediainfo
-                        #pkgs.mediainfo-gui
-                        #pkgs.micro
-                        #pkgs.mmv
-                        #pkgs.mopidy-bandcamp
-                        #pkgs.mopidy-jellyfin
-                        #pkgs.mopidy-local
-                        #pkgs.mopidy-moped
-                        #pkgs.mopidy-notify
-                        #pkgs.mopidy-podcast
-                        #pkgs.mopidy-scrobbler
-                        #pkgs.mopidy-somafm
-                        #pkgs.mopidy-soundcloud
-                        #pkgs.mopidy-spotify
-                        #pkgs.mopidy-tunein
-                        #pkgs.mopidy-youtube
-                        #pkgs.mopidy-ytmusic
-                        #pkgs.mpd
-                        #pkgs.mpv
-                        #pkgs.ncurses
-                        #pkgs.neovide
-                        #pkgs.neovim
-                        #pkgs.neovim-remote
-                        #pkgs.netbird
-                        #pkgs.netbird-ui
-                        #pkgs.ninja
-                        #pkgs.notcurses
-                        #pkgs.nu_scripts
-                        #pkgs.nufmt
-                        #pkgs.nushell
-                        #pkgs.nushellPlugins.formats
-                        #pkgs.nushellPlugins.gstat
-                        #pkgs.nushellPlugins.net
-                        #pkgs.nushellPlugins.query
-                        #pkgs.odin
-                        #pkgs.ols
-                        #pkgs.openssh_hpn
-                        #pkgs.openssl
-                        #pkgs.parallel-full
-                        #pkgs.perl
-                        #pkgs.pgadmin4
-                        #pkgs.pgadmin4-desktopmode
-                        #pkgs.php83
-                        #pkgs.php83Packages.composer
-                        #pkgs.php83Packages.composer-local-repo-plugin
-                        #pkgs.php83Packages.phpstan
-                        #pkgs.php83Packages.psysh
-                        #pkgs.phpunit
-                        #pkgs.pinentry_mac
-                        #pkgs.pipx
-                        #pkgs.pkg-config
-                        #pkgs.pngpaste
-                        #pkgs.ponysay
-                        #pkgs.poppler
-                        #pkgs.poppler_data
-                        #pkgs.poppler_utils
-                        #pkgs.postgresql_16
-                        #pkgs.postgresql16Packages.postgis
-                        #pkgs.postgresql16Packages.temporal_tables
-                        #pkgs.postgresql16Packages.timescaledb
-                        #pkgs.postgresql16Packages.timescaledb_toolkit
-                        #pkgs.powerline-fonts
-                        #pkgs.powerline-symbols
-                        #pkgs.progress
-                        #pkgs.python313Full
-                        #pkgs.racket
-                        #pkgs.rakudo
-                        #pkgs.ranger
-                        #pkgs.rebar3
-                        #pkgs.rich-cli
-                        #pkgs.ripgrep
-                        #pkgs.rlwrap
-                        #pkgs.roswell
-                        #pkgs.ruby_3_3
-                        #pkgs.rubyPackages_3_3.rails
-                        #pkgs.rubyPackages_3_3.ruby-lsp
-                        #pkgs.rubyPackages_3_3.sass
-                        #pkgs.rubyPackages_3_3.sass-listen
-                        #pkgs.rubyPackages_3_3.sassc
-                        #pkgs.rustup
-                        #pkgs.screen
-                        #pkgs.scribus
-                        #pkgs.sheldon
-                        #pkgs.shellcheck
-                        #pkgs.shellcheck-sarif
-                        #pkgs.shellharden
-                        #pkgs.shellspec
-                        #pkgs.spatialite_tools
-                        #pkgs.sqlcipher
-                        #pkgs.sqldiff
-                        #pkgs.sqlite
-                        #pkgs.sqlite-utils
-                        #pkgs.sqlite-web
-                        #pkgs.starship
-                        #pkgs.stow
-                        #pkgs.stylelint
-                        #pkgs.stylua
-                        #pkgs.tailscale
-                        #pkgs.tailscale-nginx-auth
-                        #pkgs.tailscalesd
-                        #pkgs.tailwindcss
-                        #pkgs.tailwindcss-language-server
-                        #pkgs.tartube-yt-dlp
-                        #pkgs.tcl
-                        #pkgs.tclx
-                        #pkgs.tealdeer
-                        #pkgs.tewisay
-                        #pkgs.texi2html
-                        #pkgs.texliveFull
-                        #pkgs.tig
-                        #pkgs.tk
-                        #pkgs.tkman
-                        #pkgs.tmux
-                        #pkgs.trash-cli
-                        #pkgs.tree
-                        #pkgs.tree-sitter
-                        #pkgs.typescript
-                        #pkgs.unar
-                        #pkgs.unzip
-                        #pkgs.vcpkg
-                        #pkgs.vcpkg-tool
-                        #pkgs.vim
-                        #pkgs.wget
-                        #pkgs.wireguard-tools
-                        #pkgs.xclip
-                        #pkgs.xsel
-                        #pkgs.yaml-language-server
-                        #pkgs.yamlfmt
-                        #pkgs.yazi
-                        #pkgs.yq
-                        #pkgs.yt-dlp
-                        #pkgs.ytfzf
-                        #pkgs.yubico-pam
-                        #pkgs.yubico-piv-tool
-                        #pkgs.yubikey-agent
-                        #pkgs.yubikey-manager
-                        #pkgs.yubikey-personalization
-                        #pkgs.yubikey-personalization-gui
-                        #pkgs.yubikey-touch-detector
-                        #pkgs.zellij
-                        #pkgs.zig
-                        #pkgs.zig-shell-completions
-                        #pkgs.zlib
-                        #pkgs.zls
-                        #pkgs.zoxide
-                        #pkgs.zsh
-                        #pkgs.zsh-abbr
-                        #pkgs.zsh-autocomplete
-                        #pkgs.zsh-autopair
-                        #pkgs.zsh-autosuggestions
-                        #pkgs.zsh-completions
-                        #pkgs.zsh-f-sy-h
-                        #pkgs.zsh-forgit
-                        #pkgs.zsh-fzf-history-search
-                        #pkgs.zsh-history-search-multi-word
-                        #pkgs.zsh-history-substring-search
-                        #pkgs.zsh-navigation-tools
-                        #pkgs.zsh-nix-shell
-                        #pkgs.zsh-you-should-use
-                        #pkgs.zsh-zhooks
-                        #pkgs.zstd
-                        #pkgs.ztags
                         pkgs.any-nix-shell
                         pkgs.ascii-image-converter
                         pkgs.bash_unit
                         pkgs.bash-preexec
-                        #pkgs.bashate
                         pkgs.blesh
                         pkgs.bun
                         pkgs.cacert
@@ -408,7 +124,6 @@
                         iosevka-comfy.comfy-wide-motion
                         iosevka-comfy.comfy-wide-motion-duo
                         iosevka-comfy.comfy-wide-motion-fixed
-                        # nerdfonts
                         open-dyslexic
                         overpass
                     ];
@@ -653,6 +368,7 @@
                             "micro"
                             "mmv"
                             "mongosh"
+                            "mpc"
                             {
                                 name = "mpd";
                                 link = true;
@@ -690,12 +406,32 @@
                             "p11-kit"
                             "pango"
                             "parallel"
-                            #"shivammathur/extensions/pcov@8.3"
-                            "pcov@8.4"
                             "pcre"
                             "pcre2"
                             "perl"
-                            "php"
+                            {
+                                name = "shivammathur/php/php@8.4";
+                                #args = [ "--force" ];
+                                link = true;
+                                restart_service = false;
+                                start_service = false;
+                            }
+                            "shivammathur/extensions/apcu@8.4"
+                            "shivammathur/extensions/event@8.4"
+                            "shivammathur/extensions/expect@8.4"
+                            "shivammathur/extensions/igbinary@8.4"
+                            "shivammathur/extensions/imagick@8.4"
+                            "shivammathur/extensions/msgpack@8.4"
+                            "shivammathur/extensions/opentelemetry@8.4"
+                            "shivammathur/extensions/pcov@8.4"
+                            "shivammathur/extensions/pecl_http@8.4"
+                            "shivammathur/extensions/psr@8.4"
+                            "shivammathur/extensions/raphf@8.4"
+                            "shivammathur/extensions/redis@8.4"
+                            "shivammathur/extensions/uuid@8.4"
+                            "shivammathur/extensions/xdebug@8.4"
+                            "shivammathur/extensions/yaml@8.4"
+                            "shivammathur/extensions/zstd@8.4"
                             "pinentry"
                             "pinentry-mac"
                             "pipx"
@@ -808,22 +544,11 @@
                             "zoxide"
                             "zsh-lovers"
                             "zsh"
-                            #"zsh-async"
-                            #"zsh-autocomplete"
-                            #"zsh-autopair"
-                            #"zsh-autosuggestions"
-                            #"zsh-completions"
-                            #"zsh-fast-syntax-highlighting"
-                            #"zsh-history-substring-search"
-                            #"zsh-syntax-highlighting"
-                            #"zsh-system-clipboard"
                             "zshdb"
                             "zstd"
                         ];
                         casks = [
                             ## ==> Casks
-                            #"adium"
-                            #"nikitabobko/tap/aerospace"
                             "alfred"
                             #"arc"
                             "balenaetcher"
@@ -848,87 +573,23 @@
                             "emojipedia"
                             "expressvpn"
                             "flutter"
-                            #"font-0xproto-nerd-font"
-                            #"font-3270-nerd-font"
-                            #"font-agave-nerd-font"
                             "font-alegreya-sans-sc"
                             "font-alegreya-sans"
                             "font-alegreya-sc"
-                            #"font-anonymice-nerd-font"
-                            #"font-arimo-nerd-font"
-                            #"font-aurulent-sans-mono-nerd-font"
-                            #"font-awesome-terminal-fonts"
-                            #"font-bigblue-terminal-nerd-font"
-                            #"font-bitstream-vera-sans-mono-nerd-font"
-                            #"font-blex-mono-nerd-font"
-                            #"font-caskaydia-cove-nerd-font"
-                            #"font-caskaydia-mono-nerd-font"
-                            #"font-code-new-roman-nerd-font"
-                            #"font-comic-shanns-mono-nerd-font"
-                            #"font-commit-mono-nerd-font"
-                            #"font-cousine-nerd-font"
-                            #"font-d2coding-nerd-font"
-                            #"font-daddy-time-mono-nerd-font"
-                            #"font-dejavu-sans-mono-nerd-font"
-                            #"font-departure-mono-nerd-font"
-                            #"font-droid-sans-mono-nerd-font"
-                            #"font-envy-code-r-nerd-font"
-                            #"font-fantasque-sans-mono-nerd-font"
                             "font-fira-code-nerd-font"
                             "font-fira-code"
                             "font-fira-mono-nerd-font"
                             "font-fontawesome"
                             "font-geist-mono-nerd-font"
-                            #"font-go-mono-nerd-font"
-                            #"font-gohufont-nerd-font"
-                            #"font-hack-nerd-font"
-                            #"font-hasklug-nerd-font"
-                            #"font-heavy-data-nerd-font"
-                            #"font-hurmit-nerd-font"
-                            #"font-im-writing-nerd-font"
-                            #"font-inconsolata-go-nerd-font"
-                            #"font-inconsolata-lgc-nerd-font"
-                            #"font-inconsolata-nerd-font"
-                            #"font-intone-mono-nerd-font"
-                            #"font-iosevka-nerd-font"
-                            #"font-iosevka-term-nerd-font"
-                            #"font-iosevka-term-slab-nerd-font"
                             "font-jetbrains-mono-nerd-font"
                             "font-jetbrains-mono"
-                            #"font-lekton-nerd-font"
-                            #"font-liberation-nerd-font"
-                            #"font-lilex-nerd-font"
-                            #"font-linux-biolinum"
-                            #"font-m+-nerd-font"
-                            #"font-martian-mono-nerd-font"
-                            #"font-meslo-lg-nerd-font"
-                            #"font-monaspace-nerd-font"
-                            #"font-monaspace"
-                            #"font-monocraft-nerd-font"
-                            #"font-monofur-nerd-font"
-                            #"font-monoid-nerd-font"
-                            #"font-mononoki-nerd-font"
-                            #"font-noto-nerd-font"
                             "font-open-dyslexic-nerd-font"
                             "font-open-dyslexic"
                             "font-overpass-nerd-font"
-                            #"font-profont-nerd-font"
-                            #"font-proggy-clean-tt-nerd-font"
                             "font-recursive-mono-nerd-font"
-                            #"font-roboto-mono-nerd-font"
-                            #"font-sauce-code-pro-nerd-font"
                             "font-sf-mono"
                             "font-sf-pro"
-                            #"font-shure-tech-mono-nerd-font"
-                            #"font-space-mono-nerd-font"
                             "font-symbols-only-nerd-font"
-                            #"font-terminess-ttf-nerd-font"
-                            #"font-tinos-nerd-font"
-                            #"font-trispace"
-                            #"font-ubuntu-mono-nerd-font"
-                            #"font-ubuntu-nerd-font"
-                            #"font-ubuntu-sans-nerd-font"
-                            #"font-victor-mono-nerd-font"
                             "font-zed-mono-nerd-font"
                             "font-zen-loop"
                             "font-zed-sans"
@@ -984,6 +645,7 @@
                             "microsoft-powerpoint"
                             "microsoft-teams"
                             "microsoft-word"
+                            "mpv"
                             "musescore"
                             "neovide"
                             "nextcloud"
@@ -1022,7 +684,6 @@
                             "sf-symbols"
                             "skim"
                             "sloth"
-                            #"spotify"
                             "sqlitemanager"
                             "sqlitestudio"
                             "steam"
@@ -1031,7 +692,6 @@
                             "swiftdefaultappsprefpane"
                             "swiftformat-for-xcode"
                             "tailscale"
-                            #"telegram-desktop@beta"
                             "tex-live-utility"
                             "texstudio"
                             "the-unarchiver"
@@ -1051,7 +711,6 @@
                             "youtube-downloader"
                             "ytmdesktop-youtube-music"
                             "yubico-yubikey-manager"
-                            #"zed"
                             "zen-browser"
                             "zenmap"
                             "zoom"
@@ -1063,11 +722,9 @@
                         masApps = {
                             "Amazon Kindle" = 302584613;
                             "Amazon Prime Video" = 545519333;
-                            #"Apple Carrot Weather: Alerts and Radar" = 961390574;
                             "Apple Configurator" = 1037126344;
                             "Apple Develooper" = 640199958;
                             "Apple GarageBand" = 682658836;
-                            #"Apple iMovie" = 408981434;
                             "Apple Keynote" = 409183694;
                             "Apple Numbers" = 409203825;
                             "Apple Pages" = 409201541;
@@ -1075,11 +732,8 @@
                             "Apple Swift Playgrounds" = 1496833156;
                             "Apple Testflight" = 899247664;
                             "Apple Transporter" = 1450874784;
-                            #"iPulse" = 1028916583;
                             "LanguageTool - Grammar Checker" = 1534275760;
                             "Messenger" = 1480068668;
-                            #"Microsoft 365" = 1450038993;
-                            #"MSE MoneySavingExpert" = 1590502794;
                             "Safari: Black Menu for Wikipedia" = 1543803288;
                             "Safari: Dark Readert Pro" = 1438243180;
                             "Safari: DuckDuckGo Privacy" = 1482920575;
@@ -1090,23 +744,18 @@
                             "Safari: Refined GitHub" = 1519867270;
                             "Safari: SingleFile" = 6444322545;
                             "Safari: Raindrop.io" = 1549370672;
-                            #"Safari: Vimari" = 1480933944;
                             "Safari: Wayback Machine" = 1472432422;
                             "Safari: Web Translator for DeepL" = 6443492610;
                             "Slack" = 803453959;
                             "Smart JSON Editor" = 1268962404;
-                            #"Tailscale" = 1475387142;
                             "Testflight" = 899247664;
-                            #"Tomorrow.io: Weather Forecast" = 1443325509;
                             "Ultra CharMap" = 520265986;
                             "Windows App" = 1295203466;
-                            #"Wireguard" = 1451685025;
                             "Xcode" = 497799835;
                             "Xcode: XCFormat" = 1165321484;
                             "Xcode: Text Toolset" = 1157225201;
                             "Xcode: Comment Wrapper" = 1377998565;
                             "Xcode: NamingTranslator" = 1218784832;
-                            #"Yoink" = 457622435;
                         };
                         onActivation = {
                             autoUpdate = true;
@@ -1140,6 +789,11 @@
                             #    clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
                             #    force_auto_update = true;
                             #}
+                            {
+                                name = "shivammathur/php";
+                                clone_target = "https://github.com/shivammathur/homebrew-php.git";
+                                force_auto_update = true;
+                            }
                             {
                                 name = "shivammathur/extensions";
                                 clone_target = "https://github.com/shivammathur/homebrew-extensions.git";
@@ -1461,6 +1115,7 @@
                                 "homebrew/homebrew-services" = homebrew-services;
                                 # "nikitabobko/homebrew-tap" = homebrew-aerospace;
                                 # "felixkratz/homebrew-formulae" = homebrew-sketchybar;
+                                "shivammathur/homebrew-php" = shivammathur-php;
                                 "shivammathur/homebrew-extensions" = shivammathur-extensions;
                             };
                         };
