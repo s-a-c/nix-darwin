@@ -130,6 +130,265 @@
 
                     homebrew = {
                         enable = true;
+                        global = {
+                            autoUpdate = true;
+                            brewfile = true;
+                        };
+                        onActivation = {
+                            autoUpdate = true;
+                            cleanup = "zap";
+                            extraFlags = [ "--verbose" ];
+                            upgrade = true;
+                        };
+                        masApps = {
+                            "Amazon Kindle" = 302584613;
+                            "Amazon Prime Video" = 545519333;
+                            "Apple Configurator" = 1037126344;
+                            "Apple Develooper" = 640199958;
+                            "Apple GarageBand" = 682658836;
+                            "Apple Keynote" = 409183694;
+                            "Apple Numbers" = 409203825;
+                            "Apple Pages" = 409201541;
+                            "Apple Shazam: Identify Songs" = 897118787;
+                            "Apple Swift Playgrounds" = 1496833156;
+                            "Apple Testflight" = 899247664;
+                            "Apple Transporter" = 1450874784;
+                            "LanguageTool - Grammar Checker" = 1534275760;
+                            "Messenger" = 1480068668;
+                            "Safari: Black Menu for Wikipedia" = 1543803288;
+                            "Safari: Dark Readert Pro" = 1438243180;
+                            "Safari: DuckDuckGo Privacy" = 1482920575;
+                            "Safari: G App Launcher" = 1543803459;
+                            "Safari: Inkscape Editor for Graphics" = 6443424132;
+                            "Safari: LanguageTool" = 1534275760;
+                            "Safari: Notion Web Clipper" = 1559269364;
+                            "Safari: Refined GitHub" = 1519867270;
+                            "Safari: SingleFile" = 6444322545;
+                            "Safari: Raindrop.io" = 1549370672;
+                            "Safari: Wayback Machine" = 1472432422;
+                            "Safari: Web Translator for DeepL" = 6443492610;
+                            "Slack" = 803453959;
+                            "Smart JSON Editor" = 1268962404;
+                            "Testflight" = 899247664;
+                            "Ultra CharMap" = 520265986;
+                            "Windows App" = 1295203466;
+                            "Xcode" = 497799835;
+                            "Xcode: XCFormat" = 1165321484;
+                            "Xcode: Text Toolset" = 1157225201;
+                            "Xcode: Comment Wrapper" = 1377998565;
+                            "Xcode: NamingTranslator" = 1218784832;
+                        };
+                        taps = [
+                            {
+                                name = "homebrew/bundle";
+                                clone_target = "https://github.com/homebrew/homebrew-bundle.git";
+                                force_auto_update = true;
+                            }
+                            {
+                                name = "homebrew/cask";
+                                clone_target = "https://github.com/homebrew/homebrew-cask.git";
+                                force_auto_update = true;
+                            }
+                            {
+                                name = "homebrew/core";
+                                clone_target = "https://github.com/homebrew/homebrew-core.git";
+                                force_auto_update = true;
+                            }
+                            #{
+                            #    name = "homebrew/aerospace";
+                            #    clone_target = "https://github.com/nikitabobko/homebrew-tap.git";
+                            #    force_auto_update = true;
+                            #}
+                            #{
+                            #    name = "homebrew/sketchybar";
+                            #    clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
+                            #    force_auto_update = true;
+                            #}
+                            {
+                                name = "shivammathur/php";
+                                clone_target = "https://github.com/shivammathur/homebrew-php.git";
+                                force_auto_update = true;
+                            }
+                            {
+                                name = "shivammathur/extensions";
+                                clone_target = "https://github.com/shivammathur/homebrew-extensions.git";
+                                force_auto_update = true;
+                            }
+                            {
+                                name = "atlassian/homebrew-acli";
+                                clone_target = "https://github.com/atlassian/homebrew-acli.git";
+                            }
+                        ];
+                        casks = [
+                            ## ==> Casks
+                            "alfred"
+                            #"arc"
+                            "balenaetcher"
+                            "beyond-compare"
+                            "bbedit"
+                            "bitwarden"
+                            "blender-benchmark"
+                            "blender"
+                            "brewservicesmenubar"
+                            "chatgpt"
+                            "cmake"
+                            "crossover"
+                            #"cursor"
+                            "cutter"
+                            "devtoys"
+                            "docker"
+                            "dotnet-sdk"
+                            #"droidcam-obs"
+                            "duckduckgo"
+                            "dyalog"
+                            "emacs-app"
+                            "emojipedia"
+                            "expressvpn"
+                            "flutter"
+                            "font-alegreya-sans-sc"
+                            "font-alegreya-sans"
+                            "font-alegreya-sc"
+                            "font-fira-code-nerd-font"
+                            "font-fira-code"
+                            "font-fira-mono-nerd-font"
+                            "font-fontawesome"
+                            "font-geist-mono-nerd-font"
+                            "font-jetbrains-mono-nerd-font"
+                            "font-jetbrains-mono"
+                            "font-open-dyslexic-nerd-font"
+                            "font-open-dyslexic"
+                            "font-overpass-nerd-font"
+                            "font-recursive-mono-nerd-font"
+                            "font-sf-mono"
+                            "font-sf-pro"
+                            "font-symbols-only-nerd-font"
+                            "font-zed-mono-nerd-font"
+                            "font-zen-loop"
+                            "font-zed-sans"
+                            "font-zen-antique-soft"
+                            "font-zen-dots"
+                            "git-credential-manager"
+                            "github"
+                            "gitkraken-cli"
+                            "gitkraken"
+                            "godot-mono"
+                            "godot"
+                            "google-chrome"
+                            "gpg-suite"
+                            "hammerspoon"
+                            "herd"
+                            "hex-fiend"
+                            "iina"
+                            "inkscape"
+                            "insync"
+                            "iterm2"
+                            "itermai"
+                            "jellyfin-media-player"
+                            "jellyfin"
+                            "jetbrains-gateway"
+                            "jetbrains-space"
+                            "jetbrains-toolbox"
+                            "jupyterlab"
+                            "karabiner-elements"
+                            "keycast"
+                            "kitty"
+                            "kodi"
+                            "languagetool"
+                            "launchcontrol"
+                            "launchpad-manager"
+                            "legcord"
+                            "libreoffice-language-pack"
+                            "libreoffice"
+                            "linear-linear"
+                            "livebook"
+                            "logitech-g-hub"
+                            "lulu"
+                            "macfuse"
+                            "machoview"
+                            "mactex"
+                            "mediainfo"
+                            "mediainfoex"
+                            "meetingbar"
+                            "messenger"
+                            "microsoft-auto-update"
+                            "microsoft-azure-storage-explorer"
+                            "microsoft-excel"
+                            "microsoft-onenote"
+                            "microsoft-outlook"
+                            "microsoft-powerpoint"
+                            "microsoft-teams"
+                            "microsoft-word"
+                            "mpv"
+                            "musescore"
+                            "neovide"
+                            "netbirdio/tap/netbird-ui"
+                            "nextcloud"
+                            "notesollama"
+                            "notion-calendar"
+                            "notion-enhanced"
+                            "notion"
+                            #"obs-advanced-scene-switcher"
+                            #"obs-backgroundremoval"
+                            #"obs-websocket"
+                            #"obs"
+                            "obsidian"
+                            "ollama"
+                            "ollamac"
+                            "onedrive"
+                            "onyx"
+                            "opera@beta"
+                            "oracle-jdk-javadoc"
+                            "oracle-jdk"
+                            "orion"
+                            "paragon-extfs"
+                            "pgadmin4"
+                            "porting-kit"
+                            "postman"
+                            "postman-agent"
+                            "postman-cli"
+                            "powershell"
+                            "qownnotes"
+                            "quarto"
+                            "r"
+                            "racket"
+                            "raycast"
+                            "rstudio"
+                            "scribus"
+                            "setapp"
+                            "sf-symbols"
+                            "skim"
+                            "sloth"
+                            "sqlitemanager"
+                            "sqlitestudio"
+                            "steam"
+                            "steamcmd"
+                            "streamlabs"
+                            "swiftdefaultappsprefpane"
+                            "swiftformat-for-xcode"
+                            "tailscale"
+                            "tex-live-utility"
+                            "texstudio"
+                            "the-unarchiver"
+                            "visual-studio-code"
+                            "vlc-setup"
+                            "vlc-webplugin"
+                            "vlc"
+                            "vmware-fusion"
+                            "wakatime"
+                            "warp"
+                            "wavebox"
+                            "wezterm"
+                            "whatsapp"
+                            "windows-app"
+                            "wireshark"
+                            "xcodeclangformat"
+                            "youtube-downloader"
+                            "ytmdesktop-youtube-music"
+                            "yubico-yubikey-manager"
+                            "zen-browser"
+                            "zenmap"
+                            "zoom"
+                        ];
                         brews = [
                             ## ==> Formulae
                             "acli"
@@ -221,6 +480,7 @@
                             "elixir-ls"
                             "erlang"
                             "erlang_ls"
+                            "evil-helix"
                             "exercism"
                             "exiftool"
                             "eza"
@@ -547,264 +807,6 @@
                             "zsh"
                             "zshdb"
                             "zstd"
-                        ];
-                        casks = [
-                            ## ==> Casks
-                            "alfred"
-                            #"arc"
-                            "balenaetcher"
-                            "beyond-compare"
-                            "bbedit"
-                            "bitwarden"
-                            "blender-benchmark"
-                            "blender"
-                            "brewservicesmenubar"
-                            "chatgpt"
-                            "cmake"
-                            "crossover"
-                            #"cursor"
-                            "cutter"
-                            "devtoys"
-                            "docker"
-                            "dotnet-sdk"
-                            "droidcam-obs"
-                            "duckduckgo"
-                            "dyalog"
-                            "emacs-app"
-                            "emojipedia"
-                            "expressvpn"
-                            "flutter"
-                            "font-alegreya-sans-sc"
-                            "font-alegreya-sans"
-                            "font-alegreya-sc"
-                            "font-fira-code-nerd-font"
-                            "font-fira-code"
-                            "font-fira-mono-nerd-font"
-                            "font-fontawesome"
-                            "font-geist-mono-nerd-font"
-                            "font-jetbrains-mono-nerd-font"
-                            "font-jetbrains-mono"
-                            "font-open-dyslexic-nerd-font"
-                            "font-open-dyslexic"
-                            "font-overpass-nerd-font"
-                            "font-recursive-mono-nerd-font"
-                            "font-sf-mono"
-                            "font-sf-pro"
-                            "font-symbols-only-nerd-font"
-                            "font-zed-mono-nerd-font"
-                            "font-zen-loop"
-                            "font-zed-sans"
-                            "font-zen-antique-soft"
-                            "font-zen-dots"
-                            "git-credential-manager"
-                            "github"
-                            "gitkraken-cli"
-                            "gitkraken"
-                            "godot-mono"
-                            "godot"
-                            "google-chrome"
-                            "gpg-suite"
-                            "hammerspoon"
-                            "herd"
-                            "hex-fiend"
-                            "iina"
-                            "inkscape"
-                            "insync"
-                            "iterm2"
-                            "itermai"
-                            "jellyfin-media-player"
-                            "jellyfin"
-                            "jetbrains-gateway"
-                            "jetbrains-space"
-                            "jetbrains-toolbox"
-                            "jupyterlab"
-                            "karabiner-elements"
-                            "keycast"
-                            "kitty"
-                            "kodi"
-                            "languagetool"
-                            "launchcontrol"
-                            "launchpad-manager"
-                            "legcord"
-                            "libreoffice-language-pack"
-                            "libreoffice"
-                            "livebook"
-                            "logitech-g-hub"
-                            "lulu"
-                            "macfuse"
-                            "machoview"
-                            "mactex"
-                            "mediainfo"
-                            "mediainfoex"
-                            "meetingbar"
-                            "messenger"
-                            "microsoft-auto-update"
-                            "microsoft-azure-storage-explorer"
-                            "microsoft-excel"
-                            "microsoft-onenote"
-                            "microsoft-outlook"
-                            "microsoft-powerpoint"
-                            "microsoft-teams"
-                            "microsoft-word"
-                            "mpv"
-                            "musescore"
-                            "neovide"
-                            "netbirdio/tap/netbird-ui"
-                            "nextcloud"
-                            "notesollama"
-                            "notion-calendar"
-                            "notion-enhanced"
-                            "notion"
-                            "obs-advanced-scene-switcher"
-                            "obs-backgroundremoval"
-                            "obs-websocket"
-                            "obs"
-                            "obsidian"
-                            "ollama"
-                            "ollamac"
-                            "onedrive"
-                            "onyx"
-                            "opera@beta"
-                            "oracle-jdk-javadoc"
-                            "oracle-jdk"
-                            "orion"
-                            "paragon-extfs"
-                            "pgadmin4"
-                            "porting-kit"
-                            "postman"
-                            "postman-agent"
-                            "postman-cli"
-                            "powershell"
-                            "qownnotes"
-                            "quarto"
-                            "r"
-                            "racket"
-                            "raycast"
-                            "rstudio"
-                            "scribus"
-                            "setapp"
-                            "sf-symbols"
-                            "skim"
-                            "sloth"
-                            "sqlitemanager"
-                            "sqlitestudio"
-                            "steam"
-                            "steamcmd"
-                            "streamlabs"
-                            "swiftdefaultappsprefpane"
-                            "swiftformat-for-xcode"
-                            "tailscale"
-                            "tex-live-utility"
-                            "texstudio"
-                            "the-unarchiver"
-                            "visual-studio-code"
-                            "vlc-setup"
-                            "vlc-webplugin"
-                            "vlc"
-                            "vmware-fusion"
-                            "wakatime"
-                            "warp"
-                            "wavebox"
-                            "wezterm"
-                            "whatsapp"
-                            "windows-app"
-                            "wireshark"
-                            "xcodeclangformat"
-                            "youtube-downloader"
-                            "ytmdesktop-youtube-music"
-                            "yubico-yubikey-manager"
-                            "zen-browser"
-                            "zenmap"
-                            "zoom"
-                        ];
-                        global = {
-                            autoUpdate = true;
-                            brewfile = true;
-                        };
-                        masApps = {
-                            "Amazon Kindle" = 302584613;
-                            "Amazon Prime Video" = 545519333;
-                            "Apple Configurator" = 1037126344;
-                            "Apple Develooper" = 640199958;
-                            "Apple GarageBand" = 682658836;
-                            "Apple Keynote" = 409183694;
-                            "Apple Numbers" = 409203825;
-                            "Apple Pages" = 409201541;
-                            "Apple Shazam: Identify Songs" = 897118787;
-                            "Apple Swift Playgrounds" = 1496833156;
-                            "Apple Testflight" = 899247664;
-                            "Apple Transporter" = 1450874784;
-                            "LanguageTool - Grammar Checker" = 1534275760;
-                            "Messenger" = 1480068668;
-                            "Safari: Black Menu for Wikipedia" = 1543803288;
-                            "Safari: Dark Readert Pro" = 1438243180;
-                            "Safari: DuckDuckGo Privacy" = 1482920575;
-                            "Safari: G App Launcher" = 1543803459;
-                            "Safari: Inkscape Editor for Graphics" = 6443424132;
-                            "Safari: LanguageTool" = 1534275760;
-                            "Safari: Notion Web Clipper" = 1559269364;
-                            "Safari: Refined GitHub" = 1519867270;
-                            "Safari: SingleFile" = 6444322545;
-                            "Safari: Raindrop.io" = 1549370672;
-                            "Safari: Wayback Machine" = 1472432422;
-                            "Safari: Web Translator for DeepL" = 6443492610;
-                            "Slack" = 803453959;
-                            "Smart JSON Editor" = 1268962404;
-                            "Testflight" = 899247664;
-                            "Ultra CharMap" = 520265986;
-                            "Windows App" = 1295203466;
-                            "Xcode" = 497799835;
-                            "Xcode: XCFormat" = 1165321484;
-                            "Xcode: Text Toolset" = 1157225201;
-                            "Xcode: Comment Wrapper" = 1377998565;
-                            "Xcode: NamingTranslator" = 1218784832;
-                        };
-                        onActivation = {
-                            autoUpdate = true;
-                            cleanup = "zap";
-                            extraFlags = [ "--verbose" ];
-                            upgrade = true;
-                        };
-                        taps = [
-                            {
-                                name = "homebrew/bundle";
-                                clone_target = "https://github.com/homebrew/homebrew-bundle.git";
-                                force_auto_update = true;
-                            }
-                            {
-                                name = "homebrew/cask";
-                                clone_target = "https://github.com/homebrew/homebrew-cask.git";
-                                force_auto_update = true;
-                            }
-                            {
-                                name = "homebrew/core";
-                                clone_target = "https://github.com/homebrew/homebrew-core.git";
-                                force_auto_update = true;
-                            }
-                            #{
-                            #    name = "homebrew/aerospace";
-                            #    clone_target = "https://github.com/nikitabobko/homebrew-tap.git";
-                            #    force_auto_update = true;
-                            #}
-                            #{
-                            #    name = "homebrew/sketchybar";
-                            #    clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
-                            #    force_auto_update = true;
-                            #}
-                            {
-                                name = "shivammathur/php";
-                                clone_target = "https://github.com/shivammathur/homebrew-php.git";
-                                force_auto_update = true;
-                            }
-                            {
-                                name = "shivammathur/extensions";
-                                clone_target = "https://github.com/shivammathur/homebrew-extensions.git";
-                                force_auto_update = true;
-                            }
-                            {
-                                name = "atlassian/homebrew-acli";
-                                clone_target = "https://github.com/atlassian/homebrew-acli.git";
-                            }
                         ];
                     };
 
