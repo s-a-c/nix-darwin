@@ -95,6 +95,7 @@
                         pkgs.nixd
                         pkgs.nixfmt-rfc-style
                         pkgs.nsxiv
+                        pkgs.phpactor
                         pkgs.procps
                         pkgs.shfmt
                         pkgs.sqlar
@@ -735,6 +736,7 @@
                             "screen"
                             "screenfetch"
                             "screenresolution"
+                            "semgrep"
                             "shared-mime-info"
                             "sheldon"
                             "shellcheck"
