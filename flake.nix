@@ -231,6 +231,7 @@
                             "blender-benchmark"
                             "blender"
                             "brewservicesmenubar"
+                            "charmbracelet/tap/mods"
                             "chatgpt"
                             "cmake"
                             "crossover"
