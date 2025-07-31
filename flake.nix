@@ -644,8 +644,6 @@
                             "ncurses"
                             "neofetch"
                             "neomutt"
-                            "neovim-remote"
-                            "neovim"
                             "nethack"
                             "nettle"
                             "newsboat"
