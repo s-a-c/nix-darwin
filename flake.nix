@@ -32,10 +32,10 @@
             url = "github:homebrew/homebrew-services";
             flake = false;
         };
-        # homebrew-aerospace = {
-        #     url = "github:nikitabobko/homebrew-tap";
-        #     flake = false;
-        # };
+        #homebrew-aerospace = {
+        #    url = "github:nikitabobko/homebrew-tap";
+        #    flake = false;
+        #};
         # homebrew-sketchybar = {
         #     url = "github:felixkratz/homebrew-formulae";
         #     flake = false;
@@ -60,7 +60,7 @@
             homebrew-cask,
             homebrew-core,
             homebrew-services,
-            # homebrew-aerospace,
+            #homebrew-aerospace,
             # homebrew-sketchybar,
             shivammathur-php,
             shivammathur-extensions,
@@ -195,11 +195,16 @@
                                 clone_target = "https://github.com/homebrew/homebrew-core.git";
                                 force_auto_update = true;
                             }
-                            #{
-                            #    name = "homebrew/aerospace";
-                            #    clone_target = "https://github.com/nikitabobko/homebrew-tap.git";
-                            #    force_auto_update = true;
-                            #}
+                            {
+                                name = "homebrew/aerospace";
+                                clone_target = "https://github.com/nikitabobko/homebrew-tap.git";
+                                force_auto_update = true;
+                            }
+                            {
+                                name = "homebrew/charmbracelet";
+                                clone_target = "https://github.com/charmbracelet/homebrew-tap.git";
+                                force_auto_update = true;
+                            }
                             #{
                             #    name = "homebrew/sketchybar";
                             #    clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
@@ -231,7 +236,6 @@
                             "blender-benchmark"
                             "blender"
                             "brewservicesmenubar"
-                            "charmbracelet/tap/mods"
                             "chatgpt"
                             "cmake"
                             "crossover"
@@ -451,6 +455,21 @@
                             "ccache"
                             "ccls"
                             "chafa"
+                            "charmbracelet/tap/charm"
+                            "charmbracelet/tap/confettysh"
+                            "charmbracelet/tap/crush"
+                            "charmbracelet/tap/freeze"
+                            "charmbracelet/tap/glow"
+                            "charmbracelet/tap/gum"
+                            "charmbracelet/tap/markscribe"
+                            "charmbracelet/tap/melt"
+                            "charmbracelet/tap/mods"
+                            "charmbracelet/tap/pop"
+                            "charmbracelet/tap/sequin"
+                            "charmbracelet/tap/skate"
+                            "charmbracelet/tap/soft-serve"
+                            "charmbracelet/tap/vhs"
+                            "charmbracelet/tap/wishlist"
                             "chruby"
                             "clang-build-analyzer"
                             "clang-format"
@@ -538,7 +557,6 @@
                             "grep"
                             "gsl"
                             "guile"
-                            "gum"
                             "harfbuzz"
                             "hdf5"
                             "highway"
