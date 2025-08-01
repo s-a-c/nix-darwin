@@ -657,7 +657,7 @@
                                 restart_service = false;
                                 start_service = false;
                             }
-                            "neovim-nightly"
+                            "benjiwolff/neovim-nightly"
                             "nethack"
                             "nettle"
                             "newsboat"
