@@ -741,7 +741,7 @@
                             "shellcheck"
                             "shellharden"
                             "shellspec"
-                            "felixkratz/sletchybar/sketchybar"
+                            "felixkratz/sketchybar/sketchybar"
                             "felixkratz/sketchybar/borders"
                             "felixkratz/sketchybar/svim"
                             "spatialite-gui"
