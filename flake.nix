@@ -200,6 +200,11 @@
                                 force_auto_update = true;
                             }
                             {
+                                name = "benjiwolff/neovim-nightly";
+                                clone_target = "https://github.com/benjiwolff/neovim-nightly.git";
+                                force_auto_update = true;
+                            }
+                            {
                                 name = "felixkratz/sketchybar";
                                 clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
                                 force_auto_update = true;
@@ -255,7 +260,6 @@
                             "font-recursive-mono-nerd-font"
                             "font-sf-mono"
                             "font-sf-pro"
-                            "font-sketchybar-app-font"
                             "font-symbols-only-nerd-font"
                             "font-zed-mono-nerd-font"
                             "font-zen-loop"
@@ -316,6 +320,7 @@
                             "mpv"
                             "musescore"
                             "neovide"
+                            "benjiwolff/neovim-nightly"
                             "netbirdio/tap/netbird-ui"
                             "nextcloud"
                             "notesollama"
@@ -647,6 +652,12 @@
                             "ncurses"
                             "neofetch"
                             "neomutt"
+                            {
+                                name = "neovim";
+                                link = false;
+                                restart_service = false;
+                                start_service = false;
+                            }
                             "nethack"
                             "nettle"
                             "newsboat"
