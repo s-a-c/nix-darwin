@@ -319,7 +319,7 @@
                             "microsoft-word"
                             "mpv"
                             "musescore"
-                            "neovide"
+                            #"neovide"
                             "benjiwolff/neovim-nightly/neovim-nightly"
                             "netbirdio/tap/netbird-ui"
                             "nextcloud"
@@ -652,12 +652,12 @@
                             "ncurses"
                             "neofetch"
                             "neomutt"
-                            {
-                                name = "neovim";
-                                link = false;
-                                restart_service = false;
-                                start_service = false;
-                            }
+                            #{
+                            #    name = "neovim";
+                            #    link = false;
+                            #    restart_service = false;
+                            #    start_service = false;
+                            #}
                             "nethack"
                             "nettle"
                             "newsboat"
