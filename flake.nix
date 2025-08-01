@@ -320,6 +320,7 @@
                             "mpv"
                             "musescore"
                             "neovide"
+                            "benjiwolff/neovim-nightly/neovim-nightly"
                             "netbirdio/tap/netbird-ui"
                             "nextcloud"
                             "notesollama"
@@ -657,7 +658,6 @@
                                 restart_service = false;
                                 start_service = false;
                             }
-                            "benjiwolff/neovim-nightly"
                             "nethack"
                             "nettle"
                             "newsboat"
