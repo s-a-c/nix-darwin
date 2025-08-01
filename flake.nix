@@ -201,7 +201,7 @@
                             }
                             {
                                 name = "benjiwolff/neovim-nightly";
-                                clone_target = "https://github.com/benjiwolff/neovim-nightly.git";
+                                clone_target = "https://github.com/benjiwolff/homebrew-neovim-nightly.git";
                                 force_auto_update = true;
                             }
                             {
@@ -657,7 +657,7 @@
                                 restart_service = false;
                                 start_service = false;
                             }
-                            "benjiwolff/neovim-nightly"
+                            "neovim-nightly"
                             "nethack"
                             "nettle"
                             "newsboat"
