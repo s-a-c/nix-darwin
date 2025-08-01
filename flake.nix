@@ -32,14 +32,6 @@
             url = "github:homebrew/homebrew-services";
             flake = false;
         };
-        #homebrew-aerospace = {
-        #    url = "github:nikitabobko/homebrew-tap";
-        #    flake = false;
-        #};
-        # homebrew-sketchybar = {
-        #     url = "github:felixkratz/homebrew-formulae";
-        #     flake = false;
-        # };
         shivammathur-php = {
             url = "github:shivammathur/homebrew-php";
             flake = false;
@@ -60,8 +52,6 @@
             homebrew-cask,
             homebrew-core,
             homebrew-services,
-            #homebrew-aerospace,
-            # homebrew-sketchybar,
             shivammathur-php,
             shivammathur-extensions,
             ...
@@ -196,20 +186,24 @@
                                 force_auto_update = true;
                             }
                             {
-                                name = "homebrew/aerospace";
+                                name = "atlassian/homebrew-acli";
+                                clone_target = "https://github.com/atlassian/homebrew-acli.git";
+                            }
+                            {
+                                name = "aerospace/homebrew";
                                 clone_target = "https://github.com/nikitabobko/homebrew-tap.git";
                                 force_auto_update = true;
                             }
                             {
-                                name = "homebrew/charmbracelet";
+                                name = "charmbracelet/homebrew";
                                 clone_target = "https://github.com/charmbracelet/homebrew-tap.git";
                                 force_auto_update = true;
                             }
-                            #{
-                            #    name = "homebrew/sketchybar";
-                            #    clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
-                            #    force_auto_update = true;
-                            #}
+                            {
+                                name = "felixkratz/sketchybar";
+                                clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
+                                force_auto_update = true;
+                            }
                             {
                                 name = "shivammathur/php";
                                 clone_target = "https://github.com/shivammathur/homebrew-php.git";
@@ -220,15 +214,11 @@
                                 clone_target = "https://github.com/shivammathur/homebrew-extensions.git";
                                 force_auto_update = true;
                             }
-                            {
-                                name = "atlassian/homebrew-acli";
-                                clone_target = "https://github.com/atlassian/homebrew-acli.git";
-                            }
                         ];
                         casks = [
                             ## ==> Casks
                             "alfred"
-                            #"arc"
+                            "aerospace/homebrew/aerospace"
                             "balenaetcher"
                             "beyond-compare"
                             "bbedit"
@@ -239,12 +229,10 @@
                             "chatgpt"
                             "cmake"
                             "crossover"
-                            #"cursor"
                             "cutter"
                             "devtoys"
                             "docker"
                             "dotnet-sdk"
-                            #"droidcam-obs"
                             "duckduckgo"
                             "dyalog"
                             "emacs-app"
@@ -333,10 +321,6 @@
                             "notion-calendar"
                             "notion-enhanced"
                             "notion"
-                            #"obs-advanced-scene-switcher"
-                            #"obs-backgroundremoval"
-                            #"obs-websocket"
-                            #"obs"
                             "obsidian"
                             "ollama"
                             "ollamac"
@@ -402,6 +386,7 @@
                             "armadillo"
                             "asciinema"
                             "aspell"
+                            "atuin"
                             "autoconf"
                             "autoconf-archive"
                             "autoenv"
@@ -455,21 +440,21 @@
                             "ccache"
                             "ccls"
                             "chafa"
-                            "charmbracelet/tap/charm"
-                            "charmbracelet/tap/confettysh"
-                            "charmbracelet/tap/crush"
-                            "charmbracelet/tap/freeze"
-                            "charmbracelet/tap/glow"
-                            "charmbracelet/tap/gum"
-                            "charmbracelet/tap/markscribe"
-                            "charmbracelet/tap/melt"
-                            "charmbracelet/tap/mods"
-                            "charmbracelet/tap/pop"
-                            "charmbracelet/tap/sequin"
-                            "charmbracelet/tap/skate"
-                            "charmbracelet/tap/soft-serve"
-                            "charmbracelet/tap/vhs"
-                            "charmbracelet/tap/wishlist"
+                            "charmbracelet/homebrew/charm"
+                            "charmbracelet/homebrew/confettysh"
+                            "charmbracelet/homebrew/crush"
+                            "charmbracelet/homebrew/freeze"
+                            "charmbracelet/homebrew/glow"
+                            "charmbracelet/homebrew/gum"
+                            "charmbracelet/homebrew/markscribe"
+                            "charmbracelet/homebrew/melt"
+                            "charmbracelet/homebrew/mods"
+                            "charmbracelet/homebrew/pop"
+                            "charmbracelet/homebrew/sequin"
+                            "charmbracelet/homebrew/skate"
+                            "charmbracelet/homebrew/soft-serve"
+                            "charmbracelet/homebrew/vhs"
+                            "charmbracelet/homebrew/wishlist"
                             "chruby"
                             "clang-build-analyzer"
                             "clang-format"
@@ -756,7 +741,7 @@
                             "shellcheck"
                             "shellharden"
                             "shellspec"
-                            #"sketchybar"
+                            "felixkratz/sketchybar"
                             "spatialite-gui"
                             "spatialite-tools"
                             "speedtest-cli"
@@ -770,7 +755,6 @@
                             "stow"
                             "stylelint"
                             "stylua"
-                            "superfile"
                             "svgo"
                             "svim"
                             "switchaudio-osx"
@@ -808,6 +792,7 @@
                             "yaml-language-server"
                             "yamlfmt"
                             "yamllint"
+                            "yazi"
                             "ykpers"
                             "yq"
                             "yt-dlp"
@@ -949,7 +934,7 @@
                             package = pkgs.postgresql;
                         };
 
-                        sketchybar.enable = false;
+                        sketchybar.enable = true;
 
                         spacebar.enable = false;
 
@@ -1133,8 +1118,6 @@
                                 "homebrew/homebrew-cask" = homebrew-cask;
                                 "homebrew/homebrew-core" = homebrew-core;
                                 "homebrew/homebrew-services" = homebrew-services;
-                                # "nikitabobko/homebrew-tap" = homebrew-aerospace;
-                                # "felixkratz/homebrew-formulae" = homebrew-sketchybar;
                                 "shivammathur/homebrew-php" = shivammathur-php;
                                 "shivammathur/homebrew-extensions" = shivammathur-extensions;
                             };
