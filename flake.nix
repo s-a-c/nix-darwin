@@ -87,7 +87,7 @@
             pkgs.lldb
             pkgs.lorri
             pkgs.mkalias
-            pkgs.nix-zsh-completions
+            #pkgs.nix-zsh-completions
             pkgs.nixd
             pkgs.nixfmt-rfc-style
             pkgs.nsxiv
@@ -367,7 +367,7 @@
               "streamlabs"
               "swiftdefaultappsprefpane"
               "swiftformat-for-xcode"
-              "tailscale"
+              "tailscale-app"
               "tex-live-utility"
               "texstudio"
               "the-unarchiver"
@@ -398,7 +398,7 @@
               "armadillo"
               "asciinema"
               "aspell"
-              "atuin"
+              #"atuin"
               "autoconf"
               "autoconf-archive"
               "autoenv"
@@ -806,6 +806,7 @@
               "w3m"
               "webp"
               "wget"
+              "wimlib"
               "wireguard-go"
               "wireguard-tools"
               "x265"
@@ -917,11 +918,11 @@
             };
 
             zsh = {
-              enable = true;
-              enableFzfCompletion = true;
-              enableFzfGit = true;
-              enableFzfHistory = true;
-              enableSyntaxHighlighting = true;
+              enable = false;
+              enableFzfCompletion = false;
+              enableFzfGit = false;
+              enableFzfHistory = false;
+              enableSyntaxHighlighting = false;
             };
           };
 
