@@ -641,6 +641,7 @@
               "lzo"
               "m4"
               "make"
+              "markdown-oxide"
               "marksman"
               "mas"
               "mediainfo"
