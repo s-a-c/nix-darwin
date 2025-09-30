@@ -340,7 +340,7 @@
               "onyx"
               "opera@beta"
               #"oracle-jdk-javadoc"
-              #"oracle-jdk"
+              "oracle-jdk"
               "orion"
               #"paragon-extfs"
               "pgadmin4"
