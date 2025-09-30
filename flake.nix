@@ -325,7 +325,7 @@
               "microsoft-word"
               "stolendata-mpv"
               "musescore"
-              "neovide"
+              "neovide-app"
               #"benjiwolff/neovim-nightly/neovim-nightly"
               "netbirdio/tap/netbird-ui"
               "nextcloud"
