@@ -399,7 +399,7 @@
               #"TheZoraiz/ascii-image-converter/ascii-image-converter" # go install github.com/TheZoraiz/ascii-image-converter@latest
               "asciinema"
               "aspell"
-              #"atuin"
+              "atuin"
               "autoconf"
               "autoconf-archive"
               "autoenv"
@@ -753,6 +753,7 @@
               "python-tabulate"
               "python-tk@3.13"
               "python@3.13"
+              "jetbrains/utils/qodana"
               "rakudo-star"
               "readline"
               "rebar3"
