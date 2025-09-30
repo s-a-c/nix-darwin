@@ -71,12 +71,12 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
-            pkgs.any-nix-shell
-            pkgs.ascii-image-converter
+            #pkgs.any-nix-shell
+            #pkgs.ascii-image-converter # go install github.com/TheZoraiz/ascii-image-converter@latest
             pkgs.bash_unit
             pkgs.bash-preexec
             pkgs.blesh
-            pkgs.bun
+            #pkgs.bun  # curl -fsSL https://bun.com/install | bash #
             pkgs.cacert
             pkgs.checkbashisms
             pkgs.clipse
@@ -150,7 +150,7 @@
               "Apple Swift Playgrounds" = 1496833156;
               "Apple Testflight" = 899247664;
               "Apple Transporter" = 1450874784;
-              "LanguageTool - Grammar Checker" = 1534275760;
+              #"LanguageTool - Grammar Checker" = 1534275760;
               "Messenger" = 1480068668;
               "Safari: Black Menu for Wikipedia" = 1543803288;
               "Safari: Dark Readert Pro" = 1438243180;
@@ -205,11 +205,11 @@
                 clone_target = "https://github.com/charmbracelet/homebrew-tap.git";
                 force_auto_update = true;
               }
-              {
-                name = "benjiwolff/neovim-nightly";
-                clone_target = "https://github.com/benjiwolff/homebrew-neovim-nightly.git";
-                force_auto_update = true;
-              }
+              #{
+              #  name = "benjiwolff/neovim-nightly";
+              #  clone_target = "https://github.com/benjiwolff/homebrew-neovim-nightly.git";
+              #  force_auto_update = true;
+              #}
               {
                 name = "felixkratz/sketchybar";
                 clone_target = "https://github.com/felixkratz/homebrew-formulae.git";
@@ -238,7 +238,7 @@
               "blender"
               "brewservicesmenubar"
               "chatgpt"
-              "cmake"
+              "cmake-app"
               "crossover"
               "cutter"
               "devtoys"
@@ -274,8 +274,8 @@
               "font-zen-dots"
               "git-credential-manager"
               "github"
-              "gitkraken-cli"
-              "gitkraken"
+              #"gitkraken-cli"
+              #"gitkraken"
               "godot-mono"
               "godot"
               "google-chrome"
@@ -293,12 +293,12 @@
               "jetbrains-gateway"
               "jetbrains-space"
               "jetbrains-toolbox"
-              "jupyterlab"
+              "jupyterlab-app"
               "karabiner-elements"
               "keycast"
               "kitty"
               "kodi"
-              "languagetool"
+              "languagetool-desktop"
               "launchcontrol"
               "launchpad-manager"
               "legcord"
@@ -323,10 +323,10 @@
               "microsoft-powerpoint"
               "microsoft-teams"
               "microsoft-word"
-              "mpv"
+              "stolendata-mpv"
               "musescore"
-              #"neovide"
-              "benjiwolff/neovim-nightly/neovim-nightly"
+              "neovide"
+              #"benjiwolff/neovim-nightly/neovim-nightly"
               "netbirdio/tap/netbird-ui"
               "nextcloud"
               "notesollama"
@@ -334,15 +334,15 @@
               "notion-enhanced"
               "notion"
               "obsidian"
-              "ollama"
+              "ollama-app"
               "ollamac"
               "onedrive"
               "onyx"
               "opera@beta"
-              "oracle-jdk-javadoc"
-              "oracle-jdk"
+              #"oracle-jdk-javadoc"
+              #"oracle-jdk"
               "orion"
-              "paragon-extfs"
+              #"paragon-extfs"
               "pgadmin4"
               "porting-kit"
               "postman"
@@ -351,7 +351,7 @@
               "powershell"
               "qownnotes"
               "quarto"
-              "r"
+              "r-app"
               "racket"
               "raycast"
               "rstudio"
@@ -382,12 +382,12 @@
               "wezterm"
               "whatsapp"
               "windows-app"
-              "wireshark"
+              "wireshark-app"
               "xcodeclangformat"
               "youtube-downloader"
               "ytmdesktop-youtube-music"
               "yubico-yubikey-manager"
-              "zen-browser"
+              "zen"
               "zenmap"
               "zoom"
             ];
@@ -396,6 +396,7 @@
               "acli"
               "aom"
               "armadillo"
+              #"TheZoraiz/ascii-image-converter/ascii-image-converter" # go install github.com/TheZoraiz/ascii-image-converter@latest
               "asciinema"
               "aspell"
               #"atuin"
@@ -404,6 +405,8 @@
               "autoenv"
               "autogen"
               "automake"
+              "bash_unit"
+              "bash-preexec"
               "bat"
               "bat-extras"
               "bats-core"
@@ -484,6 +487,7 @@
               "cowsay"
               "cpanminus"
               "curl"
+              "curlie"
               "deno"
               "dialog"
               "diff-so-fancy"
@@ -822,8 +826,10 @@
               "xapian"
               "xclip"
               "xdg-ninja"
+              "xh"
               "xorgproto"
               "xsel"
+              "xxh"
               "xz"
               "yaml-language-server"
               "yamlfmt"
