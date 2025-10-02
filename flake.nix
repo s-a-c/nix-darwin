@@ -483,6 +483,7 @@
               "clojure-lsp"
               "clojurescript"
               "cmatrix"
+              "codex"
               "coreutils"
               "cowsay"
               "cpanminus"

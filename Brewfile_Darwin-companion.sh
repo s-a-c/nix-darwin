@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Bun
 export BUN_INSTALL="${BUN_INSTALL:-${XDG_DATA_HOME:-${HOME/.local/share}}/bun}"
-[[ ! -d "$BUN_INSTALL" ]] ]]; then
+if [[ ! -d "$BUN_INSTALL" ]]; then
     mkdir -p "$BUN_INSTALL"
     curl -fsSL https://bun.sh/install | bash -s -- --prefix="$BUN_INSTALL"
     export PATH="$BUN_INSTALL/bin:$PATH"
@@ -21,6 +21,11 @@ uvx yamlscript || true
 # Go tools
 if command -v go >/dev/null 2>&1; then
     go install github.com/TheZoraiz/ascii-image-converter@latest
+fi
+
+# LazyCLI
+if [[ ! command -v lazy >/dev/null 2>& ]]; then
+    curl -s https://lazycli.xyz/install.sh | bash
 fi
 
 # Rust tools

@@ -1,0 +1,2 @@
+# Check for relative paths too
+find ~ -maxdepth 1 -type l -exec sh -c 'target=$(readlink "$1"); if echo "$target" | grep -q "dotfiles/dot-config/" && [ -d "$1" ]; then echo "Would remove: $1 -> $target"; fi' _ {} \;
