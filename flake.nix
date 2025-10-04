@@ -71,35 +71,35 @@
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
-            #pkgs.any-nix-shell
-            #pkgs.ascii-image-converter # go install github.com/TheZoraiz/ascii-image-converter@latest
-            pkgs.bash_unit
-            pkgs.bash-preexec
-            pkgs.blesh
-            #pkgs.bun  # curl -fsSL https://bun.com/install | bash #
-            pkgs.cacert
+            pkgs.any-nix-shell
+            # pkgs.ascii-image-converter # go install github.com/TheZoraiz/ascii-image-converter@latest
+            # pkgs.bash_unit
+            # pkgs.bash-preexec
+            # pkgs.blesh
+            # pkgs.bun  # curl -fsSL https://bun.com/install | bash #
+            # pkgs.cacert
             pkgs.checkbashisms
-            pkgs.clipse
-            pkgs.dwt1-shell-color-scripts
-            pkgs.lazycli
-            pkgs.lazysql
+            # pkgs.clipse
+            # pkgs.dwt1-shell-color-scripts
+            # pkgs.lazycli
+            # pkgs.lazysql
             pkgs.lemonade
-            pkgs.lldb
+            # pkgs.lldb
             pkgs.lorri
-            pkgs.mkalias
-            #pkgs.nix-zsh-completions
+            # pkgs.mkalias
+            pkgs.nix-zsh-completions
             pkgs.nixd
             pkgs.nixfmt-rfc-style
             pkgs.nsxiv
-            pkgs.phpactor
+            # pkgs.phpactor
             pkgs.procps
-            pkgs.shfmt
+            # pkgs.shfmt
             pkgs.sqlar
             pkgs.sysz
             pkgs.taoup
             pkgs.tigerbeetle
             pkgs.tix
-            pkgs.vivid
+            # pkgs.vivid
             pkgs.yamlscript
             pkgs.yt-dlg
             pkgs.zef
@@ -238,11 +238,13 @@
               "blender"
               "brewservicesmenubar"
               "chatgpt"
+              "claude"
+              "claude-code"
               "cmake-app"
               "crossover"
               "cutter"
               "devtoys"
-              "docker-desktop"
+              # "docker-desktop"
               "dotnet-sdk"
               "duckduckgo"
               "dyalog"
@@ -274,8 +276,8 @@
               "font-zen-dots"
               "git-credential-manager"
               "github"
-              #"gitkraken-cli"
-              #"gitkraken"
+              # "gitkraken-cli"
+              # "gitkraken"
               "godot-mono"
               "godot"
               "google-chrome"
@@ -326,7 +328,7 @@
               "stolendata-mpv"
               "musescore"
               "neovide-app"
-              #"benjiwolff/neovim-nightly/neovim-nightly"
+              # "benjiwolff/neovim-nightly/neovim-nightly"
               "netbirdio/tap/netbird-ui"
               "nextcloud"
               "notesollama"
@@ -339,11 +341,14 @@
               "onedrive"
               "onyx"
               "opera@beta"
-              #"oracle-jdk-javadoc"
+              # "oracle-jdk-javadoc"
               "oracle-jdk"
+              "orbstack"
               "orion"
-              #"paragon-extfs"
+              # "paragon-extfs"
               "pgadmin4"
+              "podman-desktop"
+              "podman-tui"
               "porting-kit"
               "postman"
               "postman-agent"
@@ -371,6 +376,7 @@
               "tex-live-utility"
               "texstudio"
               "the-unarchiver"
+              "vivid-app"
               "visual-studio-code"
               "vlc-setup"
               "vlc-webplugin"
@@ -396,7 +402,7 @@
               "acli"
               "aom"
               "armadillo"
-              #"TheZoraiz/ascii-image-converter/ascii-image-converter" # go install github.com/TheZoraiz/ascii-image-converter@latest
+              # "TheZoraiz/ascii-image-converter/ascii-image-converter" # go install github.com/TheZoraiz/ascii-image-converter@latest
               "asciinema"
               "aspell"
               "atuin"
@@ -484,6 +490,7 @@
               "clojurescript"
               "cmatrix"
               "codex"
+              "colima"
               "coreutils"
               "cowsay"
               "cpanminus"
@@ -528,6 +535,7 @@
               "gawk"
               "gcc"
               "gdu"
+              "gemini-cli"
               "gettext"
               "gh"
               "ghcup"
@@ -592,6 +600,8 @@
               "leptonica"
               "lazydocker"
               "lazygit"
+              "lazyjj"
+              "lazysql"
               "less"
               "lesspipe"
               "lilypond"
@@ -674,12 +684,12 @@
               "ncurses"
               "neofetch"
               "neomutt"
-              #{
-              #    name = "neovim";
-              #    link = false;
-              #    restart_service = false;
-              #    start_service = false;
-              #}
+              # {
+              #     name = "neovim";
+              #     link = false;
+              #     restart_service = false;
+              #     start_service = false;
+              # }
               "nethack"
               "nettle"
               "newsboat"
@@ -692,6 +702,7 @@
               "nudoku"
               "nushell"
               "nvm"
+              "opencode"
               "openexr"
               "openjpeg"
               "openssh"
@@ -776,6 +787,7 @@
               "shellcheck"
               "shellharden"
               "shellspec"
+              "shfmt"
               "felixkratz/sketchybar/sketchybar"
               "felixkratz/sketchybar/borders"
               "felixkratz/sketchybar/svim"
@@ -801,6 +813,7 @@
               "talloc"
               "tcl-tk"
               "tealdeer"
+              "teller"
               "terraform"
               "tesseract"
               "texi2html"
@@ -818,6 +831,7 @@
               "unbound"
               "unibilium"
               "unzip"
+              "vivid"
               "w3m"
               "webp"
               "wget"
