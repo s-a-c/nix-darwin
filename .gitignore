@@ -232,3 +232,12 @@ _darcs
 # console-ninja
 trace.log
 
+# ** +++++++++++++++++++++++++++++++++++++++++
+# Nix / Flakes / nix-darwin
+result
+result-*
+.nix-defexpr/
+.nix-profile
+.direnv/
+.envrc
+
