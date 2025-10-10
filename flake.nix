@@ -86,7 +86,7 @@
             pkgs.lemonade
             # pkgs.lldb
             pkgs.lorri
-            # pkgs.mkalias
+            pkgs.mkalias
             pkgs.nix-zsh-completions
             pkgs.nixd
             pkgs.nixfmt-rfc-style
@@ -1164,7 +1164,7 @@
             nix-homebrew = {
               enable = true;
               # Automatically migrate existing Homebrew installations
-              #autoMigrate = true;
+              autoMigrate = true;
 
               # Apple Silicon Only
               enableRosetta = true;
