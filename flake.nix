@@ -399,6 +399,7 @@
             ];
             brews = [
               ## ==> Formulae
+              "brew"
               "acli"
               "aom"
               "armadillo"
