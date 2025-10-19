@@ -309,6 +309,7 @@
               "linear-linear"
               "livebook"
               "logitech-g-hub"
+              "logseq"
               "lulu"
               "macfuse"
               "machoview"
@@ -401,6 +402,7 @@
               ## ==> Formulae
               "brew"
               "acli"
+              "agg"
               "aom"
               "armadillo"
               # "TheZoraiz/ascii-image-converter/ascii-image-converter" # go install github.com/TheZoraiz/ascii-image-converter@latest
