@@ -217,6 +217,11 @@
                 force_auto_update = true;
               }
               {
+                name = "jetbrains/utils";
+                clone_target = "https://github.com/jetbrains/homebrew-utils.git";
+                force_auto_update = true;
+              }
+              {
                 name = "shivammathur/php";
                 clone_target = "https://github.com/shivammathur/homebrew-php.git";
                 force_auto_update = true;
@@ -500,7 +505,7 @@
               "ccls"
               "chafa"
               "charmbracelet/homebrew/charm"
-              "charmbracelet/homebrew/confettysh"
+              # "charmbracelet/homebrew/confettysh"  # Formula does not exist in tap
               "charmbracelet/homebrew/crush"
               "charmbracelet/homebrew/freeze"
               "charmbracelet/homebrew/glow"
