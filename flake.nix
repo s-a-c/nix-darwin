@@ -436,6 +436,9 @@
               "aom"
               "armadillo"
               # "TheZoraiz/ascii-image-converter/ascii-image-converter" # go install github.com/TheZoraiz/ascii-image-converter@latest
+              "asciidoc"
+              "asciidoctor"
+              "asciidoctorj"
               "asciinema"
               "asciiquarium"
               "aspell"
@@ -460,7 +463,7 @@
               "bottom"
               "brotli"
               "btop"
-              "bufbuild/buf/buf"
+              "buf"
               "bzip2"
               "c-ares"
               "c2048"
