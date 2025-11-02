@@ -222,6 +222,11 @@
                 force_auto_update = true;
               }
               {
+                name = "netbirdio/tap";
+                clone_target = "https://github.com/netbirdio/homebrew-tap.git";
+                force_auto_update = true;
+              }
+              {
                 name = "shivammathur/php";
                 clone_target = "https://github.com/shivammathur/homebrew-php.git";
                 force_auto_update = true;
