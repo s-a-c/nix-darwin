@@ -227,6 +227,16 @@
                 force_auto_update = true;
               }
               {
+                name = "jackielii/tap";
+                clone_target = "https://github.com/jackielii/homebrew-tap.git";
+                force_auto_update = true;
+              }
+              {
+                name = "withgraphite/tap";
+                clone_target = "https://github.com/withgraphite/homebrew-tap.git";
+                force_auto_update = true;
+              }
+              {
                 name = "shivammathur/php";
                 clone_target = "https://github.com/shivammathur/homebrew-php.git";
                 force_auto_update = true;
