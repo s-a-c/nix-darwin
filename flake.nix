@@ -98,8 +98,9 @@
             pkgs.sysz
             pkgs.taoup
             pkgs.tigerbeetle
-            pkgs.tix
+            pkgs.tclPackages.tix
             # pkgs.vivid
+            pkgs.vim
             pkgs.yamlscript
             pkgs.yt-dlg
             pkgs.zef
@@ -984,11 +985,14 @@
               enableVim = true;
             };
 
-            vim = {
-              # vi improved
-              enable = true;
-              enableSensible = true;
-            };
+            # vim = {
+            #   # vi improved
+            #   enable = true;
+            #   enableSensible = true;
+            #   package = pkgs.vim;
+            # };
+            # Note: vim module disabled due to vim_configurable deprecation.
+            # vim is installed via environment.systemPackages instead.
 
             zsh = {
               enable = false;
