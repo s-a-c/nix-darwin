@@ -513,6 +513,7 @@
               "charmbracelet/homebrew/soft-serve"
               "charmbracelet/homebrew/vhs"
               "charmbracelet/homebrew/wishlist"
+              "chezmoi"
               "chruby"
               "clang-build-analyzer"
               "clang-format"
@@ -983,7 +984,7 @@
               enableVim = true;
             };
 
-            vim = {
+            vim-full = {
               # vi improved
               enable = true;
               enableSensible = true;
