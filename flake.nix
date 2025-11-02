@@ -984,7 +984,7 @@
               enableVim = true;
             };
 
-            vim-full = {
+            vim = {
               # vi improved
               enable = true;
               enableSensible = true;
