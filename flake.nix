@@ -152,7 +152,7 @@
               "Apple Testflight" = 899247664;
               "Apple Transporter" = 1450874784;
               #"LanguageTool - Grammar Checker" = 1534275760;
-              "Messenger" = 1480068668;
+              #"Messenger" = 1480068668;
               "Safari: Black Menu for Wikipedia" = 1543803288;
               "Safari: Dark Readert Pro" = 1438243180;
               "Safari: DuckDuckGo Privacy" = 1482920575;
@@ -251,7 +251,7 @@
               ## ==> Casks
               "affinity"
               "alfred"
-              "aerospace/homebrew/aerospace"
+              # "aerospace/homebrew/aerospace"
               "balenaetcher"
               "beyond-compare"
               "bbedit"
@@ -264,6 +264,7 @@
               "claude"
               "claude-code"
               "cmake-app"
+              "codex"
               "crossover"
               "cursor"
               "cutter"
@@ -378,7 +379,6 @@
               # "paragon-extfs"
               "pgadmin4"
               "podman-desktop"
-              "podman-tui"
               "porting-kit"
               "postman"
               "postman-agent"
@@ -430,7 +430,6 @@
             ];
             brews = [
               ## ==> Formulae
-              "brew"
               "acli"
               "agg"
               "aom"
@@ -548,7 +547,6 @@
               "clojure-lsp"
               "clojurescript"
               "cmatrix"
-              "codex"
               "colima"
               "coreutils"
               "cowsay"
@@ -807,6 +805,7 @@
               "pkg-config"
               "pngpaste"
               "pngquant"
+              "podman-tui"
               "portaudio"
               "poppler"
               "posting"
@@ -827,7 +826,6 @@
               "python-tabulate"
               "python-tk@3.14"
               "python@3.14"
-              "idle@3.14"
               "uv"
               "jetbrains/utils/qodana"
               "rakudo-star"
