@@ -431,6 +431,9 @@
             brews = [
               ## ==> Formulae
               "acli"
+              "age"
+              "age-plugin-se"
+              "age-plugin-yubikey"
               "agg"
               "aom"
               "armadillo"
@@ -716,6 +719,7 @@
               "luajit"
               "luarocks"
               "luv"
+              "lynix"
               "lynx"
               "lz4"
               "lzo"
