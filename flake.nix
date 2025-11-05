@@ -719,7 +719,7 @@
               "luajit"
               "luarocks"
               "luv"
-              "lynix"
+              "lynis"
               "lynx"
               "lz4"
               "lzo"
