@@ -788,7 +788,12 @@
               }
               "shivammathur/extensions/apcu@8.4"
               "shivammathur/extensions/event@8.4"
-              "shivammathur/extensions/expect@8.4"
+              {
+                name = "shivammathur/extensions/expect@8.4";
+                link = false;
+                restart_service = false;
+                start_service = false;
+              }  # avoid link conflict with core expect
               "shivammathur/extensions/igbinary@8.4"
               "shivammathur/extensions/imagick@8.4"
               "shivammathur/extensions/msgpack@8.4"
@@ -805,12 +810,17 @@
               {
                 name = "shivammathur/php/php@8.5";
                 #args = [ "--force" ];
-                link = true;
-                restart_service = true;
-                start_service = true;
+                link = false;
+                restart_service = false;
+                start_service = false;
               }
               "shivammathur/extensions/apcu@8.5"
-              "shivammathur/extensions/event@8.5"
+              {
+                name = "shivammathur/extensions/expect@8.5";
+                link = false;
+                restart_service = false;
+                start_service = false;
+              }  # avoid link conflict with core expect
               "shivammathur/extensions/expect@8.5"
               "shivammathur/extensions/igbinary@8.5"
               "shivammathur/extensions/imagick@8.5"
