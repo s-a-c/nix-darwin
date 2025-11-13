@@ -140,7 +140,7 @@
             };
             masApps = {
               "Amazon Kindle" = 302584613;
-              "Amazon Prime Video" = 545519333;
+              #"Amazon Prime Video" = 545519333;
               "Apple Configurator" = 1037126344;
               "Apple Develooper" = 640199958;
               "Apple GarageBand" = 682658836;
@@ -165,7 +165,7 @@
               "Safari: Raindrop.io" = 1549370672;
               "Safari: Wayback Machine" = 1472432422;
               "Safari: Web Translator for DeepL" = 6443492610;
-              "Slack" = 803453959;
+              #"Slack" = 803453959;
               "Smart JSON Editor" = 1268962404;
               "Testflight" = 899247664;
               "Ultra CharMap" = 520265986;
@@ -802,6 +802,29 @@
               "shivammathur/extensions/xdebug@8.4"
               "shivammathur/extensions/yaml@8.4"
               "shivammathur/extensions/zstd@8.4"
+              {
+                name = "shivammathur/php/php@8.5";
+                #args = [ "--force" ];
+                link = true;
+                restart_service = true;
+                start_service = true;
+              }
+              "shivammathur/extensions/apcu@8.5"
+              "shivammathur/extensions/event@8.5"
+              "shivammathur/extensions/expect@8.5"
+              "shivammathur/extensions/igbinary@8.5"
+              "shivammathur/extensions/imagick@8.5"
+              "shivammathur/extensions/msgpack@8.5"
+              "shivammathur/extensions/opentelemetry@8.5"
+              "shivammathur/extensions/pcov@8.5"
+              "shivammathur/extensions/pecl_http@8.5"
+              "shivammathur/extensions/psr@8.5"
+              "shivammathur/extensions/raphf@8.5"
+              "shivammathur/extensions/redis@8.5"
+              "shivammathur/extensions/uuid@8.5"
+              "shivammathur/extensions/xdebug@8.5"
+              "shivammathur/extensions/yaml@8.5"
+              "shivammathur/extensions/zstd@8.5"
               "pinentry"
               "pinentry-mac"
               "pipx"
