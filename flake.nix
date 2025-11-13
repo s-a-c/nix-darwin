@@ -780,28 +780,28 @@
               "pcre2"
               "perl"
               {
-                name = "shivammathur/php/php@8.5";
+                name = "shivammathur/php/php@8.4";
                 #args = [ "--force" ];
                 link = true;
-                restart_service = false;
-                start_service = false;
+                restart_service = true;
+                start_service = true;
               }
-              "shivammathur/extensions/apcu@8.5"
-              "shivammathur/extensions/event@8.5"
-              "shivammathur/extensions/expect@8.5"
-              "shivammathur/extensions/igbinary@8.5"
-              "shivammathur/extensions/imagick@8.5"
-              "shivammathur/extensions/msgpack@8.5"
-              "shivammathur/extensions/opentelemetry@8.5"
-              "shivammathur/extensions/pcov@8.5"
-              "shivammathur/extensions/pecl_http@8.5"
-              "shivammathur/extensions/psr@8.5"
-              "shivammathur/extensions/raphf@8.5"
-              "shivammathur/extensions/redis@8.5"
-              "shivammathur/extensions/uuid@8.5"
-              "shivammathur/extensions/xdebug@8.5"
-              "shivammathur/extensions/yaml@8.5"
-              "shivammathur/extensions/zstd@8.5"
+              "shivammathur/extensions/apcu@8.4"
+              "shivammathur/extensions/event@8.4"
+              "shivammathur/extensions/expect@8.4"
+              "shivammathur/extensions/igbinary@8.4"
+              "shivammathur/extensions/imagick@8.4"
+              "shivammathur/extensions/msgpack@8.4"
+              "shivammathur/extensions/opentelemetry@8.4"
+              "shivammathur/extensions/pcov@8.4"
+              "shivammathur/extensions/pecl_http@8.4"
+              "shivammathur/extensions/psr@8.4"
+              "shivammathur/extensions/raphf@8.4"
+              "shivammathur/extensions/redis@8.4"
+              "shivammathur/extensions/uuid@8.4"
+              "shivammathur/extensions/xdebug@8.4"
+              "shivammathur/extensions/yaml@8.4"
+              "shivammathur/extensions/zstd@8.4"
               "pinentry"
               "pinentry-mac"
               "pipx"
