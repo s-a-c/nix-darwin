@@ -783,8 +783,8 @@
                 name = "shivammathur/php/php@8.4";
                 #args = [ "--force" ];
                 link = true;
-                restart_service = true;
-                start_service = true;
+                restart_service = false;
+                start_service = false;
               }
               "shivammathur/extensions/apcu@8.4"
               "shivammathur/extensions/event@8.4"
