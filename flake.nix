@@ -427,6 +427,7 @@
               "zen"
               "zenmap"
               "zoom"
+	      "zotero@beta"
             ];
             brews = [
               ## ==> Formulae
