@@ -139,7 +139,7 @@
               upgrade = true;
             };
             masApps = {
-              "Amazon Kindle" = 302584613;
+              #"Amazon Kindle" = 302584613;
               #"Amazon Prime Video" = 545519333;
               "Apple Configurator" = 1037126344;
               "Apple Develooper" = 640199958;
@@ -169,7 +169,7 @@
               "Smart JSON Editor" = 1268962404;
               "Testflight" = 899247664;
               "Ultra CharMap" = 520265986;
-              "Windows App" = 1295203466;
+              #"Windows App" = 1295203466;
               "Xcode" = 497799835;
               "Xcode: XCFormat" = 1165321484;
               "Xcode: Text Toolset" = 1157225201;
@@ -1179,7 +1179,7 @@
                 appswitcher-all-displays = true;
                 autohide = true;
                 enable-spring-load-actions-on-all-items = true;
-                largesize = 128;
+                largesize = 64;
                 magnification = true;
                 mineffect = "suck";
                 minimize-to-application = true;
