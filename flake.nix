@@ -876,6 +876,7 @@
               "rubyfmt"
               "rustup"
               "sassc"
+	      "sbcl"
               "screen"
               "screenfetch"
               "screenresolution"
