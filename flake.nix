@@ -80,6 +80,7 @@
             # pkgs.cacert
             pkgs.checkbashisms
             # pkgs.clipse
+	    pkgs.devbox
             # pkgs.dwt1-shell-color-scripts
             # pkgs.lazycli
             # pkgs.lazysql
