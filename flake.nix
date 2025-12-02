@@ -725,7 +725,13 @@
               "m4"
               "make"
               "markdown-oxide"
-              "marksman"
+              {
+                name = "marksman";
+                link = true;
+                force = true;
+                restart_service = false;
+                start_service = false;
+              }
               "mas"
               "mediainfo"
               "micro"
@@ -877,7 +883,7 @@
               "rubyfmt"
               "rustup"
               "sassc"
-	      "sbcl"
+              "sbcl"
               "screen"
               "screenfetch"
               "screenresolution"
