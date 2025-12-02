@@ -725,13 +725,7 @@
               "m4"
               "make"
               "markdown-oxide"
-              {
-                name = "marksman";
-                link = true;
-                force = true;
-                restart_service = false;
-                start_service = false;
-              }
+	      "marksman"
               "mas"
               "mediainfo"
               "micro"
