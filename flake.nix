@@ -425,7 +425,7 @@
               "zen"
               "zenmap"
               "zoom"
-	      "zotero@beta"
+              "zotero@beta"
             ];
             brews = [
               ## ==> Formulae
@@ -564,6 +564,8 @@
               "docker-compose"
               "dooit"
               "dotenv-linter"
+              "duf"
+              "dust"
               "duti"
               "e2fsprogs"
               "editorconfig"
@@ -725,7 +727,7 @@
               "m4"
               "make"
               "markdown-oxide"
-	      "marksman"
+              "marksman"
               "mas"
               "mediainfo"
               "micro"
@@ -744,6 +746,7 @@
               "msgpack"
               "nasm"
               "nbsdgames"
+              "ncdu"
               "ncurses"
               "neofetch"
               "neomutt"
