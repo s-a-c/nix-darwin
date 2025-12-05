@@ -847,6 +847,7 @@
               "podman-tui"
               "portaudio"
               "poppler"
+              "postgresql@18"
               "posting"
               "prettier"
               "procs"
