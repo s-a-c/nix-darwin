@@ -82,7 +82,7 @@
             # pkgs.clipse
             pkgs.devbox
             # pkgs.dwt1-shell-color-scripts
-            # pkgs.komorebi
+            pkgs.komorebi
             # pkgs.lazycli
             # pkgs.lazysql
             pkgs.lemonade
@@ -1082,8 +1082,6 @@
             };
 
             karabiner-elements.enable = true;
-
-            komorebi.enable = true;
 
             mopidy = {
               enable = false;
