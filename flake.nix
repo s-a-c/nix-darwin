@@ -1097,7 +1097,7 @@
                 ps.timescaledb
                 ps.pg_cron
                 ps.hypopg
-                ps.pgaudit
+                # ps.pgaudit  # marked as broken for postgresql_18
                 ps.pg_hint_plan
                 ps.rum
               ]);
@@ -1106,7 +1106,7 @@
                 "--encoding=UTF8"
               ];
               settings = {
-                shared_preload_libraries = "pg_stat_statements,pgaudit,pg_cron,timescaledb,auto_explain,pg_hint_plan";
+                shared_preload_libraries = "pg_stat_statements,pg_cron,timescaledb,auto_explain,pg_hint_plan";
               };
             };
 
