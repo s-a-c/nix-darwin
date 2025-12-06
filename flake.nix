@@ -82,7 +82,7 @@
             # pkgs.clipse
             pkgs.devbox
             # pkgs.dwt1-shell-color-scripts
-            pkgs.komorebi
+            # pkgs.komorebi  # Linux-only animated wallpaper manager, not compatible with macOS
             # pkgs.lazycli
             # pkgs.lazysql
             pkgs.lemonade
@@ -1120,7 +1120,7 @@
                 "--encoding=UTF8"
               ];
               settings = {
-                port = 5433;  # Non-standard port to avoid conflict with Homebrew
+                port = lib.mkForce 5433;  # Non-standard port to avoid conflict with Homebrew
                 shared_preload_libraries = "pg_stat_statements,pgaudit,pg_cron,timescaledb,auto_explain,pg_hint_plan";
               };
             };
