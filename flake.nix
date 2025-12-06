@@ -80,8 +80,9 @@
             # pkgs.cacert
             pkgs.checkbashisms
             # pkgs.clipse
-	    pkgs.devbox
+            pkgs.devbox
             # pkgs.dwt1-shell-color-scripts
+            # pkgs.komorebi
             # pkgs.lazycli
             # pkgs.lazysql
             pkgs.lemonade
@@ -559,7 +560,6 @@
               "deno"
               "dialog"
               "diff-so-fancy"
-              "direnv"
               "docker"
               "docker-compose"
               "dooit"
@@ -847,7 +847,6 @@
               "podman-tui"
               "portaudio"
               "poppler"
-              "postgresql@18"
               "posting"
               "prettier"
               "procs"
@@ -996,7 +995,7 @@
               #                                 and replaces them with hard links to a single copy.
               # This saves disk space.
               # If set to false (the default), you can still run nix-store --optimise to get rid of duplicate files.
-              auto-optimise-store = false;
+              auto-optimise-store = true;
 
               # Necessary for using flakes on this system.
               experimental-features = "nix-command flakes";
@@ -1082,7 +1081,9 @@
               inactive_color = "gradient(top_left=0x9992B3F5,bottom_right=0x9992B3F5)";
             };
 
-            karabiner-elements.enable = false;
+            karabiner-elements.enable = true;
+
+            komorebi.enable = true;
 
             mopidy = {
               enable = false;
@@ -1097,10 +1098,27 @@
             postgresql = {
               enable = true;
               enableTCPIP = true;
-              package = pkgs.postgresql;
+              package = pkgs.postgresql_18.withPackages (ps: [
+                ps.postgis
+                ps.pg_partman
+                ps.pgvector
+                ps.timescaledb
+                ps.pg_cron
+                ps.hypopg
+                ps.pgaudit
+                ps.pg_hint_plan
+                ps.rum
+              ]);
+              initdbArgs = [
+                "--locale=en_GB.UTF-8"
+                "--encoding=UTF8"
+              ];
+              settings = {
+                shared_preload_libraries = "pg_stat_statements,pgaudit,pg_cron,timescaledb,auto_explain,pg_hint_plan";
+              };
             };
 
-            sketchybar.enable = true;
+            sketchybar.enable = false;
 
             spacebar.enable = false;
 

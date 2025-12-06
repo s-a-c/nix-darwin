@@ -167,7 +167,7 @@ brew "eternal-terminal"
 # ⚠️ jankyborders -> manual install from felixkratz GitHub
 brew "netbird"
 brew "tailscale"
-brew "postgresql"
+# ⚠️ postgresql -> provided by nix-darwin services.postgresql
 # ⚠️ sketchybar -> present via tap felixkratz/formulae
 # ⚠️ mopidy, spotifyd -> optional
 brew "dockutil"
