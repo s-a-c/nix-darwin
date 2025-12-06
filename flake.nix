@@ -848,6 +848,19 @@
               "portaudio"
               "poppler"
               "posting"
+              # PostgreSQL 18 (primary, default port 5432)
+              {
+                name = "postgresql@18";
+                link = true;  # Link as default postgres
+                restart_service = true;
+                start_service = true;
+              }
+              "postgis"  # PostGIS extension for PostgreSQL
+              "pgvector"  # Vector similarity search extension
+              "pg_partman"  # Partition management extension
+              "pg_cron"  # Job scheduler extension
+              # Note: timescaledb, pgaudit, pg_hint_plan, hypopg, rum not available in Homebrew
+              # Install manually or use from PostgreSQL 17 (Nix) for full extension support
               "prettier"
               "procs"
               "proctools"
@@ -1006,7 +1019,7 @@
 
           nixpkgs = {
             config = {
-              allowBroken = true;	# Allow broken packages.
+              allowBroken = false;
               allowUnfree = true;
               #allowUnsupportedSystem = true;
             };
@@ -1087,10 +1100,11 @@
             # Auto upgrade nix package and the daemon service.    -- deprecated
             ## nix-daemon.enable = true; # # nix.package = pkgs.nix;
 
+            # PostgreSQL 17 with full extension support (secondary, port 5433)
             postgresql = {
               enable = true;
               enableTCPIP = true;
-              package = pkgs.postgresql_18.withPackages (ps: [
+              package = pkgs.postgresql_17.withPackages (ps: [
                 ps.postgis
                 ps.pg_partman
                 ps.pgvector
@@ -1106,6 +1120,7 @@
                 "--encoding=UTF8"
               ];
               settings = {
+                port = 5433;  # Non-standard port to avoid conflict with Homebrew
                 shared_preload_libraries = "pg_stat_statements,pgaudit,pg_cron,timescaledb,auto_explain,pg_hint_plan";
               };
             };
@@ -1142,6 +1157,7 @@
                                                 ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
                 done
               '';
+
 
             # Set Git commit hash for darwin-version.
             configurationRevision = self.rev or self.dirtyRev or null;
