@@ -991,12 +991,6 @@
             #package = pkgs.nix;
 
             settings = {
-              # If set to true, automatically detects files in the store that have identical contents,
-              #                                 and replaces them with hard links to a single copy.
-              # This saves disk space.
-              # If set to false (the default), you can still run nix-store --optimise to get rid of duplicate files.
-              auto-optimise-store = true;
-
               # Necessary for using flakes on this system.
               experimental-features = "nix-command flakes";
 
