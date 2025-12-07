@@ -1088,7 +1088,7 @@
               inactive_color = "gradient(top_left=0x9992B3F5,bottom_right=0x9992B3F5)";
             };
 
-            karabiner-elements.enable = true;
+            # karabiner-elements.enable = true;  # Disabled: missing binaries in Nix package, using Homebrew instead
 
             mopidy = {
               enable = false;
