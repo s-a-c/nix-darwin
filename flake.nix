@@ -326,7 +326,8 @@
               "jetbrains-space"
               "jetbrains-toolbox"
               "jupyterlab-app"
-              "karabiner-elements" "showyedge"
+              "karabiner-elements"
+              "showyedge"
               "kate"
               "keycast"
               "kitty"
@@ -431,6 +432,7 @@
             brews = [
               ## ==> Formulae
               "acli"
+              "act"
               "age"
               "age-plugin-se"
               "age-plugin-yubikey"
@@ -795,7 +797,7 @@
                 link = false;
                 restart_service = false;
                 start_service = false;
-              }  # avoid link conflict with core expect
+              } # avoid link conflict with core expect
               "shivammathur/extensions/igbinary@8.4"
               "shivammathur/extensions/imagick@8.4"
               "shivammathur/extensions/msgpack@8.4"
@@ -822,7 +824,7 @@
                 link = false;
                 restart_service = false;
                 start_service = false;
-              }  # avoid link conflict with core expect
+              } # avoid link conflict with core expect
               "shivammathur/extensions/expect@8.5"
               "shivammathur/extensions/igbinary@8.5"
               "shivammathur/extensions/imagick@8.5"
@@ -851,14 +853,14 @@
               # PostgreSQL 18 (primary, default port 5432)
               {
                 name = "postgresql@18";
-                link = true;  # Link as default postgres
+                link = true; # Link as default postgres
                 restart_service = true;
                 start_service = true;
               }
-              "postgis"  # PostGIS extension for PostgreSQL
-              "pgvector"  # Vector similarity search extension
-              "pg_partman"  # Partition management extension
-              "pg_cron"  # Job scheduler extension
+              "postgis" # PostGIS extension for PostgreSQL
+              "pgvector" # Vector similarity search extension
+              "pg_partman" # Partition management extension
+              "pg_cron" # Job scheduler extension
               # Note: timescaledb, pgaudit, pg_hint_plan, hypopg, rum not available in Homebrew
               # Install manually or use from PostgreSQL 17 (Nix) for full extension support
               "prettier"
@@ -944,6 +946,7 @@
               "tree"
               "tree-sitter"
               "tree-sitter-cli"
+              "turso"
               "unar"
               "unbound"
               "unibilium"
@@ -1120,7 +1123,7 @@
                 "--encoding=UTF8"
               ];
               settings = {
-                port = lib.mkForce 5433;  # Non-standard port to avoid conflict with Homebrew
+                port = lib.mkForce 5433; # Non-standard port to avoid conflict with Homebrew
                 shared_preload_libraries = "pg_stat_statements,pgaudit,pg_cron,timescaledb,auto_explain,pg_hint_plan";
               };
             };
@@ -1141,8 +1144,8 @@
                   name = "system-applications";
                   paths = config.environment.systemPackages;
                   pathsToLink = [
-		    "/Applications"
-		  ];
+                    "/Applications"
+                  ];
                 };
               in
               pkgs.lib.mkForce ''
@@ -1157,7 +1160,6 @@
                                                 ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
                 done
               '';
-
 
             # Set Git commit hash for darwin-version.
             configurationRevision = self.rev or self.dirtyRev or null;
