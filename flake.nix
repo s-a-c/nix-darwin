@@ -733,7 +733,7 @@
               "luajit"
               "luarocks"
               "luv"
-              "lychae"
+              "lychee"
               "lynis"
               "lynx"
               "lz4"
