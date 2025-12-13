@@ -101,6 +101,7 @@
             pkgs.taoup
             pkgs.tigerbeetle
             pkgs.tclPackages.tix
+            pkgs.ulid
             # pkgs.vivid
             pkgs.vim
             pkgs.yamlscript
