@@ -454,7 +454,7 @@
               "autogen"
               "automake"
               "bash_unit"
-              "bash-completion"
+              # "bash-completion"
               "bash-completion@2"
               "bash-preexec"
               "bash-snippets"
