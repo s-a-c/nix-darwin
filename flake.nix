@@ -983,6 +983,7 @@
               "xclip"
               "xdg-ninja"
               "xh"
+              "xonsh"
               "xorgproto"
               "xsel"
               "xxh"
