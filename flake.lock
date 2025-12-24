@@ -36,11 +36,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1766534622,
-        "narHash": "sha256-SAg3/COuotVtcaR92l1sp9PlnkYvqjJAD4vAYUhjwVg=",
+        "lastModified": 1766573219,
+        "narHash": "sha256-zOUUVXhvysSKIbDlqYwSbnv8f+5p9D8onuz7xPk5YbI=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "d7d2a2ed0988ca82bc9cc2f46413328e33671217",
+        "rev": "79d0f753ead8a60768a44661ac65d8ad43013687",
         "type": "github"
       },
       "original": {
@@ -52,11 +52,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1766534623,
-        "narHash": "sha256-W5DNyu8PL/9brgyd5g/aq92OYSdHHpYZlzYCLTVgiwY=",
+        "lastModified": 1766572475,
+        "narHash": "sha256-685xI4i8OX4MB7sre9x3lkVTFiJTxehPyo7ejxqru7A=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "d12f13b9c2409c019e9afb7a7460685ab46bfe97",
+        "rev": "208a0cb11001c33da2cec42164d5dd1a738fc322",
         "type": "github"
       },
       "original": {
@@ -151,11 +151,11 @@
     "shivammathur-extensions": {
       "flake": false,
       "locked": {
-        "lastModified": 1766348218,
-        "narHash": "sha256-PeAuiyCy5qOaSv6s9F0+dKxqkKy+p3RTdQP/aA3lNvE=",
+        "lastModified": 1766566647,
+        "narHash": "sha256-rFwiS5dgytCCqV6QOG0T9QUOrSpK/5I640Q9mBhABeM=",
         "owner": "shivammathur",
         "repo": "homebrew-extensions",
-        "rev": "28955625c56e4ca8cadf4c5b4ed917d83e9b08ec",
+        "rev": "7d4a664e18f45def30fc0e9345a0c503c5013835",
         "type": "github"
       },
       "original": {
@@ -167,11 +167,11 @@
     "shivammathur-php": {
       "flake": false,
       "locked": {
-        "lastModified": 1766453644,
-        "narHash": "sha256-txuqy4xL8Oqt18M6vQEVcZfjfi13O6aJJbPSBmGgoOE=",
+        "lastModified": 1766561287,
+        "narHash": "sha256-Tugj3KdUTajlE4WXcMlTPkZDNScL+yoZuUhcu+5phl8=",
         "owner": "shivammathur",
         "repo": "homebrew-php",
-        "rev": "824ccf06e23f555598ca1e3d9912bcfa431152d7",
+        "rev": "f1bffeb86f730101997ccd89d91ff692aca676af",
         "type": "github"
       },
       "original": {
