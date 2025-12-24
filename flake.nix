@@ -805,7 +805,7 @@
               {
                 name = "shivammathur/php/php@8.4";
                 #args = [ "--force" ];
-                link = true;
+                link = false;
                 restart_service = false;
                 start_service = false;
               }
@@ -833,7 +833,7 @@
               {
                 name = "shivammathur/php/php@8.5";
                 #args = [ "--force" ];
-                link = false;
+                link = true;
                 restart_service = false;
                 start_service = false;
               }
@@ -844,7 +844,6 @@
                 restart_service = false;
                 start_service = false;
               } # avoid link conflict with core expect
-              "shivammathur/extensions/expect@8.5"
               "shivammathur/extensions/igbinary@8.5"
               "shivammathur/extensions/imagick@8.5"
               "shivammathur/extensions/msgpack@8.5"
