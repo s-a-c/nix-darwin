@@ -167,11 +167,11 @@
     "shivammathur-php": {
       "flake": false,
       "locked": {
-        "lastModified": 1767576853,
-        "narHash": "sha256-QOH/IOMBBUD0euao1toQ4b0a5XSUpBe7GI+eBb0My1w=",
+        "lastModified": 1767580576,
+        "narHash": "sha256-1JFbLVDlv94eyhpPqx8kwfTGmY2r3z51lxZnK71ZFK0=",
         "owner": "shivammathur",
         "repo": "homebrew-php",
-        "rev": "0ce1a58f2089bd70b1f81f5695a273a697ff81af",
+        "rev": "aa9090b319e586663ebaa15d3c272295c0dc7839",
         "type": "github"
       },
       "original": {
