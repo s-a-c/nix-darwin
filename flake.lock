@@ -36,11 +36,11 @@
     "homebrew-cask": {
       "flake": false,
       "locked": {
-        "lastModified": 1767566331,
-        "narHash": "sha256-6pTXiz5bz2p81OBJ7EURFdBsdt93NZqjmtpTZcHdE70=",
+        "lastModified": 1767578396,
+        "narHash": "sha256-mf2k0GddUWZLTSi5mf4+tFBVNP5RtAptRMTfLBpVxbU=",
         "owner": "homebrew",
         "repo": "homebrew-cask",
-        "rev": "a47fa21272d8a386d92c9423a506da7958e9f3fa",
+        "rev": "a72a8ea062f4f6cacb9f98908b417b00731222c4",
         "type": "github"
       },
       "original": {
@@ -52,11 +52,11 @@
     "homebrew-core": {
       "flake": false,
       "locked": {
-        "lastModified": 1767570507,
-        "narHash": "sha256-6tWabb2FXP6d5MEzglr3FH6FbMtb1F2WRd1kB/fH63s=",
+        "lastModified": 1767579281,
+        "narHash": "sha256-qOwLpLh0e8I+9fDRWlwM4YH8v78IZmImAf/Opzpi1Is=",
         "owner": "homebrew",
         "repo": "homebrew-core",
-        "rev": "ed27009b52908b6e87a6c7256066855370a4ffd5",
+        "rev": "ea8b09caea29ca3476e69b10b4e8c00902988747",
         "type": "github"
       },
       "original": {
@@ -167,11 +167,11 @@
     "shivammathur-php": {
       "flake": false,
       "locked": {
-        "lastModified": 1767403693,
-        "narHash": "sha256-2XdCx3xECaSW8wrFIABCgnfIHw3M/nit5mgIHe381k8=",
+        "lastModified": 1767576853,
+        "narHash": "sha256-QOH/IOMBBUD0euao1toQ4b0a5XSUpBe7GI+eBb0My1w=",
         "owner": "shivammathur",
         "repo": "homebrew-php",
-        "rev": "06eec83a2717b368f9105200eef26e9134dc67a5",
+        "rev": "0ce1a58f2089bd70b1f81f5695a273a697ff81af",
         "type": "github"
       },
       "original": {
