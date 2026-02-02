@@ -786,7 +786,7 @@
               "nudoku"
               "nushell"
               "nvm"
-              "opencode"
+              #"opencode"
               "openexr"
               "openjpeg"
               "openssh"
