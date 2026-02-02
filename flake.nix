@@ -278,7 +278,7 @@
               "dyalog"
               "emacs-app"
               "emojipedia"
-              "expressvpn"
+              #"expressvpn"
               "flutter"
               "font-alegreya-sans-sc"
               "font-alegreya-sans"
