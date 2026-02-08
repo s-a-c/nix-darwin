@@ -377,6 +377,7 @@
               "ollamac"
               "onedrive"
               "onyx"
+              "opencode-desktop"
               # "opera@beta"
               # "oracle-jdk-javadoc"
               "oracle-jdk"
