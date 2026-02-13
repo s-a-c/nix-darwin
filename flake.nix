@@ -104,7 +104,7 @@
             pkgs.ulid
             # pkgs.vivid
             pkgs.vim
-            pkgs.yamlscript
+            # pkgs.yamlscript # broken: upstream release 0.2.9 no longer exists
             pkgs.yt-dlg
             pkgs.zef
             pkgs.zunit
