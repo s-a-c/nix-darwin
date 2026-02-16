@@ -410,6 +410,7 @@
               "swiftdefaultappsprefpane"
               "swiftformat-for-xcode"
               "tailscale-app"
+              "telegram-desktop"
               "tex-live-utility"
               "texstudio"
               "the-unarchiver"
