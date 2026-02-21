@@ -60,7 +60,6 @@
       # The platform the configuration will be used on.
       hostPlatform = "aarch64-darwin";
       configuration =
-        homebrew-args:
         {
           pkgs,
           config,
@@ -145,7 +144,7 @@
               #"Amazon Kindle" = 302584613;
               #"Amazon Prime Video" = 545519333;
               "Apple Configurator" = 1037126344;
-              "Apple Develooper" = 640199958;
+              "Apple Developer" = 640199958;
               "Apple GarageBand" = 682658836;
               "Apple Keynote" = 409183694;
               "Apple Numbers" = 409203825;
@@ -157,7 +156,7 @@
               #"LanguageTool - Grammar Checker" = 1534275760;
               #"Messenger" = 1480068668;
               "Safari: Black Menu for Wikipedia" = 1543803288;
-              "Safari: Dark Readert Pro" = 1438243180;
+              "Safari: Dark Reader Pro" = 1438243180;
               "Safari: DuckDuckGo Privacy" = 1482920575;
               "Safari: G App Launcher" = 1543803459;
               "Safari: Inkscape Editor for Graphics" = 6443424132;
@@ -170,7 +169,6 @@
               "Safari: Web Translator for DeepL" = 6443492610;
               #"Slack" = 803453959;
               "Smart JSON Editor" = 1268962404;
-              "Testflight" = 899247664;
               "Ultra CharMap" = 520265986;
               #"Windows App" = 1295203466;
               "Xcode" = 497799835;
@@ -1314,15 +1312,7 @@
               homebrew.taps = builtins.attrNames config.nix-homebrew.taps;
             }
           )
-          (configuration {
-            inherit
-              homebrew-bundle
-              homebrew-cask
-              homebrew-core
-              homebrew-services
-              shivammathur-extensions
-              ;
-          })
+          configuration
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
