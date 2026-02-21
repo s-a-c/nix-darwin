@@ -81,6 +81,7 @@
             # pkgs.clipse
             pkgs.devbox
             # pkgs.dwt1-shell-color-scripts
+            pkgs.garage_2
             # pkgs.komorebi  # Linux-only animated wallpaper manager, not compatible with macOS
             # pkgs.lazycli
             # pkgs.lazysql
