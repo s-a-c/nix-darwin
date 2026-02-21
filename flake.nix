@@ -247,6 +247,11 @@
                 clone_target = "https://github.com/shivammathur/homebrew-extensions.git";
                 force_auto_update = true;
               }
+              {
+                name = "nalgeon/sqlpkg";
+                clone_target = "https://github.com/nalgeon/sqlpkg-cli";
+                force_auto_update = true;
+              }
             ];
             casks = [
               ## ==> Casks
