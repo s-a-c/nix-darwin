@@ -913,7 +913,7 @@
               "python-tk@3.14"
               "python@3.14"
               "qt"
-              "qt-mariadb"
+              # "qt-mariadb"
               "qt-mysql"
               "qt-postgresql"
               "qtcharts"
