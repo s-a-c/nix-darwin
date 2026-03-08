@@ -275,6 +275,7 @@
               "crossover"
               "cursor"
               "cutter"
+              "datagrip"
               "devtoys"
               "docker-desktop"
               "dotnet-sdk"
