@@ -588,6 +588,7 @@
               "dolt"
               "dooit"
               "dotenv-linter"
+              "duckdb"
               "duf"
               "dust"
               "duti"
