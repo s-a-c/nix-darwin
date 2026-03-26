@@ -1082,8 +1082,13 @@
               completion.enable = true;
             };
 
-            # Enable direnv to automatically load .envrc files.
-            direnv.enable = true; # direnv is a shell extension that loads and unloads environment variables depending on the current directory.
+          # Enable direnv to automatically load .envrc files.
+            direnv = {
+              enable = true;
+              package = pkgs.direnv.overrideAttrs (old: {
+                CGO_ENABLED = "1";
+              });
+            };
 
             # Whether to configure fish as an interactive shell.
             fish = {
