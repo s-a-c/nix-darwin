@@ -763,6 +763,7 @@
               "micro"
               "mise"
               "mmv"
+              "mole"
               "mongosh"
               "mpc"
               {
