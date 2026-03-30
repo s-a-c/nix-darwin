@@ -144,8 +144,8 @@
             masApps = {
               # "Amazon Kindle" = 302584613;
               # "Amazon Prime Video" = 545519333;
-              "Apple Configurator" = 1037126344;
-              "Apple Developer" = 640199958;
+              # "Apple Configurator" = 1037126344;
+              # "Apple Developer" = 640199958;
               "Apple GarageBand" = 682658836;
               "Apple Keynote" = 409183694;
               "Apple Numbers" = 409203825;
@@ -756,13 +756,13 @@
               "make"
               "markdown-oxide"
               "marksman"
-              # {
-              #   name = "mas";
-              #   args = [ "force" ];
-              #   link = true;
-              #   restart_service = true;
-              #   start_service = true;
-              # }
+              {
+                name = "mas";
+                args = [ "force" ];
+                link = true;
+                restart_service = true;
+                start_service = true;
+              }
               "mediainfo"
               "mermaid-cli"
               "micro"
