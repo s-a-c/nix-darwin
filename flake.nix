@@ -760,8 +760,8 @@
                 name = "mas";
                 args = [ "force" ];
                 link = true;
-                restart_service = true;
-                start_service = true;
+                restart_service = false;
+                start_service = false;
               }
               "mediainfo"
               "mermaid-cli"
