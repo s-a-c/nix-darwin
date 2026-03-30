@@ -91,7 +91,7 @@
             pkgs.mkalias
             pkgs.nix-zsh-completions
             pkgs.nixd
-            pkgs.nixfmt-rfc-style
+            pkgs.nixfmt
             pkgs.nsxiv
             # pkgs.phpactor
             pkgs.procps
@@ -354,7 +354,7 @@
               "lulu"
               "macfuse"
               "machoview"
-              "mactex"
+              # "mactex"
               "mediainfo"
               "mediainfoex"
               "meetingbar"
@@ -419,8 +419,8 @@
               "swiftformat-for-xcode"
               "tailscale-app"
               "telegram-desktop"
-              "tex-live-utility"
-              "texstudio"
+              # "tex-live-utility"
+              # "texstudio"
               "the-unarchiver"
               "vivid-app"
               "visual-studio-code"
@@ -437,8 +437,8 @@
               "youtube-downloader"
               "ytmdesktop-youtube-music"
               "yubico-yubikey-manager"
-              "zen"
-              "zenmap"
+              "zen@twilight"
+              # "zenmap"
               "zoom"
               "zotero@beta"
             ];
@@ -757,7 +757,13 @@
               "make"
               "markdown-oxide"
               "marksman"
-              "mas"
+              {
+                name = "mas";
+                args = [ "force" ];
+                link = true;
+                restart_service = true;
+                start_service = true;
+              }
               "mediainfo"
               "mermaid-cli"
               "micro"
@@ -840,7 +846,7 @@
               "shivammathur/extensions/pecl_http@8.4"
               "shivammathur/extensions/psr@8.4"
               "shivammathur/extensions/raphf@8.4"
-              "shivammathur/extensions/redis@8.4"
+              "shivammathur/extensions/phpredis@8.4"
               "shivammathur/extensions/uuid@8.4"
               "shivammathur/extensions/xdebug@8.4"
               "shivammathur/extensions/yaml@8.4"
@@ -867,7 +873,7 @@
               "shivammathur/extensions/pecl_http@8.5"
               "shivammathur/extensions/psr@8.5"
               "shivammathur/extensions/raphf@8.5"
-              "shivammathur/extensions/redis@8.5"
+              "shivammathur/extensions/phpredis@8.5"
               "shivammathur/extensions/uuid@8.5"
               "shivammathur/extensions/xdebug@8.5"
               "shivammathur/extensions/yaml@8.5"
@@ -978,7 +984,7 @@
               "tesseract"
               "texi2html"
               "texinfo"
-              "texlab"
+              # "texlab"
               # "texlive"
               "tig"
               "tmux"
@@ -1073,6 +1079,16 @@
 
             # The platform the configuration will be used on.
             hostPlatform = hostPlatform;
+
+            # Overlay: build netbird with Go 1.25 to avoid gvisor build tag
+            # conflict with Go 1.26 (WaitReason* redeclared symbols)
+            overlays = [
+              (final: prev: {
+                netbird = prev.netbird.override {
+                  buildGoModule = prev.buildGo125Module;
+                };
+              })
+            ];
           };
 
           programs = {
@@ -1086,7 +1102,9 @@
             direnv = {
               enable = true;
               package = pkgs.direnv.overrideAttrs (old: {
-                CGO_ENABLED = "1";
+                env = (old.env or {}) // {
+                  CGO_ENABLED = "1";
+                };
               });
             };
 
