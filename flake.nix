@@ -141,43 +141,43 @@
               extraFlags = [ "--verbose" ];
               upgrade = true;
             };
-            masApps = {
-              # "Amazon Kindle" = 302584613;
-              # "Amazon Prime Video" = 545519333;
-              # "Apple Configurator" = 1037126344;
-              # "Apple Developer" = 640199958;
-              "Apple GarageBand" = 682658836;
-              "Apple Keynote" = 409183694;
-              "Apple Numbers" = 409203825;
-              "Apple Pages" = 409201541;
-              "Apple Shazam: Identify Songs" = 897118787;
-              "Apple Swift Playgrounds" = 1496833156;
-              "Apple Testflight" = 899247664;
-              "Apple Transporter" = 1450874784;
-              # "LanguageTool - Grammar Checker" = 1534275760;
-              # "Messenger" = 1480068668;
-              "Safari: Black Menu for Wikipedia" = 1543803288;
-              "Safari: Dark Reader Pro" = 1438243180;
-              "Safari: DuckDuckGo Privacy" = 1482920575;
-              "Safari: G App Launcher" = 1543803459;
-              "Safari: Inkscape Editor for Graphics" = 6443424132;
-              "Safari: LanguageTool" = 1534275760;
-              "Safari: Notion Web Clipper" = 1559269364;
-              "Safari: Refined GitHub" = 1519867270;
-              "Safari: SingleFile" = 6444322545;
-              "Safari: Raindrop.io" = 1549370672;
-              "Safari: Wayback Machine" = 1472432422;
-              "Safari: Web Translator for DeepL" = 6443492610;
-              # "Slack" = 803453959;
-              "Smart JSON Editor" = 1268962404;
-              "Ultra CharMap" = 520265986;
-              # "Windows App" = 1295203466;
-              "Xcode" = 497799835;
-              "Xcode: XCFormat" = 1165321484;
-              "Xcode: Text Toolset" = 1157225201;
-              "Xcode: Comment Wrapper" = 1377998565;
-              "Xcode: NamingTranslator" = 1218784832;
-            };
+            # masApps = {
+            #   # "Amazon Kindle" = 302584613;
+            #   # "Amazon Prime Video" = 545519333;
+            #   "Apple Configurator" = 1037126344;
+            #   "Apple Developer" = 640199958;
+            #   "Apple GarageBand" = 682658836;
+            #   "Apple Keynote" = 409183694;
+            #   "Apple Numbers" = 409203825;
+            #   "Apple Pages" = 409201541;
+            #   "Apple Shazam: Identify Songs" = 897118787;
+            #   "Apple Swift Playgrounds" = 1496833156;
+            #   "Apple Testflight" = 899247664;
+            #   "Apple Transporter" = 1450874784;
+            #   # "LanguageTool - Grammar Checker" = 1534275760;
+            #   # "Messenger" = 1480068668;
+            #   "Safari: Black Menu for Wikipedia" = 1543803288;
+            #   "Safari: Dark Reader Pro" = 1438243180;
+            #   "Safari: DuckDuckGo Privacy" = 1482920575;
+            #   "Safari: G App Launcher" = 1543803459;
+            #   "Safari: Inkscape Editor for Graphics" = 6443424132;
+            #   "Safari: LanguageTool" = 1534275760;
+            #   "Safari: Notion Web Clipper" = 1559269364;
+            #   "Safari: Refined GitHub" = 1519867270;
+            #   "Safari: SingleFile" = 6444322545;
+            #   "Safari: Raindrop.io" = 1549370672;
+            #   "Safari: Wayback Machine" = 1472432422;
+            #   "Safari: Web Translator for DeepL" = 6443492610;
+            #   # "Slack" = 803453959;
+            #   "Smart JSON Editor" = 1268962404;
+            #   "Ultra CharMap" = 520265986;
+            #   # "Windows App" = 1295203466;
+            #   "Xcode" = 497799835;
+            #   "Xcode: XCFormat" = 1165321484;
+            #   "Xcode: Text Toolset" = 1157225201;
+            #   "Xcode: Comment Wrapper" = 1377998565;
+            #   "Xcode: NamingTranslator" = 1218784832;
+            # };
             taps = [
               {
                 name = "homebrew/bundle";
@@ -756,13 +756,13 @@
               "make"
               "markdown-oxide"
               "marksman"
-              {
-                name = "mas";
-                args = [ "force" ];
-                link = true;
-                restart_service = false;
-                start_service = false;
-              }
+              # {
+              #   name = "mas";
+              #   args = [ "force" ];
+              #   link = true;
+              #   restart_service = false;
+              #   start_service = false;
+              # }
               "mediainfo"
               "mermaid-cli"
               "micro"
