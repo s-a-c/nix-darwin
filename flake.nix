@@ -144,7 +144,7 @@
             masApps = {
               # "Amazon Kindle" = 302584613;
               # "Amazon Prime Video" = 545519333;
-              # "Apple Configurator" = 1037126344;
+              "Apple Configurator" = 1037126344;
               "Apple Developer" = 640199958;
               "Apple GarageBand" = 682658836;
               "Apple Keynote" = 409183694;
@@ -283,7 +283,7 @@
               "dyalog"
               "emacs-app"
               "emojipedia"
-              #"expressvpn"
+              # "expressvpn"
               "flutter"
               "font-alegreya-sans-sc"
               "font-alegreya-sans"
@@ -426,14 +426,13 @@
               "visual-studio-code"
               "visual-studio-code@insiders"
               "vmware-fusion"
-              #"wakatime"
+              # "wakatime"
               "warp"
               "wavebox"
               "wezterm"
               "whatsapp"
               "windows-app"
               "wireshark-app"
-              "xcodeclangformat"
               "youtube-downloader"
               "ytmdesktop-youtube-music"
               "yubico-yubikey-manager"
@@ -757,13 +756,13 @@
               "make"
               "markdown-oxide"
               "marksman"
-              {
-                name = "mas";
-                args = [ "force" ];
-                link = true;
-                restart_service = true;
-                start_service = true;
-              }
+              # {
+              #   name = "mas";
+              #   args = [ "force" ];
+              #   link = true;
+              #   restart_service = true;
+              #   start_service = true;
+              # }
               "mediainfo"
               "mermaid-cli"
               "micro"
