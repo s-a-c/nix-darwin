@@ -142,9 +142,9 @@
               upgrade = true;
             };
             masApps = {
-              #"Amazon Kindle" = 302584613;
-              #"Amazon Prime Video" = 545519333;
-              "Apple Configurator" = 1037126344;
+              # "Amazon Kindle" = 302584613;
+              # "Amazon Prime Video" = 545519333;
+              # "Apple Configurator" = 1037126344;
               "Apple Developer" = 640199958;
               "Apple GarageBand" = 682658836;
               "Apple Keynote" = 409183694;
@@ -154,8 +154,8 @@
               "Apple Swift Playgrounds" = 1496833156;
               "Apple Testflight" = 899247664;
               "Apple Transporter" = 1450874784;
-              #"LanguageTool - Grammar Checker" = 1534275760;
-              #"Messenger" = 1480068668;
+              # "LanguageTool - Grammar Checker" = 1534275760;
+              # "Messenger" = 1480068668;
               "Safari: Black Menu for Wikipedia" = 1543803288;
               "Safari: Dark Reader Pro" = 1438243180;
               "Safari: DuckDuckGo Privacy" = 1482920575;
@@ -168,10 +168,10 @@
               "Safari: Raindrop.io" = 1549370672;
               "Safari: Wayback Machine" = 1472432422;
               "Safari: Web Translator for DeepL" = 6443492610;
-              #"Slack" = 803453959;
+              # "Slack" = 803453959;
               "Smart JSON Editor" = 1268962404;
               "Ultra CharMap" = 520265986;
-              #"Windows App" = 1295203466;
+              # "Windows App" = 1295203466;
               "Xcode" = 497799835;
               "Xcode: XCFormat" = 1165321484;
               "Xcode: Text Toolset" = 1157225201;
@@ -334,7 +334,7 @@
               "jetbrains-toolbox"
               "jupyterlab-app"
               "karabiner-elements"
-              #"showyedge"
+              # "showyedge"
               "kate"
               "keycast"
               "kitty"
@@ -901,8 +901,8 @@
               "pgvector" # Vector similarity search extension
               "pg_partman" # Partition management extension
               "pg_cron" # Job scheduler extension
-              # Note: timescaledb, pgaudit, pg_hint_plan, hypopg, rum not available in Homebrew
-              # Install manually or use from PostgreSQL 17 (Nix) for full extension support
+              ## Note: timescaledb, pgaudit, pg_hint_plan, hypopg, rum not available in Homebrew
+              ## Install manually or use from PostgreSQL 17 (Nix) for full extension support
               "prettier"
               "procs"
               "proctools"
