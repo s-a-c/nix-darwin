@@ -789,10 +789,10 @@
               "neofetch"
               "neomutt"
               # {
-              #     name = "neovim";
-              #     link = false;
-              #     restart_service = false;
-              #     start_service = false;
+              #   name = "neovim";
+              #   link = false;
+              #   restart_service = false;
+              #   start_service = false;
               # }
               "nethack"
               "nettle"
@@ -806,7 +806,7 @@
               "nudoku"
               "nushell"
               "nvm"
-              #"opencode"
+              # "opencode"
               "openexr"
               "openjpeg"
               "openssh"
@@ -825,7 +825,7 @@
               "perl"
               {
                 name = "shivammathur/php/php@8.4";
-                #args = [ "--force" ];
+                # args = [ "force" ];
                 link = false;
                 restart_service = false;
                 start_service = false;
@@ -1222,9 +1222,9 @@
                 mkdir -p /Applications/Nix\ Apps
                 find ${env}/Applications -maxdepth 1 -type l -exec readlink '{}' + |
                 while read -r src; do
-                                                app_name=$(basename "$src")
-                                                echo "copying $src" >&2
-                                                ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
+                  app_name=$(basename "$src")
+                  echo "copying $src" >&2
+                  ${pkgs.mkalias}/bin/mkalias "$src" "/Applications/Nix Apps/$app_name"
                 done
               '';
 
@@ -1233,12 +1233,12 @@
 
             defaults = {
               # CustomUserPreferences = {
-              #                                 NSGlobalDomain = {
-              #                                                                 TISRomanSwitchState = 1;
-              #                                 };
-              #                                 "com.apple.Safari" = {
-              #                                                                 "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true;
-              #                                 };
+              #   NSGlobalDomain = {
+              #     TISRomanSwitchState = 1;
+              #   };
+              #   "com.apple.Safari" = {
+              #     "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" = true;
+              #   };
               # };
               NSGlobalDomain = {
                 AppleFontSmoothing = 2;
@@ -1269,12 +1269,12 @@
                 GloballyEnabled = true;
                 StandardHideDesktopIcons = true;
               };
-              #alf = {
-              #    allowdownloadsignedenabled = 1;
-              #    globalstate = 1;
-              #    loggingenabled = 1;
-              #    stealthenabled = 1;
-              #};
+              # alf = {
+              #   allowdownloadsignedenabled = 1;
+              #   globalstate = 1;
+              #   loggingenabled = 1;
+              #   stealthenabled = 1;
+              # };
               dock = {
                 appswitcher-all-displays = true;
                 autohide = true;
@@ -1285,11 +1285,11 @@
                 minimize-to-application = true;
                 mouse-over-hilite-stack = true;
                 # persistent-apps = [
-                #                                 "${pkgs.alacritty}/Applications/Alacritty.app"
-                #                                 "/Applications/Firefox.app"
-                #                                 "${pkgs.obsidian}/Applications/Obsidian.app"
-                #                                 "/System/Applications/Mail.app"
-                #                                 "/System/Applications/Calendar.app"
+                #   "${pkgs.alacritty}/Applications/Alacritty.app"
+                #   "/Applications/Firefox.app"
+                #   "${pkgs.obsidian}/Applications/Obsidian.app"
+                #   "/System/Applications/Mail.app"
+                #   "/System/Applications/Calendar.app"
                 # ];
                 showhidden = true;
                 slow-motion-allowed = true;
@@ -1386,6 +1386,5 @@
           }
         ];
       };
-
     };
 }
