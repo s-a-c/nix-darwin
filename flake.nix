@@ -32,6 +32,13 @@
       url = "github:homebrew/homebrew-services";
       flake = false;
     };
+    jundot-omlx = {
+      # The oMLX Homebrew tap lives in the main repo itself (per upstream docs:
+      # `brew tap jundot/omlx https://github.com/jundot/omlx`). There is no
+      # separate `homebrew-omlx` repository, so fetching that URL returns 404.
+      url = "github:jundot/omlx";
+      flake = false;
+    };
     shivammathur-php = {
       url = "github:shivammathur/homebrew-php";
       flake = false;
@@ -52,6 +59,7 @@
       homebrew-cask,
       homebrew-core,
       homebrew-services,
+      jundot-omlx,
       shivammathur-php,
       shivammathur-extensions,
       ...
@@ -129,6 +137,31 @@
             overpass
           ];
 
+          # 2. Mnemonic Environment Variables
+          environment.variables = {
+            OMLX_PORT = "6659";       # Mnemonic: O-M-L-X
+            HERMES_PORT = "43763";    # Mnemonic: H-E-R-M-E
+            AGENT_API_PORT = "42637"; # Mnemonic: A-G-E-N-T
+            OMLX_MODEL_DIR = "$HOME/ai_vault/models";
+          };
+
+          # 3. oMLX Background Service (launchd)
+          # Runs omlx serve with mnemonic port and SSD caching enabled for M1 Max
+          launchd.user.agents.omlx = {
+            serviceConfig = {
+              ProgramArguments = [
+                "/bin/sh"
+                "-c"
+                "export PATH=$PATH:/opt/homebrew/bin; omlx serve --port 6659 --model-dir ~/ai_vault/models --ssd-cache"
+              ];
+              RunAtLoad = true;
+              KeepAlive = true;
+              StandardOutPath = "/tmp/omlx.log";
+              StandardErrorPath = "/tmp/omlx.error.log";
+            };
+          };
+
+          # 4. Homebrew Configuration
           homebrew = {
             enable = true;
             global = {
@@ -219,23 +252,28 @@
                 force_auto_update = true;
               }
               {
-                name = "jetbrains/utils";
-                clone_target = "https://github.com/jetbrains/homebrew-utils.git";
-                force_auto_update = true;
-              }
-              {
-                name = "netbirdio/tap";
-                clone_target = "https://github.com/netbirdio/homebrew-tap.git";
-                force_auto_update = true;
-              }
-              {
                 name = "jackielii/tap";
                 clone_target = "https://github.com/jackielii/homebrew-tap.git";
                 force_auto_update = true;
               }
               {
-                name = "withgraphite/tap";
-                clone_target = "https://github.com/withgraphite/homebrew-tap.git";
+                name = "jetbrains/utils";
+                clone_target = "https://github.com/jetbrains/homebrew-utils.git";
+                force_auto_update = true;
+              }
+              {
+                name = "jundot/omlx";
+                # Upstream uses the main repo as the tap source.
+                clone_target = "https://github.com/jundot/omlx.git";
+              }
+              {
+                name = "nalgeon/sqlpkg";
+                clone_target = "https://github.com/nalgeon/sqlpkg-cli";
+                force_auto_update = true;
+              }
+              {
+                name = "netbirdio/tap";
+                clone_target = "https://github.com/netbirdio/homebrew-tap.git";
                 force_auto_update = true;
               }
               {
@@ -249,8 +287,8 @@
                 force_auto_update = true;
               }
               {
-                name = "nalgeon/sqlpkg";
-                clone_target = "https://github.com/nalgeon/sqlpkg-cli";
+                name = "withgraphite/tap";
+                clone_target = "https://github.com/withgraphite/homebrew-tap.git";
                 force_auto_update = true;
               }
             ];
@@ -259,6 +297,7 @@
               "affinity"
               "alfred"
               # "aerospace/homebrew/aerospace"
+              "antigravity"
               "balenaetcher"
               "beyond-compare"
               "bbedit"
@@ -393,6 +432,7 @@
               "phpstorm"
               "podman-desktop"
               "porting-kit"
+              "postgres-app"
               "postman"
               "postman-agent"
               "postman-cli"
@@ -783,6 +823,7 @@
               "mpfr"
               "mplayer"
               "msgpack"
+              "mysql"
               "nasm"
               "nbsdgames"
               "ncdu"
@@ -807,6 +848,10 @@
               "nudoku"
               "nushell"
               "nvm"
+              # Fully qualified as tap/formula so brew bundle resolves it from the
+              # jundot/omlx tap (just "jundot/omlx" is ambiguous and makes brew
+              # search globally for a formula named "omlx").
+              "jundot/omlx/omlx"
               # "opencode"
               "openexr"
               "openjpeg"
@@ -862,10 +907,10 @@
               "shivammathur/extensions/apcu@8.5"
               {
                 name = "shivammathur/extensions/expect@8.5";
-                link = false;
+                link = true;
                 restart_service = false;
                 start_service = false;
-              } # avoid link conflict with core expect
+              } # override core expect to enable helper commands like "unbuffer"
               "shivammathur/extensions/igbinary@8.5"
               "shivammathur/extensions/imagick@8.5"
               "shivammathur/extensions/msgpack@8.5"
@@ -890,6 +935,7 @@
               "podman-tui"
               "portaudio"
               "poppler"
+              "postgrest"
               "posting"
               # PostgreSQL 18 (primary, default port 5432)
               {
@@ -1040,6 +1086,7 @@
             ];
           };
 
+          # 5. Nix Settings & Services
           nix = {
             extraOptions = ''
               extra-platforms = x86_64-darwin aarch64-darwin
@@ -1073,7 +1120,39 @@
 
           nixpkgs = {
             config = {
-              allowBroken = false;
+              allowBroken = true;
+              problems.handlers = {
+                anonymizer.broken = "warn";
+                hypopg.broken = "warn";
+                ip4r.broken = "warn";
+                periods.broken = "warn";
+                pg_background.broken = "warn";
+                pg_cron.broken = "warn";
+                pg_ed25519.broken = "warn";
+                pg_hint_plan.broken = "warn";
+                pg_ivm.broken = "warn";
+                pg_partman.broken = "warn";
+                pg_relusage.broken = "warn";
+                pg_repack.broken = "warn";
+                pg_safeupdate.broken = "warn";
+                pg_similarity.broken = "warn";
+                pg_squeeze.broken = "warn";
+                pg_topn.broken = "warn";
+                pg_uuidv7.broken = "warn";
+                pg-semver.broken = "warn";
+                pgaudit.broken = "warn";
+                pgmq.broken = "warn";
+                pgrouting.broken = "warn";
+                pgvector.broken = "warn";
+                pgvectorscale.broken = "warn";
+                plv8.broken = "warn";
+                postgis.broken = "warn";
+                rum.broken = "warn";
+                system_stats.broken = "warn";
+                timescaledb.broken = "warn";
+                timescaledb_toolkit.broken = "warn";
+              };
+
               allowUnfree = true;
               #allowUnsupportedSystem = true;
             };
@@ -1171,20 +1250,40 @@
             # Auto upgrade nix package and the daemon service.    -- deprecated
             ## nix-daemon.enable = true; # # nix.package = pkgs.nix;
 
-            # PostgreSQL 17 with full extension support (secondary, port 5433)
+            # PostgreSQL 18 with full extension support (secondary, port 5433)
             postgresql = {
               enable = true;
               enableTCPIP = true;
-              package = pkgs.postgresql_17.withPackages (ps: [
-                ps.postgis
-                ps.pg_partman
-                ps.pgvector
-                ps.timescaledb
-                ps.pg_cron
+              package = pkgs.postgresql_18.withPackages (ps: [
+                ps.anonymizer
                 ps.hypopg
-                ps.pgaudit
+                ps.ip4r
+                ps.periods
+                ps.pg_background
+                ps.pg_cron
+                # ps.pg_ed25519
                 ps.pg_hint_plan
+                ps.pg_ivm
+                ps.pg_partman
+                ps.pg_relusage
+                ps.pg_repack
+                ps.pg_safeupdate
+                ps.pg_similarity
+                ps.pg_squeeze
+                ps.pg_topn
+                ps.pg_uuidv7
+                ps.pg-semver
+                # ps.pgaudit
+                ps.pgmq
+                ps.pgrouting
+                ps.pgvector
+                ps.pgvectorscale
+                # ps.plv8
+                ps.postgis
                 ps.rum
+                ps.system_stats
+                ps.timescaledb
+                # ps.timescaledb_toolkit
               ]);
               initdbArgs = [
                 "--locale=en_GB.UTF-8"
@@ -1192,7 +1291,7 @@
               ];
               settings = {
                 port = lib.mkForce 5433; # Non-standard port to avoid conflict with Homebrew
-                shared_preload_libraries = "pg_stat_statements,pgaudit,pg_cron,timescaledb,auto_explain,pg_hint_plan";
+                shared_preload_libraries = "pg_stat_statements,pgaudit,pg_cron,timescaledb,auto_explain,pg_hint_plan, pg_uuidv7";
               };
             };
 
@@ -1380,6 +1479,7 @@
                 "homebrew/homebrew-cask" = homebrew-cask;
                 "homebrew/homebrew-core" = homebrew-core;
                 "homebrew/homebrew-services" = homebrew-services;
+                "jundot/homebrew-omlx" = jundot-omlx; # Declarative oMLX tap
                 "shivammathur/homebrew-php" = shivammathur-php;
                 "shivammathur/homebrew-extensions" = shivammathur-extensions;
               };
