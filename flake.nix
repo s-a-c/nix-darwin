@@ -139,8 +139,8 @@
 
           # 2. Mnemonic Environment Variables
           environment.variables = {
-            OMLX_PORT = "6659";       # Mnemonic: O-M-L-X
-            HERMES_PORT = "43763";    # Mnemonic: H-E-R-M-E
+            OMLX_PORT = "6659"; # Mnemonic: O-M-L-X
+            HERMES_PORT = "43763"; # Mnemonic: H-E-R-M-E
             AGENT_API_PORT = "42637"; # Mnemonic: A-G-E-N-T
             OMLX_MODEL_DIR = "$HOME/ai_vault/models";
           };
@@ -152,7 +152,9 @@
               ProgramArguments = [
                 "/bin/sh"
                 "-c"
-                "export PATH=$PATH:/opt/homebrew/bin; omlx serve --port 6659 --model-dir ~/ai_vault/models --ssd-cache"
+                # Note: `omlx serve` in 0.3.x exposes `--paged-ssd-cache-dir <path>`
+                # to enable SSD-backed KV cache; there is no bare `--ssd-cache` flag.
+                "export PATH=$PATH:/opt/homebrew/bin; mkdir -p $HOME/.omlx/cache; omlx serve --port 6659 --model-dir $HOME/ai_vault/models --paged-ssd-cache-dir $HOME/.omlx/cache"
               ];
               RunAtLoad = true;
               KeepAlive = true;
@@ -304,7 +306,7 @@
               "bitwarden"
               "blender-benchmark"
               "blender"
-              "block-goose"
+              # "block-goose"
               "brewservicesmenubar"
               "chatgpt"
               "claude"
@@ -378,7 +380,7 @@
               "keycast"
               "kitty"
               "kodi"
-              "languagetool-desktop"
+              # "languagetool-desktop"
               "lapce"
               "launchcontrol"
               "launchpad-manager"
@@ -473,7 +475,7 @@
               "wezterm"
               "whatsapp"
               "windows-app"
-              "wireshark-app"
+              # "wireshark-app"
               "youtube-downloader"
               "ytmdesktop-youtube-music"
               "yubico-yubikey-manager"
@@ -519,7 +521,7 @@
               "bear"
               "bfg"
               "binutils"
-              "block-goose-cli"
+              # "block-goose-cli"
               "bob"
               "boost"
               "bottom"
@@ -1178,11 +1180,11 @@
               completion.enable = true;
             };
 
-          # Enable direnv to automatically load .envrc files.
+            # Enable direnv to automatically load .envrc files.
             direnv = {
               enable = true;
               package = pkgs.direnv.overrideAttrs (old: {
-                env = (old.env or {}) // {
+                env = (old.env or { }) // {
                   CGO_ENABLED = "1";
                 };
               });
