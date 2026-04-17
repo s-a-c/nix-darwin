@@ -854,6 +854,7 @@
               # jundot/omlx tap (just "jundot/omlx" is ambiguous and makes brew
               # search globally for a formula named "omlx").
               "jundot/omlx/omlx"
+              "mlx-knife"
               # "opencode"
               "openexr"
               "openjpeg"
